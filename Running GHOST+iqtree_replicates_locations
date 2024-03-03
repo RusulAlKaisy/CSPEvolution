@@ -1,0 +1,84 @@
+#First dataset for locations with outgroup
+#H2 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep1_LocationsOutgroup.fasta -m GTR*H2 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\FirstDataSet_LocationswithOutGroupH2GHOST.fasta")
+
+#H3 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep1_LocationsOutgroup.fasta -m GTR*H3 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\FirstDataSet_LocationswithOutGroupH3GHOST.fasta")
+
+#H4 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep1_LocationsOutgroup.fasta -m GTR*H4 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\FirstDataSet_LocationswithOutGroupH4GHOST.fasta")
+
+#H5 category model 
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep1_LocationsOutgroup.fasta -m GTR*H5 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\FirstDataSet_LocationswithOutGroupH5GHOST.fasta")
+
+#H6 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep1_LocationsOutgroup.fasta -m GTR*H6 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\FirstDataSet_LocationswithOutGroupH6GHOST.fasta")
+
+
+#Second dataset for locations with outgroup
+
+#H2 category model 
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep2_LocationsOutgroup.fasta -m GTR*H2 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\SecondDataSet_LocationswithOutGroupH2GHOST.fasta")
+
+#H3 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep2_LocationsOutgroup.fasta -m GTR*H3 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\SecondDataSet_LocationswithOutGroupH3GHOST.fasta")
+
+#H4 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep2_LocationsOutgroup.fasta -m GTR*H4 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\SecondDataSet_LocationswithOutGroupH4GHOST.fasta")
+
+#H5 category model 
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep2_LocationsOutgroup.fasta -m GTR*H5 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\SecondDataSet_LocationswithOutGroupH5GHOST.fasta")
+
+#H6 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep2_LocationsOutgroup.fasta -m GTR*H6 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\SecondDataSet_LocationswithOutGroupH6GHOST.fasta")
+
+
+#Third dataset for locations with outgroup
+#H2 category model 
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep3_LocationsOutgroup.fasta -m GTR*H2 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\ThirdDataSet_LocationswithOutGroupH2GHOST.fasta")
+
+#H3 category model 
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep3_LocationsOutgroup.fasta -m GTR*H3 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\ThirdDataSet_LocationswithOutGroupH3GHOST.fasta")
+
+#H4 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep3_LocationsOutgroup.fasta -m GTR*H4 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\ThirdDataSet_LocationswithOutGroupH4GHOST.fasta")
+
+#H5 category model 
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep3_LocationsOutgroup.fasta -m GTR*H5 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\ThirdDataSet_LocationswithOutGroupH5GHOST.fasta")
+
+#H6 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep3_LocationsOutgroup.fasta -m GTR*H6 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\ThirdDataSet_LocationswithOutGroupH6GHOST.fasta")
+
+
+#Fourth dataset for locations with outgroup
+#H2 category model 
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep4_LocationsOutgroup.fasta -m GTR*H2 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\FourthDataSet_LocationswithOutGroupH2GHOST.fasta")
+
+#H3 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep4_LocationsOutgroup.fasta -m GTR*H3 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\FourthDataSet_LocationswithOutGroupH3GHOST.fasta")
+#H4 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep4_LocationsOutgroup.fasta -m GTR*H4 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\FourthDataSet_LocationswithOutGroupH4GHOST.fasta")
+
+#H5 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep4_LocationsOutgroup.fasta -m GTR*H5 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\FourthDataSet_LocationswithOutGroupH5GHOST.fasta")
+
+#H6 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep4_LocationsOutgroup.fasta -m GTR*H6 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\FourthDataSet_LocationswithOutGroupH6GHOST.fasta")
+
+
+#Fifth dataset for the locations with outgroup
+#H2 category model 
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep5_LocationsOutgroup.fasta -m GTR*H2 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\FifthDataSet_LocationswithOutGroupH2GHOST.fasta")
+
+#H3 category model 
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep5_LocationsOutgroup.fasta -m GTR*H3 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\FifthDataSet_LocationswithOutGroupH3GHOST.fasta")
+
+#H4 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep5_LocationsOutgroup.fasta -m GTR*H4 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\FifthDataSet_LocationswithOutGroupH4GHOST.fasta")
+
+#H5 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep5_LocationsOutgroup.fasta -m GTR*H5 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\FifthDataSet_LocationswithOutGroupH5GHOST.fasta")
+
+#H6 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\Rep5_LocationsOutgroup.fasta -m GTR*H6 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\FifthDataSet_LocationswithOutGroupH6GHOST.fasta")
+
