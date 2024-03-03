@@ -1,0 +1,38 @@
+names(alignmentnames)<-paste0(orderedCSV$ACCESSION,"_",orderedCSV$LOCATION)
+names(alignmentnames)<-gsub(" |:","_",names(alignmentnames))
+
+write.FASTA(alignmentnames,"C:\\Users\\HomePC\\Desktop\\Dataset1\\Sequences_with_Locations.fasta")
+
+#Let's us read the FASTA file and create datasets for it 
+
+Sequences_with_Locations<-read.FASTA("C:\\Users\\HomePC\\Desktop\\Dataset1\\Sequences_with_Locations.fasta")
+
+#Let's remove the two sequences: M15505 and AY870439  ## I will do this later but now I need to finish and run GHOST
+#Let us re-read the FASTA file where the two sequences have been manually removed 
+
+Sequences_with_Locations<-read.FASTA("C:\\Users\\HomePC\\Desktop\\Dataset1\\Sequences_with_Locations_WithOutGroup.txt")
+
+#Let's reshuffle the seuqences
+Sequences_with_Locations <- as.matrix(Sequences_with_Locations)  
+neworder <- sample(rownames(Sequences_with_Locations)[-1], nrow(Sequences_with_Locations)-1, replace = F)
+Sequences_with_Locations <- rbind(Sequences_with_Locations[1,], Sequences_with_Locations[neworder,])
+Sequences_with_Locations
+
+
+#The datasets with an outgroup
+
+Rep1_LocationsOutgroup<-Sequences_with_Locations[1:81,]
+
+Rep2_LocationsOutgroup<-Sequences_with_Locations[c(1,82:(81+80)),]
+
+Rep3_LocationsOutgroup<-Sequences_with_Locations[c(1,162:(161+80)),]
+
+Rep4_LocationsOutgroup<-Sequences_with_Locations[c(1,242:(241+80)),]
+
+Rep5_LocationsOutgroup<-Sequences_with_Locations[c(1,322:(321+80)),]
+
+#Sanity check
+which(rownames(Rep1_LocationsOutgroup) %in% rownames(Rep2_LocationsOutgroup))
+which(rownames(Rep2_LocationsOutgroup) %in% rownames(Rep3_LocationsOutgroup))
+which(rownames(Rep3_LocationsOutgroup) %in% rownames(Rep4_LocationsOutgroup))
+which(rownames(Rep4_LocationsOutgroup) %in% rownames(Rep5_LocationsOutgroup))
