@@ -1,0 +1,28 @@
+NewSequencesFastaTrimNoDup <- as.matrix(NewSequencesFastaTrimNoDup)  
+neworder <- sample(rownames(NewSequencesFastaTrimNoDup)[-1], nrow(NewSequencesFastaTrimNoDup)-1, replace = F)
+NewSequencesFastaTrimNoDup <- rbind(NewSequencesFastaTrimNoDup[1,], NewSequencesFastaTrimNoDup[neworder,])
+NewSequencesFastaTrimNoDup
+
+# Create replicate data sets
+Rep1<-NewSequencesFastaTrimNoDup[1:81,]
+Rep2<-NewSequencesFastaTrimNoDup[c(1,82:(81+80)),]
+Rep3<-NewSequencesFastaTrimNoDup[c(1,162:(161+80)),]
+Rep4<-NewSequencesFastaTrimNoDup[c(1,242:(241+80)),]
+Rep5<-NewSequencesFastaTrimNoDup[c(1,322:(321+80)),]
+
+
+# Sanity checks. What is the overlap, if any, among replicate data sets
+which(rownames(Rep1) %in% rownames(Rep2))
+which(rownames(Rep2) %in% rownames(Rep3))
+which(rownames(Rep3) %in% rownames(Rep4))
+which(rownames(Rep4) %in% rownames(Rep5))
+
+
+# Save replicate data sets 
+write.FASTA(Rep1,"C:\\Users\\HomePC\\Desktop\\Dataset1\\FirstDataSet_81withoutgroup.fasta")
+write.FASTA(Rep2,"C:\\Users\\HomePC\\Desktop\\Dataset1\\SecondDataSet_81withoutgroup.fasta")
+write.FASTA(Rep3,"C:\\Users\\HomePC\\Desktop\\Dataset1\\ThirdDataSet_81withoutgroup.fasta")
+write.FASTA(Rep4,"C:\\Users\\HomePC\\Desktop\\Dataset1\\FourthDataSet_81withoutgroup.fasta")
+write.FASTA(Rep5,"C:\\Users\\HomePC\\Desktop\\Dataset1\\FifthDataSet_81withoutgroup.fasta")
+
+setwd("C:/Users/HomePC/Desktop/Dataset1/GHOST_200_species")
