@@ -1,0 +1,23 @@
+#Removing non-falciparum species
+seqs <- seqs[which(species == "Plasmodium_falciparum")]
+seqs
+
+#Filtering of short and long nucleotide sequences
+write.FASTA<-(seqs,"C:\\Users\\HomePC\\Desktop\\Dataset1\\"TheNewAccessionswithout.txt")
+
+#Certain sequences have been removed from the file. Here we will filter out the short and long nucleotide sequencecs
+NewSequencesFasta<-read.FASTA("TheNewAccessionswithout.txt",type="DNA")
+
+NewSequencesLength<-sapply(NewSequencesFasta,length)
+NewSequencesLength
+#Removing the long sequence in the file
+NewSequencesFasta<-NewSequencesFasta[-which(NewSequencesLength==max(NewSequencesLength))]
+NewSequencesLength<-sapply(NewSequencesFasta, length)
+hist(NewSequencesLength)
+length(which(NewSequencesLength < (max(NewSequencesLength / 2)))) / length(NewSequencesLength)
+NewSequencesFasta<-NewSequencesFasta[-which(NewSequencesLength<(max(NewSequencesLength/2)))]
+NewSequencesLength<-sapply(NewSequencesFasta,length)
+
+View(NewSequencesFasta)
+
+#We will save it as a FASTA file before running MACSE
