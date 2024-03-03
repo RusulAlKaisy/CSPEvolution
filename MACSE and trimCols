@@ -1,0 +1,13 @@
+#Let's run MACSE on that 
+system("java -jar ~C:\\Users\\HomePC\\Downloads\\macse\\macse_v2.03.jar -prog alignSequences -max_refine_iter 0 -seq NewSequencesFasta.fasta -out_NT NewSequencesFasta_nucleotide_macse_NT.fasta -out_AA NewSequences_amino_macse_AA.fasta")
+
+#Removing gaps and columns
+
+system("java -jar ~/Desktop/Software/macse_v2.03.jar -prog exportAlignment -align NewSequencesFasta_nucleotide_macse_NT.fasta -codonForInternalStop NNN -codonForFinalStop --- -codonForInternalFS --- -charForRemainingFS - -out_NT NewSequences_alignment_macse_NT.fasta -out_AA NewSequences_alignment_macse_AA.fasta")
+
+#After having removed the gaps and codons we can use the trimCols function
+
+setwd("C:/Users/HomePC/Desktop")
+
+source("trimCols.R")
+NewSequencesFasta_alignment<-read.FASTA("C:\\Users\\HomePC\\Desktop\\Dataset1\\MACSE\\NewSequences_alignment_macse_NT.fasta")
