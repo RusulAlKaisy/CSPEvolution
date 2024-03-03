@@ -1,0 +1,19 @@
+getwd()
+setwd("C:/Users/HomePC/Desktop/Dataset1")
+names
+#Creating the new names for the nucleotide sequences
+seqs<-read.FASTA("seqs2.txt",type="DNA")
+seqs
+accessions2<-(gsub(".*\\||\\..*$", "", names(seqs)))
+accessions2
+accessions_unique2<-names(table(accessions2)[which(as.numeric(table(accessions2)) == 1)])
+table(accessions_unique2)
+
+
+seqs<-read.GenBank(accessions_unique2)
+seqs
+species<-attr(seqs,"species")
+species
+
+names(seqs) <- paste0(accessions_unique2, "_", species)
+names(seqs)
