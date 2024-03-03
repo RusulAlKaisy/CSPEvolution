@@ -1,0 +1,20 @@
+Let's grep the locations and read the excel file
+
+#Let's change the working directory 
+setwd("C://Users//HomePC//Desktop//Dataset1//GHOST_200_locations")
+
+#Read the Excel file with read.csv
+Excel_CSV<-read.csv("C:/Users/HomePC/Desktop/Dataset1/GHOST_200_locations/Book5.csv")
+
+#Read the FASTA file
+alignmentnames<-read.FASTA("C:\\Users\\HomePC\\Desktop\\Dataset1\\NewSequencesFastaTrimNoDupText.txt")
+
+
+#Gsub in the Excel_CSV to remove the spaces
+names(alignmentnames)<-gsub(" ","",names(alignmentnames))
+Excel_CSV$ACCESSION<-gsub(" ","",Excel_CSV$ACCESSION)
+
+rownames(Excel_CSV)<-Excel_CSV$ACCESSION
+
+orderedCSV<-Excel_CSV[names(alignmentnames),]
+orderedCSV
