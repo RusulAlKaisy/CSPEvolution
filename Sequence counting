@@ -1,0 +1,69 @@
+##Let's write code that will count how many sequences from each country we have 
+fasta_lines<-read.FASTA("C:\\Users\\HomePC\\Desktop\\Dataset1\\Sequences_with_Locations.fasta")
+
+labels<-names(fasta_lines)
+
+label_counts<-table(labels)
+
+#Vanuatu
+Country_counts_Vanuatu<-sum(grepl("Vanuatu",labels,ignore.case=TRUE))
+
+#Papua New Guinea
+Country_counts_Papua_New<-sum(grepl("Papua_New_Guinea",labels,ignore.case=TRUE))
+
+#Philippines
+Country_counts_Philippines<-sum(grepl("Philippines",labels,ignore.case=TRUE))
+
+#Uganda
+Country_counts_Uganda<-sum(grepl("Uganda",labels,ignore.case=TRUE))
+
+#Ghana
+Country_counts_Ghana<-sum(grepl("Ghana",labels,ignore.case=TRUE))
+
+#Gambia
+Country_counts_Gambia<-sum(grepl("Gambia",labels,ignore.case=TRUE))
+
+#Iran
+Country_counts_Iran<-sum(grepl("Iran",labels,ignore.case=TRUE))
+
+#Equatorial Guinea
+Country_counts_Equatorial<-sum(grepl("Equatorial",labels,ignore.case=TRUE))
+
+#Thailand
+Country_counts_Thailand<-sum(grepl("Thailand",labels,ignore.case=TRUE))
+
+#Brazil
+Country_counts_Brazil<-sum(grepl("Brazil",labels,ignore.case=TRUE))
+
+#Tanzania
+Country_counts_Tanzania<-sum(grepl("Tanzania",labels,ignore.case=TRUE))
+
+#India
+Country_counts_India<-sum(grepl("India",labels,ignore.case=TRUE))
+
+#Republic of the Congo
+Country_counts_Republic_of_the_Congo<-sum(grepl("Republic_of_the_Congo",labels,ignore.case=TRUE))
+
+#Solomon Islands
+Country_counts_Solomon<-sum(grepl("Solomon",labels,ignore.case=TRUE))
+
+#Venezuela
+Country_counts_Venezuela<-sum(grepl("Venezuela",labels,ignore.case=TRUE))
+
+#Bolivar(Venezuela)
+Country_counts_Bolivar<-sum(grepl("Bolivar",labels,ignore.case=TRUE))
+
+#Asembo Bay
+Country_counts_Asembo_Bay<-sum(grepl("Asembo",labels,ignore.case=TRUE))
+
+#Yaounde
+Country_counts_Yaounde<-sum(grepl("Yaounde",labels,ignore.case=TRUE))
+
+#Honduras
+Country_counts_Honduras<-sum(grepl("Honduras",labels,ignore.case=TRUE))
+
+#Sudan
+Country_counts_Sudan<-sum(grepl("Sudan",labels,ignore.case=TRUE))
+
+#Amazonas
+Country_counts_Amazonas<-sum(grepl("Amazonas",labels,ignore.case=TRUE))
