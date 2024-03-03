@@ -1,0 +1,58 @@
+#Let's extract the color codes for the maps
+color_codes<-map_plot$x$attrs
+viridis_values<-c(0.088080233, 79.876921979, 59.152670869,80.738071315,0.019516986,3.365170611,0.000275056,8.868051282,16.748870317, 0.099747472,23.980539088,6.593165163,20.744542941,0.058799173,68.654083163,2.840834112,0.810939318,89.057755500)
+colors <- sapply(viridis_values,viridis)
+str(colors)
+
+
+#What colors correspond to what dot? 
+df_colors<-df$Mortality_Rate
+for (i in seq_along((colors))){
+  cat("Color:",colors[[i]],"\t Corresponding Value:",df_colors[i],"\n")
+}
+) 
+Sys.setenv("plotly_username"="RusulAK")
+Sys.setenv("plotly_api_key"="0KamtRkYcmFbApu2GkQS")
+
+PNG<-plotly_IMAGE(map_plot, format = "png",  out_file = "plotly-test-image.png")
+
+plotly_IMAGE(map_plot)
+
+#Create a different world map - Incidence Rate
+df<-data.frame(Countries=excel_file$ISO3,Incidence_Rate=excel_file$`Incidence Rate`,Infection_Prevalence=excel_file$`Infection Prevalence`,Mortality_Rate=excel_file$`Mortality Rate`,Latitude=excel_file$Latitude,Longitude=excel_file$Longitude)
+
+ggplot(df, aes(x = Longitude, y = Latitude, color = Incidence_Rate, label = Countries)) +
+  geom_point(size = 3) +
+  geom_text(nudge_y = 1, size = 2) +  # Add data labels
+  scale_color_gradient(low = "#440154", high = "#fde725", name = "Incidence Rate") +
+  labs(title = "World Map with Average Incidence Rate") +
+  theme_minimal()
+
+#Infection prevalence
+ggplot(df, aes(x = Longitude, y = Latitude, color = Infection_Prevalence, label = Countries)) +
+  geom_point(size = 3) +
+  geom_text(nudge_y = 1, size = 2) +  # Add data labels
+  scale_color_gradient(low = "#440154", high = "#fde725", name = "Infection_Prevalence") +
+  labs(title = "World Map with Average Infection_Prevalence") +
+  theme_minimal()
+
+
+#Mortality rate
+ggplot(df, aes(x = Longitude, y = Latitude, color = Mortality_Rate, label = Countries)) +
+  geom_point(size = 3) +
+  geom_text(nudge_y = 1, size = 2) +  # Add data labels
+  scale_color_gradient(low = "#440154", high = "#fde725", name = "Mortality_Rate") +
+  labs(title = "World Map with Average Mortality Rate") +
+  theme_minimal()
+
+
+# Create a Gall Peters world map projection
+world_map <- map_data("world")
+
+ggplot(world_map, aes(x = long, y = lat, group = group)) +
+  geom_polygon(fill = "white", color = "black") +
+  coord_fixed(ratio = 1.6) +  # To keep the aspect ratio flat
+  theme_void() +  # To remove axis labels and background
+  ggtitle("Gall-Peters Projection World Map")  # Title of the plot
+
+
