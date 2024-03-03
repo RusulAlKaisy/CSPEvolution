@@ -1,0 +1,8 @@
+#Now we have to remove the duplicates
+NewSequencesFastaTrim<-NewSequencesFastaTrim[!duplicated(NewSequencesFastaTrim)]
+NewSequencesFastaTrim
+anyDuplicated(NewSequencesFastaTrim)
+#We have removed all the duplicates, and now we can save it as gbfile and as a fasta file
+write.FASTA(NewSequencesFastaTrim,"C:\\Users\\HomePC\\Desktop\\Dataset1\\NewSequencesFastaTrimNoDup.fasta")
+NewSequencesFastaTrimNoDup<-read.FASTA("C:\\Users\\HomePC\\Desktop\\Dataset1\\NewSequencesFastaTrimNoDup.fasta")
+NewSequencesFastaTrimNoDup
