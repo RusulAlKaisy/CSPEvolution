@@ -1,0 +1,22 @@
+Rep1_LocationsNoOutgroup<-Sequences_with_Locations[2:81,]
+
+Rep2_LocationsNoOutgroup<-Sequences_with_Locations[c(82:(81+80)),]
+
+Rep3_LocationsNoOutgroup<-Sequences_with_Locations[c(162:(161+80)),]
+
+Rep4_LocationsNoOutgroup<-Sequences_with_Locations[c(242:(241+80)),]
+
+Rep5_LocationsNoOutgroup<-Sequences_with_Locations[c(322:(321+80)),]
+
+#Sanity check
+which(rownames(Rep1_LocationsNoOutgroup) %in% rownames(Rep2_LocationsNoOutgroup))
+which(rownames(Rep2_LocationsNoOutgroup) %in% rownames(Rep3_LocationsNoOutgroup))
+which(rownames(Rep3_LocationsNoOutgroup) %in% rownames(Rep4_LocationsNoOutgroup))
+which(rownames(Rep4_LocationsNoOutgroup) %in% rownames(Rep5_LocationsNoOutgroup))
+
+#Save as a FASTA file 
+write.FASTA(Rep1_LocationsNoOutgroup,"C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\Rep1_LocationsNoOutgroup.fasta")
+write.FASTA(Rep2_LocationsNoOutgroup,"C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\Rep2_LocationsNoOutgroup.fasta")
+write.FASTA(Rep3_LocationsNoOutgroup,"C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\Rep3_LocationsNoOutgroup.fasta")
+write.FASTA(Rep4_LocationsNoOutgroup,"C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\Rep4_LocationsNoOutgroup.fasta")
+write.FASTA(Rep5_LocationsNoOutgroup,"C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\Rep5_LocationsNoOutgroup.fasta")
