@@ -5,7 +5,7 @@ seqs
 #Filtering of short and long nucleotide sequences
 write.FASTA<-(seqs,"C:\\Users\\HomePC\\Desktop\\Dataset1\\"TheNewAccessionswithout.txt")
 
-#Certain sequences have been removed from the file. Here we will filter out the short and long nucleotide sequencecs
+#Certain sequences have been removed from the file. Here we will filter out the short and long nucleotide sequences
 NewSequencesFasta<-read.FASTA("TheNewAccessionswithout.txt",type="DNA")
 
 NewSequencesLength<-sapply(NewSequencesFasta,length)
@@ -21,3 +21,4 @@ NewSequencesLength<-sapply(NewSequencesFasta,length)
 View(NewSequencesFasta)
 
 #We will save it as a FASTA file before running MACSE
+write.FASTA(NewSequencesFasta,"C:\\Users\\HomePC\\Desktop\\Dataset1\\NewSequencesFasta.fasta")
