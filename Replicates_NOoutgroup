@@ -1,0 +1,25 @@
+
+#Let's do the datasets that do not contain the outgroup
+Rep1_NoOutgroup<-NewSequencesFastaTrimNoDup[2:81,]
+
+Rep2_NoOutgroup<-NewSequencesFastaTrimNoDup[c(82:(81+80)),]
+
+Rep3_NoOutgroup<-NewSequencesFastaTrimNoDup[c(162:(161+80)),]
+
+Rep4_NoOutgroup<-NewSequencesFastaTrimNoDup[c(242:(241+80)),]
+
+Rep5_NoOutgroup<-NewSequencesFastaTrimNoDup[c(322:(321+80)),]
+
+
+#Sanity check 
+which(rownames(Rep1_NoOutgroup) %in% rownames(Rep2_NoOutgroup))
+which(rownames(Rep2_NoOutgroup) %in% rownames(Rep3_NoOutgroup))
+which(rownames(Rep3_NoOutgroup) %in% rownames(Rep4_NoOutgroup))
+which(rownames(Rep4_NoOutgroup) %in% rownames(Rep5_NoOutgroup))
+
+#Save it as a FASTA file 
+write.FASTA(Rep1_NoOutgroup,"C:\\Users\\HomePC\\Desktop\\Dataset1\\FirstDataSet_80NoOutGroup.fasta")
+write.FASTA(Rep2_NoOutgroup,"C:\\Users\\HomePC\\Desktop\\Dataset1\\SecondDataSet_80NoOutGroup.fasta")
+write.FASTA(Rep3_NoOutgroup,"C:\\Users\\HomePC\\Desktop\\Dataset1\\ThirdDataSet_80NoOutGroup.fasta")
+write.FASTA(Rep4_NoOutgroup,"C:\\Users\\HomePC\\Desktop\\Dataset1\\FourthDataSet_80NoOutGroup.fasta")
+write.FASTA(Rep5_NoOutgroup,"C:\\Users\\HomePC\\Desktop\\Dataset1\\FifthDataSet_80NoOutGroup.fasta")
