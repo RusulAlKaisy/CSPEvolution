@@ -1,0 +1,1477 @@
+#Let us us figure out what sites of the categories belong to what region 
+
+#Define the range for the C-terminal
+
+
+#First replicate  with an outgroup. Category model H5
+
+category_model_H5_FirstDatasetWithOutgroup<-read.table("FirstDataSet_LocationswithOutGroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number<-1
+
+C_terminal<-859:1233
+
+site_categories_model_H5_FirstDataSetWithOutgroup<-apply(category_model_H5_FirstDatasetWithOutgroup, 1, function(x) which(x == max(x))) 
+
+category_sites<-which(site_categories_model_H5_FirstDataSetWithOutgroup==cat_number)
+
+proportion_in_C_terminal<-sum(category_sites%in% C_terminal)/length(category_sites)
+
+
+#Second category 
+
+cat_number<-2
+
+site_categories_model_H5_FirstDataSetWithOutgroup<-apply(category_model_H5_FirstDatasetWithOutgroup, 1, function(x) which(x == max(x))) 
+
+category_sites<-which(site_categories_model_H5_FirstDataSetWithOutgroup==cat_number)
+
+proportion_in_C_terminal<-sum(category_sites%in% C_terminal)/length(category_sites)
+                                                                                    
+
+#Third category 
+cat_number<-3
+
+site_categories_model_H5_FirstDataSetWithOutgroup<-apply(category_model_H5_FirstDatasetWithOutgroup, 1, function(x) which(x == max(x))) 
+
+category_sites<-which(site_categories_model_H5_FirstDataSetWithOutgroup==cat_number)
+
+proportion_in_C_terminal<-sum(category_sites%in% C_terminal)/length(category_sites)
+
+#Fourth category
+
+cat_number<-4
+
+site_categories_model_H5_FirstDataSetWithOutgroup<-apply(category_model_H5_FirstDatasetWithOutgroup, 1, function(x) which(x == max(x))) 
+
+category_sites<-which(site_categories_model_H5_FirstDataSetWithOutgroup==cat_number)
+
+proportion_in_C_terminal<-sum(category_sites%in% C_terminal)/length(category_sites)                                                                                                    
+
+#Fifth category
+cat_number<-5
+
+site_categories_model_H5_FirstDataSetWithOutgroup<-apply(category_model_H5_FirstDatasetWithOutgroup, 1, function(x) which(x == max(x))) 
+
+category_sites<-which(site_categories_model_H5_FirstDataSetWithOutgroup==cat_number)
+
+proportion_in_C_terminal<-sum(category_sites%in% C_terminal)/length(category_sites)   
+
+#First replicate without an outgroup 
+
+#First category 
+
+category_model_H5_FirstDataSetNoOutgroup<-read.table("FirstDataSet_LocationsNOOutGroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_First_Replicate_H5_NOOutgroup<-1
+
+
+site_categories_model_H5_FirstDataSetNOOutgroup<-apply(category_model_H5_FirstDataSetNoOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_First_Replicate_NOOutgroup_H5<-which(site_categories_model_H5_FirstDataSetNOOutgroup==cat_number_First_Replicate_H5_NOOutgroup)
+
+proportion_in_C_terminal_First_Replicate_NOOutgroup_H5<-sum(category_sites_First_Replicate_NOOutgroup_H5%in%C_terminal)/length(category_sites_First_Replicate_NOOutgroup_H5)
+
+#Second category 
+
+cat_number_First_Replicate_H5_NOOutgroup<-2
+
+site_categories_model_H5_FirstDataSetNOOutgroup<-apply(category_model_H5_FirstDataSetNoOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_First_Replicate_NOOutgroup_H5<-which(site_categories_model_H5_FirstDataSetNOOutgroup==cat_number_First_Replicate_H5_NOOutgroup)
+
+proportion_in_C_terminal_First_Replicate_NOOutgroup_H5<-sum(category_sites_First_Replicate_NOOutgroup_H5%in%C_terminal)/length(category_sites_First_Replicate_NOOutgroup_H5)
+
+#Third category 
+cat_number_First_Replicate_H5_NOOutgroup<-3
+
+site_categories_model_H5_FirstDataSetNOOutgroup<-apply(category_model_H5_FirstDataSetNoOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_First_Replicate_NOOutgroup_H5<-which(site_categories_model_H5_FirstDataSetNOOutgroup==cat_number_First_Replicate_H5_NOOutgroup)
+
+proportion_in_C_terminal_First_Replicate_NOOutgroup_H5<-sum(category_sites_First_Replicate_NOOutgroup_H5%in%C_terminal)/length(category_sites_First_Replicate_NOOutgroup_H5)
+
+#Fourth category 
+cat_number_First_Replicate_H5_NOOutgroup<-4
+
+site_categories_model_H5_FirstDataSetNOOutgroup<-apply(category_model_H5_FirstDataSetNoOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_First_Replicate_NOOutgroup_H5<-which(site_categories_model_H5_FirstDataSetNOOutgroup==cat_number_First_Replicate_H5_NOOutgroup)
+
+proportion_in_C_terminal_First_Replicate_NOOutgroup_H5<-sum(category_sites_First_Replicate_NOOutgroup_H5%in%C_terminal)/length(category_sites_First_Replicate_NOOutgroup_H5)
+
+#Fifth category 
+cat_number_First_Replicate_H5_NOOutgroup<-5
+
+site_categories_model_H5_FirstDataSetNOOutgroup<-apply(category_model_H5_FirstDataSetNoOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_First_Replicate_NOOutgroup_H5<-which(site_categories_model_H5_FirstDataSetNOOutgroup==cat_number_First_Replicate_H5_NOOutgroup)
+
+proportion_in_C_terminal_First_Replicate_NOOutgroup_H5<-sum(category_sites_First_Replicate_NOOutgroup_H5%in%C_terminal)/length(category_sites_First_Replicate_NOOutgroup_H5)
+
+
+#Second replicate with an out group. Category model H5 
+
+#First category
+
+category_model_H5_SecondDataSetwithOutgroup<-read.table("SecondDataSet_LocationswithOutGroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_H5_withOutgroup<-1
+
+
+site_categories_model_H5_SecondDataSetwithOutgroup<-apply(category_model_H5_SecondDataSetwithOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_withOutgroup_H5<-which(site_categories_model_H5_SecondDataSetwithOutgroup==cat_number_Second_Replicate_H5_withOutgroup)
+
+proportion_in_C_terminal_Second_Replicate_withOutgroup_H5<-sum(category_sites_Second_Replicate_withOutgroup_H5%in%C_terminal)/length(category_sites_Second_Replicate_withOutgroup_H5)
+
+#Second category 
+category_model_H5_SecondDataSetwithOutgroup<-read.table("SecondDataSet_LocationswithOutGroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_H5_withOutgroup<-2
+
+site_categories_model_H5_SecondDataSetwithOutgroup<-apply(category_model_H5_SecondDataSetwithOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_withOutgroup_H5<-which(site_categories_model_H5_SecondDataSetwithOutgroup==cat_number_Second_Replicate_H5_withOutgroup)
+
+proportion_in_C_terminal_Second_Replicate_withOutgroup_H5<-sum(category_sites_Second_Replicate_withOutgroup_H5%in%C_terminal)/length(category_sites_Second_Replicate_withOutgroup_H5)
+
+#Third category 
+category_model_H5_SecondDataSetwithOutgroup<-read.table("SecondDataSet_LocationswithOutGroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_H5_withOutgroup<-3
+
+
+site_categories_model_H5_SecondDataSetwithOutgroup<-apply(category_model_H5_SecondDataSetwithOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_withOutgroup_H5<-which(site_categories_model_H5_SecondDataSetwithOutgroup==cat_number_Second_Replicate_H5_withOutgroup)
+
+proportion_in_C_terminal_Second_Replicate_withOutgroup_H5<-sum(category_sites_Second_Replicate_withOutgroup_H5%in%C_terminal)/length(category_sites_Second_Replicate_withOutgroup_H5)
+
+#Fourth category
+category_model_H5_SecondDataSetwithOutgroup<-read.table("SecondDataSet_LocationswithOutGroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_H5_withOutgroup<-4
+
+site_categories_model_H5_SecondDataSetwithOutgroup<-apply(category_model_H5_SecondDataSetwithOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_withOutgroup_H5<-which(site_categories_model_H5_SecondDataSetwithOutgroup==cat_number_Second_Replicate_H5_withOutgroup)
+
+proportion_in_C_terminal_Second_Replicate_withOutgroup_H5<-sum(category_sites_Second_Replicate_withOutgroup_H5%in%C_terminal)/length(category_sites_Second_Replicate_withOutgroup_H5)
+
+#Fifth category
+category_model_H5_SecondDataSetwithOutgroup<-read.table("SecondDataSet_LocationswithOutGroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_H5_withOutgroup<-5
+
+C_terminal<-859:1233
+
+site_categories_model_H5_SecondDataSetwithOutgroup<-apply(category_model_H5_SecondDataSetwithOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_withOutgroup_H5<-which(site_categories_model_H5_SecondDataSetwithOutgroup==cat_number_Second_Replicate_H5_withOutgroup)
+
+proportion_in_C_terminal_Second_Replicate_withOutgroup_H5<-sum(category_sites_Second_Replicate_withOutgroup_H5%in%C_terminal)/length(category_sites_Second_Replicate_withOutgroup_H5)
+
+
+#Second replicate with no outgroup. Category model H5
+
+#First category 
+category_model_H5_SecondDataSetNOOutgroup<-read.table("SecondDataSet_LocationsNOOutGroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_H5_NOOutgroup<-1
+
+site_categories_model_H5_SecondDataSetNOOutgroup<-apply(category_model_H5_SecondDataSetNOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_NOOutgroup_H5<-which(site_categories_model_H5_SecondDataSetNOOutgroup==cat_number_Second_Replicate_H5_NOOutgroup)
+
+proportion_in_C_terminal_Second_Replicate_NOOutgroup_H5<-sum(category_sites_Second_Replicate_NOOutgroup_H5%in%C_terminal)/length(category_sites_Second_Replicate_NOOutgroup_H5)
+
+#Second category 
+category_model_H5_SecondDataSetNOOutgroup<-read.table("SecondDataSet_LocationsNOOutGroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_H5_NOOutgroup<-2
+
+site_categories_model_H5_SecondDataSetNOOutgroup<-apply(category_model_H5_SecondDataSetNOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_NOOutgroup_H5<-which(site_categories_model_H5_SecondDataSetNOOutgroup==cat_number_Second_Replicate_H5_NOOutgroup)
+
+proportion_in_C_terminal_Second_Replicate_NOOutgroup_H5<-sum(category_sites_Second_Replicate_NOOutgroup_H5%in%C_terminal)/length(category_sites_Second_Replicate_NOOutgroup_H5)
+
+#Third category
+category_model_H5_SecondDataSetNOOutgroup<-read.table("SecondDataSet_LocationsNOOutGroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_H5_NOOutgroup<-3
+
+site_categories_model_H5_SecondDataSetNOOutgroup<-apply(category_model_H5_SecondDataSetNOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_NOOutgroup_H5<-which(site_categories_model_H5_SecondDataSetNOOutgroup==cat_number_Second_Replicate_H5_NOOutgroup)
+
+proportion_in_C_terminal_Second_Replicate_NOOutgroup_H5<-sum(category_sites_Second_Replicate_NOOutgroup_H5%in%C_terminal)/length(category_sites_Second_Replicate_NOOutgroup_H5)
+
+#Fourth category 
+category_model_H5_SecondDataSetNOOutgroup<-read.table("SecondDataSet_LocationsNOOutGroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_H5_NOOutgroup<-4
+
+site_categories_model_H5_SecondDataSetNOOutgroup<-apply(category_model_H5_SecondDataSetNOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_NOOutgroup_H5<-which(site_categories_model_H5_SecondDataSetNOOutgroup==cat_number_Second_Replicate_H5_NOOutgroup)
+
+proportion_in_C_terminal_Second_Replicate_NOOutgroup_H5<-sum(category_sites_Second_Replicate_NOOutgroup_H5%in%C_terminal)/length(category_sites_Second_Replicate_NOOutgroup_H5)
+
+#Fifth category
+category_model_H5_SecondDataSetNOOutgroup<-read.table("SecondDataSet_LocationsNOOutGroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_H5_NOOutgroup<-5
+
+site_categories_model_H5_SecondDataSetNOOutgroup<-apply(category_model_H5_SecondDataSetNOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_NOOutgroup_H5<-which(site_categories_model_H5_SecondDataSetNOOutgroup==cat_number_Second_Replicate_H5_NOOutgroup)
+
+proportion_in_C_terminal_Second_Replicate_NOOutgroup_H5<-sum(category_sites_Second_Replicate_NOOutgroup_H5%in%C_terminal)/length(category_sites_Second_Replicate_NOOutgroup_H5)
+
+#Third replicate with outgroup. Categorymodel H5 
+
+#First category 
+category_model_H5_ThirdDataSetwithOutgroup<-read.table("ThirdDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+cat_number_Third_Replicate_H5_withOutgroup<-1
+
+
+site_categories_model_H5_ThirdDataSetwithOutgroup<-apply(category_model_H5_ThirdDataSetwithOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Third_Replicate_withOutgroup_H5<-which(site_categories_model_H5_ThirdDataSetwithOutgroup==cat_number_Third_Replicate_H5_withOutgroup)
+
+proportion_in_C_terminal_Third_Replicate_withOutgroup_H5<-sum(category_sites_Third_Replicate_withOutgroup_H5%in%C_terminal)/length(category_sites_Third_Replicate_withOutgroup_H5)
+
+#Second category 
+category_model_H5_ThirdDataSetwithOutgroup<-read.table("ThirdDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+cat_number_Third_Replicate_H5_withOutgroup<-2
+
+site_categories_model_H5_ThirdDataSetwithOutgroup<-apply(category_model_H5_ThirdDataSetwithOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Third_Replicate_withOutgroup_H5<-which(site_categories_model_H5_ThirdDataSetwithOutgroup==cat_number_Third_Replicate_H5_withOutgroup)
+
+proportion_in_C_terminal_Third_Replicate_withOutgroup_H5<-sum(category_sites_Third_Replicate_withOutgroup_H5%in%C_terminal)/length(category_sites_Third_Replicate_withOutgroup_H5)
+
+#Third category
+category_model_H5_ThirdDataSetwithOutgroup<-read.table("ThirdDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+cat_number_Third_Replicate_H5_withOutgroup<-3
+
+site_categories_model_H5_ThirdDataSetwithOutgroup<-apply(category_model_H5_ThirdDataSetwithOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Third_Replicate_withOutgroup_H5<-which(site_categories_model_H5_ThirdDataSetwithOutgroup==cat_number_Third_Replicate_H5_withOutgroup)
+
+proportion_in_C_terminal_Third_Replicate_withOutgroup_H5<-sum(category_sites_Third_Replicate_withOutgroup_H5%in%C_terminal)/length(category_sites_Third_Replicate_withOutgroup_H5)
+
+#Fourth category
+category_model_H5_ThirdDataSetwithOutgroup<-read.table("ThirdDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+cat_number_Third_Replicate_H5_withOutgroup<-4
+
+
+site_categories_model_H5_ThirdDataSetwithOutgroup<-apply(category_model_H5_ThirdDataSetwithOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Third_Replicate_withOutgroup_H5<-which(site_categories_model_H5_ThirdDataSetwithOutgroup==cat_number_Third_Replicate_H5_withOutgroup)
+
+proportion_in_C_terminal_Third_Replicate_withOutgroup_H5<-sum(category_sites_Third_Replicate_withOutgroup_H5%in%C_terminal)/length(category_sites_Third_Replicate_withOutgroup_H5)
+
+#Fifth category
+category_model_H5_ThirdDataSetwithOutgroup<-read.table("ThirdDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+cat_number_Third_Replicate_H5_withOutgroup<-5
+
+
+site_categories_model_H5_ThirdDataSetwithOutgroup<-apply(category_model_H5_ThirdDataSetwithOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Third_Replicate_withOutgroup_H5<-which(site_categories_model_H5_ThirdDataSetwithOutgroup==cat_number_Third_Replicate_H5_withOutgroup)
+
+proportion_in_C_terminal_Third_Replicate_withOutgroup_H5<-sum(category_sites_Third_Replicate_withOutgroup_H5%in%C_terminal)/length(category_sites_Third_Replicate_withOutgroup_H5)
+
+#Third replicate with no outgroup. H4 categorymodel 
+#First category
+category_model_H4_ThirdDataSetNOOutgroup<-read.table("ThirdDataSet_LocationsNOOutgroupH4GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+cat_number_Third_Replicate_H4_NOOutgroup<-1
+
+
+site_categories_model_H4_ThirdDataSetNOOutgroup<-apply(category_model_H4_ThirdDataSetNOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Third_Replicate_NOOutgroup_H4<-which(site_categories_model_H4_ThirdDataSetNOOutgroup==cat_number_Third_Replicate_H4_NOOutgroup)
+
+proportion_in_C_terminal_Third_Replicate_NOOutgroup_H4<-sum(category_sites_Third_Replicate_NOOutgroup_H4%in%C_terminal)/length(category_sites_Third_Replicate_NOOutgroup_H4)
+
+#Second category 
+category_model_H4_ThirdDataSetNOOutgroup<-read.table("ThirdDataSet_LocationsNOOutgroupH4GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+cat_number_Third_Replicate_H4_NOOutgroup<-2
+
+
+site_categories_model_H4_ThirdDataSetNOOutgroup<-apply(category_model_H4_ThirdDataSetNOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Third_Replicate_NOOutgroup_H4<-which(site_categories_model_H4_ThirdDataSetNOOutgroup==cat_number_Third_Replicate_H4_NOOutgroup)
+
+proportion_in_C_terminal_Third_Replicate_NOOutgroup_H4<-sum(category_sites_Third_Replicate_NOOutgroup_H4%in%C_terminal)/length(category_sites_Third_Replicate_NOOutgroup_H4)
+
+#Third category
+category_model_H4_ThirdDataSetNOOutgroup<-read.table("ThirdDataSet_LocationsNOOutgroupH4GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+cat_number_Third_Replicate_H4_NOOutgroup<-3
+
+site_categories_model_H4_ThirdDataSetNOOutgroup<-apply(category_model_H4_ThirdDataSetNOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Third_Replicate_NOOutgroup_H4<-which(site_categories_model_H4_ThirdDataSetNOOutgroup==cat_number_Third_Replicate_H4_NOOutgroup)
+
+proportion_in_C_terminal_Third_Replicate_NOOutgroup_H4<-sum(category_sites_Third_Replicate_NOOutgroup_H4%in%C_terminal)/length(category_sites_Third_Replicate_NOOutgroup_H4)
+
+#Fourth category
+category_model_H4_ThirdDataSetNOOutgroup<-read.table("ThirdDataSet_LocationsNOOutgroupH4GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+cat_number_Third_Replicate_H4_NOOutgroup<-4
+
+site_categories_model_H4_ThirdDataSetNOOutgroup<-apply(category_model_H4_ThirdDataSetNOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Third_Replicate_NOOutgroup_H4<-which(site_categories_model_H4_ThirdDataSetNOOutgroup==cat_number_Third_Replicate_H4_NOOutgroup)
+
+proportion_in_C_terminal_Third_Replicate_NOOutgroup_H4<-sum(category_sites_Third_Replicate_NOOutgroup_H4%in%C_terminal)/length(category_sites_Third_Replicate_NOOutgroup_H4)
+
+
+#Fourth replicate with outgroup. Categorymodel H3 
+
+#First category 
+
+category_model_H3_FourthDataSetwithOutgroup<-read.table("FourthDataSet_LocationswithOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+cat_number_Fourth_Replicate_H4_withOutgroup<-1
+
+
+site_categories_model_H3_FourthDatawithOutgroup<-apply(category_model_H3_FourthDataSetwithOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fourth_Replicate_withOutgroup_H3<-which(site_categories_model_H3_FourthDatawithOutgroup==cat_number_Fourth_Replicate_H4_withOutgroup)
+
+proportion_in_C_terminal_Fourth_Replicate_withOutgroup_H3<-sum(category_sites_Fourth_Replicate_withOutgroup_H3%in%C_terminal)/length(category_sites_Fourth_Replicate_withOutgroup_H3)
+
+#Second category 
+category_model_H3_FourthDataSetwithOutgroup<-read.table("FourthDataSet_LocationswithOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+cat_number_Fourth_Replicate_H4_withOutgroup<-2
+
+
+site_categories_model_H3_FourthDatawithOutgroup<-apply(category_model_H3_FourthDataSetwithOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fourth_Replicate_withOutgroup_H3<-which(site_categories_model_H3_FourthDatawithOutgroup==cat_number_Fourth_Replicate_H4_withOutgroup)
+
+proportion_in_C_terminal_Fourth_Replicate_withOutgroup_H3<-sum(category_sites_Fourth_Replicate_withOutgroup_H3%in%C_terminal)/length(category_sites_Fourth_Replicate_withOutgroup_H3)
+
+#Third category 
+category_model_H3_FourthDataSetwithOutgroup<-read.table("FourthDataSet_LocationswithOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+cat_number_Fourth_Replicate_H4_withOutgroup<-3
+
+site_categories_model_H3_FourthDatawithOutgroup<-apply(category_model_H3_FourthDataSetwithOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fourth_Replicate_withOutgroup_H3<-which(site_categories_model_H3_FourthDatawithOutgroup==cat_number_Fourth_Replicate_H4_withOutgroup)
+
+proportion_in_C_terminal_Fourth_Replicate_withOutgroup_H3<-sum(category_sites_Fourth_Replicate_withOutgroup_H3%in%C_terminal)/length(category_sites_Fourth_Replicate_withOutgroup_H3)
+
+#Fourth replicate with no outgroup. Categorymodel H3
+
+#First category
+
+category_model_H3_FourthDataSetNOOutgroup<-read.table("FourthDataSet_LocationsNOOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+cat_number_Fourth_Replicate_H3_NOOutgroup<-1
+
+site_categories_model_H3_FourthDataNOOutgroup<-apply(category_model_H3_FourthDataSetNOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fourth_Replicate_NOOutgroup_H3<-which(site_categories_model_H3_FourthDataNOOutgroup==cat_number_Fourth_Replicate_H3_NOOutgroup)
+
+proportion_in_C_terminal_Fourth_Replicate_NOOutgroup_H3<-sum(category_sites_Fourth_Replicate_NOOutgroup_H3%in%C_terminal)/length(category_sites_Fourth_Replicate_NOOutgroup_H3)
+
+
+#Second category 
+category_model_H3_FourthDataSetNOOutgroup<-read.table("FourthDataSet_LocationsNOOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+cat_number_Fourth_Replicate_H3_NOOutgroup<-2
+
+
+site_categories_model_H3_FourthDataNOOutgroup<-apply(category_model_H3_FourthDataSetNOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fourth_Replicate_NOOutgroup_H3<-which(site_categories_model_H3_FourthDataNOOutgroup==cat_number_Fourth_Replicate_H3_NOOutgroup)
+
+proportion_in_C_terminal_Fourth_Replicate_NOOutgroup_H3<-sum(category_sites_Fourth_Replicate_NOOutgroup_H3%in%C_terminal)/length(category_sites_Fourth_Replicate_NOOutgroup_H3)
+
+#Third category 
+category_model_H3_FourthDataSetNOOutgroup<-read.table("FourthDataSet_LocationsNOOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+cat_number_Fourth_Replicate_H3_NOOutgroup<-3
+
+
+site_categories_model_H3_FourthDataNOOutgroup<-apply(category_model_H3_FourthDataSetNOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fourth_Replicate_NOOutgroup_H3<-which(site_categories_model_H3_FourthDataNOOutgroup==cat_number_Fourth_Replicate_H3_NOOutgroup)
+
+proportion_in_C_terminal_Fourth_Replicate_NOOutgroup_H3<-sum(category_sites_Fourth_Replicate_NOOutgroup_H3%in%C_terminal)/length(category_sites_Fourth_Replicate_NOOutgroup_H3)
+
+#Fifth replicate with outgroup - H3 categorymodel
+
+#First category 
+category_model_H3_FifthDataSetwithOutgroup<-read.table("FifthDataSet_LocationswithOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fifth_Replicate_H3_withOutgroup<-1
+
+
+site_categories_model_H3_FifthDatawithOutgroup<-apply(category_model_H3_FifthDataSetwithOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fifth_Replicate_withOutgroup_H3<-which(site_categories_model_H3_FifthDatawithOutgroup==cat_number_Fifth_Replicate_H3_withOutgroup)
+
+proportion_in_C_terminal_Fifth_Replicate_withOutgroup_H3<-sum(category_sites_Fifth_Replicate_withOutgroup_H3%in%C_terminal)/length(category_sites_Fifth_Replicate_withOutgroup_H3)
+
+#Second category 
+category_model_H3_FifthDataSetwithOutgroup<-read.table("FifthDataSet_LocationswithOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fifth_Replicate_H3_withOutgroup<-2
+
+
+site_categories_model_H3_FifthDatawithOutgroup<-apply(category_model_H3_FifthDataSetwithOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fifth_Replicate_withOutgroup_H3<-which(site_categories_model_H3_FifthDatawithOutgroup==cat_number_Fifth_Replicate_H3_withOutgroup)
+
+proportion_in_C_terminal_Fifth_Replicate_withOutgroup_H3<-sum(category_sites_Fifth_Replicate_withOutgroup_H3%in%C_terminal)/length(category_sites_Fifth_Replicate_withOutgroup_H3)
+
+#Third category 
+category_model_H3_FifthDataSetwithOutgroup<-read.table("FifthDataSet_LocationswithOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fifth_Replicate_H3_withOutgroup<-3
+
+
+site_categories_model_H3_FifthDatawithOutgroup<-apply(category_model_H3_FifthDataSetwithOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fifth_Replicate_withOutgroup_H3<-which(site_categories_model_H3_FifthDatawithOutgroup==cat_number_Fifth_Replicate_H3_withOutgroup)
+
+proportion_in_C_terminal_Fifth_Replicate_withOutgroup_H3<-sum(category_sites_Fifth_Replicate_withOutgroup_H3%in%C_terminal)/length(category_sites_Fifth_Replicate_withOutgroup_H3)
+
+
+#Fifth replicate with no outgroup. H3 category model 
+
+#First category 
+category_model_H3_FifthDataSetNOOutgroup<-read.table("FifthDataSet_LocationsNOOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fifth_Replicate_H3_NOOutgroup<-1
+
+site_categories_model_H3_FifthDataNOOutgroup<-apply(category_model_H3_FifthDataSetNOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fifth_Replicate_NOOutgroup_H3<-which(site_categories_model_H3_FifthDataNOOutgroup==cat_number_Fifth_Replicate_H3_NOOutgroup)
+
+proportion_in_C_terminal_Fifth_Replicate_NOOutgroup_H3<-sum(category_sites_Fifth_Replicate_NOOutgroup_H3%in%C_terminal)/length(category_sites_Fifth_Replicate_NOOutgroup_H3)
+
+#Second category 
+category_model_H3_FifthDataSetNOOutgroup<-read.table("FifthDataSet_LocationsNOOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fifth_Replicate_H3_NOOutgroup<-2
+
+
+site_categories_model_H3_FifthDataNOOutgroup<-apply(category_model_H3_FifthDataSetNOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fifth_Replicate_NOOutgroup_H3<-which(site_categories_model_H3_FifthDataNOOutgroup==cat_number_Fifth_Replicate_H3_NOOutgroup)
+
+proportion_in_C_terminal_Fifth_Replicate_NOOutgroup_H3<-sum(category_sites_Fifth_Replicate_NOOutgroup_H3%in%C_terminal)/length(category_sites_Fifth_Replicate_NOOutgroup_H3)
+
+#Third category
+category_model_H3_FifthDataSetNOOutgroup<-read.table("FifthDataSet_LocationsNOOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fifth_Replicate_H3_NOOutgroup<-3
+
+
+site_categories_model_H3_FifthDataNOOutgroup<-apply(category_model_H3_FifthDataSetNOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fifth_Replicate_NOOutgroup_H3<-which(site_categories_model_H3_FifthDataNOOutgroup==cat_number_Fifth_Replicate_H3_NOOutgroup)
+
+proportion_in_C_terminal_Fifth_Replicate_NOOutgroup_H3<-sum(category_sites_Fifth_Replicate_NOOutgroup_H3%in%C_terminal)/length(category_sites_Fifth_Replicate_NOOutgroup_H3)
+
+#Now we will do it for the central repeat region
+
+Central_repeat_region<-355:858
+
+#First replicate with an outgroup. Categorymodel H5
+
+#First category
+Central_repeat_First_Replicate_withOutgroup_H5<-read.table("FirstDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_First_Replicate_Central_H5_withoutgroup<-1
+
+site_categories_model_H5_FirstDatawithOutgroup_Central<-apply(Central_repeat_First_Replicate_withOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_First_Replicate_withOutgroup_Central_H5<-which(site_categories_model_H5_FirstDatawithOutgroup_Central==cat_number_First_Replicate_Central_H5_withoutgroup)
+
+proportion_in_Central_repeat_region_H5_withoutgroup<-sum(category_sites_First_Replicate_withOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_First_Replicate_withOutgroup_Central_H5)
+
+
+#Second category 
+Central_repeat_First_Replicate_withOutgroup_H5<-read.table("FirstDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_First_Replicate_Central_H5_withoutgroup<-2
+
+site_categories_model_H5_FirstDatawithOutgroup_Central<-apply(Central_repeat_First_Replicate_withOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_First_Replicate_withOutgroup_Central_H5<-which(site_categories_model_H5_FirstDatawithOutgroup_Central==cat_number_First_Replicate_Central_H5_withoutgroup)
+
+proportion_in_Central_repeat_region_H5_withoutgroup<-sum(category_sites_First_Replicate_withOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_First_Replicate_withOutgroup_Central_H5)
+
+#Third category
+Central_repeat_First_Replicate_withOutgroup_H5<-read.table("FirstDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_First_Replicate_Central_H5_withoutgroup<-3
+
+site_categories_model_H5_FirstDatawithOutgroup_Central<-apply(Central_repeat_First_Replicate_withOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_First_Replicate_withOutgroup_Central_H5<-which(site_categories_model_H5_FirstDatawithOutgroup_Central==cat_number_First_Replicate_Central_H5_withoutgroup)
+
+proportion_in_Central_repeat_region_H5_withoutgroup<-sum(category_sites_First_Replicate_withOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_First_Replicate_withOutgroup_Central_H5)
+
+#Fourth category
+Central_repeat_First_Replicate_withOutgroup_H5<-read.table("FirstDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_First_Replicate_Central_H5_withoutgroup<-4
+
+site_categories_model_H5_FirstDatawithOutgroup_Central<-apply(Central_repeat_First_Replicate_withOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_First_Replicate_withOutgroup_Central_H5<-which(site_categories_model_H5_FirstDatawithOutgroup_Central==cat_number_First_Replicate_Central_H5_withoutgroup)
+
+proportion_in_Central_repeat_region_H5_withoutgroup<-sum(category_sites_First_Replicate_withOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_First_Replicate_withOutgroup_Central_H5)
+
+#Fifth category 
+Central_repeat_First_Replicate_withOutgroup_H5<-read.table("FirstDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_First_Replicate_Central_H5_withoutgroup<-5
+
+site_categories_model_H5_FirstDatawithOutgroup_Central<-apply(Central_repeat_First_Replicate_withOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_First_Replicate_withOutgroup_Central_H5<-which(site_categories_model_H5_FirstDatawithOutgroup_Central==cat_number_First_Replicate_Central_H5_withoutgroup)
+
+proportion_in_Central_repeat_region_H5_withoutgroup<-sum(category_sites_First_Replicate_withOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_First_Replicate_withOutgroup_Central_H5)
+
+
+#First replicate with no outgroup 
+
+#First category
+Central_repeat_First_Replicate_NOOutgroup_H5<-read.table("FirstDataSet_LocationsNOOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_First_Replicate_Central_H5_NOOutgroup<-1
+
+site_categories_model_H5_FirstDataNOOutgroup_Central<-apply(Central_repeat_First_Replicate_NOOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_First_Replicate_NOOutgroup_Central_H5<-which(site_categories_model_H5_FirstDataNOOutgroup_Central==cat_number_First_Replicate_Central_H5_NOOutgroup)
+
+proportion_in_Central_repeat_region_H5_without<-sum(category_sites_First_Replicate_NOOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_First_Replicate_NOOutgroup_Central_H5)
+
+#Second category 
+Central_repeat_First_Replicate_NOOutgroup_H5<-read.table("FirstDataSet_LocationsNOOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_First_Replicate_Central_H5_NOOutgroup<-2
+
+site_categories_model_H5_FirstDataNOOutgroup_Central<-apply(Central_repeat_First_Replicate_NOOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_First_Replicate_NOOutgroup_Central_H5<-which(site_categories_model_H5_FirstDataNOOutgroup_Central==cat_number_First_Replicate_Central_H5_NOOutgroup)
+
+proportion_in_Central_repeat_region_H5_without<-sum(category_sites_First_Replicate_NOOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_First_Replicate_NOOutgroup_Central_H5)
+
+#Third category 
+Central_repeat_First_Replicate_NOOutgroup_H5<-read.table("FirstDataSet_LocationsNOOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_First_Replicate_Central_H5_NOOutgroup<-3
+
+site_categories_model_H5_FirstDataNOOutgroup_Central<-apply(Central_repeat_First_Replicate_NOOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_First_Replicate_NOOutgroup_Central_H5<-which(site_categories_model_H5_FirstDataNOOutgroup_Central==cat_number_First_Replicate_Central_H5_NOOutgroup)
+
+proportion_in_Central_repeat_region_H5_without<-sum(category_sites_First_Replicate_NOOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_First_Replicate_NOOutgroup_Central_H5)
+
+#Fourth category 
+Central_repeat_First_Replicate_NOOutgroup_H5<-read.table("FirstDataSet_LocationsNOOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_First_Replicate_Central_H5_NOOutgroup<-4
+
+site_categories_model_H5_FirstDataNOOutgroup_Central<-apply(Central_repeat_First_Replicate_NOOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_First_Replicate_NOOutgroup_Central_H5<-which(site_categories_model_H5_FirstDataNOOutgroup_Central==cat_number_First_Replicate_Central_H5_NOOutgroup)
+
+proportion_in_Central_repeat_region_H5_without<-sum(category_sites_First_Replicate_NOOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_First_Replicate_NOOutgroup_Central_H5)
+
+#Fifth category 
+Central_repeat_First_Replicate_NOOutgroup_H5<-read.table("FirstDataSet_LocationsNOOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_First_Replicate_Central_H5_NOOutgroup<-5
+
+site_categories_model_H5_FirstDataNOOutgroup_Central<-apply(Central_repeat_First_Replicate_NOOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_First_Replicate_NOOutgroup_Central_H5<-which(site_categories_model_H5_FirstDataNOOutgroup_Central==cat_number_First_Replicate_Central_H5_NOOutgroup)
+
+proportion_in_Central_repeat_region_H5_without<-sum(category_sites_First_Replicate_NOOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_First_Replicate_NOOutgroup_Central_H5)
+
+
+#Second replicate with outgroup. Category model H5 
+
+#First category 
+Central_repeat_Second_Replicate_withOutgroup_H5<-read.table("SecondDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_Central_H5_withOutgroup<-1
+
+site_categories_model_H5_SecondDatawithOutgroup_Central<-apply(Central_repeat_Second_Replicate_withOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_withOUtgroup_Central_H5<-which(site_categories_model_H5_SecondDatawithOutgroup_Central==cat_number_Second_Replicate_Central_H5_withOutgroup)
+
+proportion_in_Central_repeat_region_H5_NOOutgroup<-sum(category_sites_Second_Replicate_withOUtgroup_Central_H5%in%Central_repeat_region)/length(category_sites_Second_Replicate_withOUtgroup_Central_H5)
+
+#Second category 
+Central_repeat_Second_Replicate_withOutgroup_H5<-read.table("SecondDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_Central_H5_withOutgroup<-2
+
+site_categories_model_H5_SecondDatawithOutgroup_Central<-apply(Central_repeat_Second_Replicate_withOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_withOUtgroup_Central_H5<-which(site_categories_model_H5_SecondDatawithOutgroup_Central==cat_number_Second_Replicate_Central_H5_withOutgroup)
+
+proportion_in_Central_repeat_region_H5_NOOutgroup<-sum(category_sites_Second_Replicate_withOUtgroup_Central_H5%in%Central_repeat_region)/length(category_sites_Second_Replicate_withOUtgroup_Central_H5)
+
+#Third category 
+Central_repeat_Second_Replicate_withOutgroup_H5<-read.table("SecondDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_Central_H5_withOutgroup<-3
+
+site_categories_model_H5_SecondDatawithOutgroup_Central<-apply(Central_repeat_Second_Replicate_withOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_withOUtgroup_Central_H5<-which(site_categories_model_H5_SecondDatawithOutgroup_Central==cat_number_Second_Replicate_Central_H5_withOutgroup)
+
+proportion_in_Central_repeat_region_H5_NOOutgroup<-sum(category_sites_Second_Replicate_withOUtgroup_Central_H5%in%Central_repeat_region)/length(category_sites_Second_Replicate_withOUtgroup_Central_H5)
+
+#Fourth category 
+Central_repeat_Second_Replicate_withOutgroup_H5<-read.table("SecondDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_Central_H5_withOutgroup<-4
+
+site_categories_model_H5_SecondDatawithOutgroup_Central<-apply(Central_repeat_Second_Replicate_withOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_withOUtgroup_Central_H5<-which(site_categories_model_H5_SecondDatawithOutgroup_Central==cat_number_Second_Replicate_Central_H5_withOutgroup)
+
+proportion_in_Central_repeat_region_H5_NOOutgroup<-sum(category_sites_Second_Replicate_withOUtgroup_Central_H5%in%Central_repeat_region)/length(category_sites_Second_Replicate_withOUtgroup_Central_H5)
+
+#Fifth category
+Central_repeat_Second_Replicate_withOutgroup_H5<-read.table("SecondDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_Central_H5_withOutgroup<-5
+
+site_categories_model_H5_SecondDatawithOutgroup_Central<-apply(Central_repeat_Second_Replicate_withOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_withOUtgroup_Central_H5<-which(site_categories_model_H5_SecondDatawithOutgroup_Central==cat_number_Second_Replicate_Central_H5_withOutgroup)
+
+proportion_in_Central_repeat_region_H5_NOOutgroup<-sum(category_sites_Second_Replicate_withOUtgroup_Central_H5%in%Central_repeat_region)/length(category_sites_Second_Replicate_withOUtgroup_Central_H5)
+
+
+#Second replicate with no outgroup. Category model H5
+
+#First category 
+Central_repeat_Second_Replicate_NOOutgroup_H5<-read.table("SecondDataSet_LocationsNOOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_Central_H5_NOOutgroup<-1
+
+site_categories_model_H5_SecondDataNOOutgroup<-apply(Central_repeat_Second_Replicate_NOOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_NOOutgroup_Central_H5<-which(site_categories_model_H5_SecondDataNOOutgroup==cat_number_Second_Replicate_Central_H5_NOOutgroup)
+
+proportion_in_Central_repeat_region_H5_NOOutgroup<-sum(category_sites_Second_Replicate_NOOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_Second_Replicate_NOOutgroup_Central_H5)
+
+#Second category
+Central_repeat_Second_Replicate_NOOutgroup_H5<-read.table("SecondDataSet_LocationsNOOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_Central_H5_NOOutgroup<-2
+
+site_categories_model_H5_SecondDataNOOutgroup<-apply(Central_repeat_Second_Replicate_NOOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_NOOutgroup_Central_H5<-which(site_categories_model_H5_SecondDataNOOutgroup==cat_number_Second_Replicate_Central_H5_NOOutgroup)
+
+proportion_in_Central_repeat_region_H5_NOOutgroup<-sum(category_sites_Second_Replicate_NOOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_Second_Replicate_NOOutgroup_Central_H5)
+
+#Third category
+Central_repeat_Second_Replicate_NOOutgroup_H5<-read.table("SecondDataSet_LocationsNOOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_Central_H5_NOOutgroup<-3
+
+site_categories_model_H5_SecondDataNOOutgroup<-apply(Central_repeat_Second_Replicate_NOOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_NOOutgroup_Central_H5<-which(site_categories_model_H5_SecondDataNOOutgroup==cat_number_Second_Replicate_Central_H5_NOOutgroup)
+
+proportion_in_Central_repeat_region_H5_NOOutgroup<-sum(category_sites_Second_Replicate_NOOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_Second_Replicate_NOOutgroup_Central_H5)
+
+#Fourth category
+Central_repeat_Second_Replicate_NOOutgroup_H5<-read.table("SecondDataSet_LocationsNOOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_Central_H5_NOOutgroup<-4
+
+site_categories_model_H5_SecondDataNOOutgroup<-apply(Central_repeat_Second_Replicate_NOOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_NOOutgroup_Central_H5<-which(site_categories_model_H5_SecondDataNOOutgroup==cat_number_Second_Replicate_Central_H5_NOOutgroup)
+
+proportion_in_Central_repeat_region_H5_NOOutgroup<-sum(category_sites_Second_Replicate_NOOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_Second_Replicate_NOOutgroup_Central_H5)
+
+#Fifth category
+Central_repeat_Second_Replicate_NOOutgroup_H5<-read.table("SecondDataSet_LocationsNOOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_Central_H5_NOOutgroup<-5
+
+site_categories_model_H5_SecondDataNOOutgroup<-apply(Central_repeat_Second_Replicate_NOOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_NOOutgroup_Central_H5<-which(site_categories_model_H5_SecondDataNOOutgroup==cat_number_Second_Replicate_Central_H5_NOOutgroup)
+
+proportion_in_Central_repeat_region_H5_NOOutgroup<-sum(category_sites_Second_Replicate_NOOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_Second_Replicate_NOOutgroup_Central_H5)
+
+#Third replicate with outgroup. Category model H5
+
+#First category
+
+Central_repeat_Third_Replicate_withOutgroup_H5<-read.table("ThirdDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Third_Replicate_Central_H5_withOutgroup_H5<-1
+
+site_categories_model_H5_ThirdDatawithOutgroup<-apply(Central_repeat_Third_Replicate_withOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_Third_replicate_withOutgroup_Central_H5<-which(site_categories_model_H5_ThirdDatawithOutgroup==cat_number_Third_Replicate_Central_H5_withOutgroup_H5)
+
+proportion_in_Central_repeat_region_H5_withOutgroup<-sum(category_sites_Third_replicate_withOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_Third_replicate_withOutgroup_Central_H5)
+
+
+#Second category 
+Central_repeat_Third_Replicate_withOutgroup_H5<-read.table("ThirdDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Third_Replicate_Central_H5_withOutgroup_H5<-2
+
+site_categories_model_H5_ThirdDatawithOutgroup<-apply(Central_repeat_Third_Replicate_withOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_Third_replicate_withOutgroup_Central_H5<-which(site_categories_model_H5_ThirdDatawithOutgroup==cat_number_Third_Replicate_Central_H5_withOutgroup_H5)
+
+proportion_in_Central_repeat_region_H5_withOutgroup<-sum(category_sites_Third_replicate_withOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_Third_replicate_withOutgroup_Central_H5)
+
+#Third category 
+Central_repeat_Third_Replicate_withOutgroup_H5<-read.table("ThirdDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Third_Replicate_Central_H5_withOutgroup_H5<-3
+
+site_categories_model_H5_ThirdDatawithOutgroup<-apply(Central_repeat_Third_Replicate_withOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_Third_replicate_withOutgroup_Central_H5<-which(site_categories_model_H5_ThirdDatawithOutgroup==cat_number_Third_Replicate_Central_H5_withOutgroup_H5)
+
+proportion_in_Central_repeat_region_H5_withOutgroup<-sum(category_sites_Third_replicate_withOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_Third_replicate_withOutgroup_Central_H5)
+
+#Fourth category 
+Central_repeat_Third_Replicate_withOutgroup_H5<-read.table("ThirdDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Third_Replicate_Central_H5_withOutgroup_H5<-4
+
+site_categories_model_H5_ThirdDatawithOutgroup<-apply(Central_repeat_Third_Replicate_withOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_Third_replicate_withOutgroup_Central_H5<-which(site_categories_model_H5_ThirdDatawithOutgroup==cat_number_Third_Replicate_Central_H5_withOutgroup_H5)
+
+proportion_in_Central_repeat_region_H5_withOutgroup<-sum(category_sites_Third_replicate_withOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_Third_replicate_withOutgroup_Central_H5)
+
+#Fifth category
+Central_repeat_Third_Replicate_withOutgroup_H5<-read.table("ThirdDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Third_Replicate_Central_H5_withOutgroup_H5<-5
+
+site_categories_model_H5_ThirdDatawithOutgroup<-apply(Central_repeat_Third_Replicate_withOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_Third_replicate_withOutgroup_Central_H5<-which(site_categories_model_H5_ThirdDatawithOutgroup==cat_number_Third_Replicate_Central_H5_withOutgroup_H5)
+
+proportion_in_Central_repeat_region_H5_withOutgroup<-sum(category_sites_Third_replicate_withOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_Third_replicate_withOutgroup_Central_H5)
+
+#Third replicate with no outgroup. Category model H4 
+
+#First category
+
+Central_repeat_Third_Replicate_NOOutgroup_H4<-read.table("ThirdDataSet_LocationsNOOutgroupH4GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Third_Replicate_Central_H4_NOOutgroup_H4<-1
+
+site_categories_model_H5_ThirdDataNOOutgroup<-apply(Central_repeat_Third_Replicate_NOOutgroup_H4,1,function(x)which(x==max(x)))
+
+category_sites_Third_replicate_NOOutgroup_Central_H5<-which(site_categories_model_H5_ThirdDataNOOutgroup==cat_number_Third_Replicate_Central_H4_NOOutgroup_H4)
+
+proportion_in_Central_repeat_region_H4_NOOutgroup<-sum(category_sites_Third_replicate_NOOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_Third_replicate_NOOutgroup_Central_H5)
+
+#Second category 
+Central_repeat_Third_Replicate_NOOutgroup_H4<-read.table("ThirdDataSet_LocationsNOOutgroupH4GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Third_Replicate_Central_H4_NOOutgroup_H4<-2
+
+site_categories_model_H5_ThirdDataNOOutgroup<-apply(Central_repeat_Third_Replicate_NOOutgroup_H4,1,function(x)which(x==max(x)))
+
+category_sites_Third_replicate_NOOutgroup_Central_H5<-which(site_categories_model_H5_ThirdDataNOOutgroup==cat_number_Third_Replicate_Central_H4_NOOutgroup_H4)
+
+proportion_in_Central_repeat_region_H4_NOOutgroup<-sum(category_sites_Third_replicate_NOOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_Third_replicate_NOOutgroup_Central_H5)
+
+#Third category 
+Central_repeat_Third_Replicate_NOOutgroup_H4<-read.table("ThirdDataSet_LocationsNOOutgroupH4GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Third_Replicate_Central_H4_NOOutgroup_H4<-3
+
+site_categories_model_H5_ThirdDataNOOutgroup<-apply(Central_repeat_Third_Replicate_NOOutgroup_H4,1,function(x)which(x==max(x)))
+
+category_sites_Third_replicate_NOOutgroup_Central_H5<-which(site_categories_model_H5_ThirdDataNOOutgroup==cat_number_Third_Replicate_Central_H4_NOOutgroup_H4)
+
+proportion_in_Central_repeat_region_H4_NOOutgroup<-sum(category_sites_Third_replicate_NOOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_Third_replicate_NOOutgroup_Central_H5)
+
+#Fourth category
+Central_repeat_Third_Replicate_NOOutgroup_H4<-read.table("ThirdDataSet_LocationsNOOutgroupH4GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Third_Replicate_Central_H4_NOOutgroup_H4<-4
+
+site_categories_model_H5_ThirdDataNOOutgroup<-apply(Central_repeat_Third_Replicate_NOOutgroup_H4,1,function(x)which(x==max(x)))
+
+category_sites_Third_replicate_NOOutgroup_Central_H5<-which(site_categories_model_H5_ThirdDataNOOutgroup==cat_number_Third_Replicate_Central_H4_NOOutgroup_H4)
+
+proportion_in_Central_repeat_region_H4_NOOutgroup<-sum(category_sites_Third_replicate_NOOutgroup_Central_H5%in%Central_repeat_region)/length(category_sites_Third_replicate_NOOutgroup_Central_H5)
+
+#Fourth replicate with out group. Categorymodel H3 
+
+#First category
+
+Central_repeat_Fourth_Replicate_withOutgroup_H3<-read.table("FourthDataSet_LocationswithOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fourth_Replicate_Central_H3_withOutgroup_H3<-1
+
+site_categories_model_H3_FourthDatawithOutgroup_Central<-apply(Central_repeat_Fourth_Replicate_withOutgroup_H3,1,function(x)which(x==max(x)))
+
+category_sites_Fourth_Replicate_withOutgroup_Central_H3<-which(site_categories_model_H3_FourthDatawithOutgroup_Central==cat_number_Fourth_Replicate_Central_H3_withOutgroup_H3)
+
+proportion_in_Central_repeat_region_H3_withOutgroup<-sum(category_sites_Fourth_Replicate_withOutgroup_Central_H3%in%Central_repeat_region)/length(category_sites_Fourth_Replicate_withOutgroup_Central_H3)
+
+#Second category
+Central_repeat_Fourth_Replicate_withOutgroup_H3<-read.table("FourthDataSet_LocationswithOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fourth_Replicate_Central_H3_withOutgroup_H3<-2
+
+site_categories_model_H3_FourthDatawithOutgroup_Central<-apply(Central_repeat_Fourth_Replicate_withOutgroup_H3,1,function(x)which(x==max(x)))
+
+category_sites_Fourth_Replicate_withOutgroup_Central_H3<-which(site_categories_model_H3_FourthDatawithOutgroup_Central==cat_number_Fourth_Replicate_Central_H3_withOutgroup_H3)
+
+proportion_in_Central_repeat_region_H3_withOutgroup<-sum(category_sites_Fourth_Replicate_withOutgroup_Central_H3%in%Central_repeat_region)/length(category_sites_Fourth_Replicate_withOutgroup_Central_H3)
+
+#Third category 
+Central_repeat_Fourth_Replicate_withOutgroup_H3<-read.table("FourthDataSet_LocationswithOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fourth_Replicate_Central_H3_withOutgroup_H3<-3
+
+site_categories_model_H3_FourthDatawithOutgroup_Central<-apply(Central_repeat_Fourth_Replicate_withOutgroup_H3,1,function(x)which(x==max(x)))
+
+category_sites_Fourth_Replicate_withOutgroup_Central_H3<-which(site_categories_model_H3_FourthDatawithOutgroup_Central==cat_number_Fourth_Replicate_Central_H3_withOutgroup_H3)
+
+proportion_in_Central_repeat_region_H3_withOutgroup<-sum(category_sites_Fourth_Replicate_withOutgroup_Central_H3%in%Central_repeat_region)/length(category_sites_Fourth_Replicate_withOutgroup_Central_H3)
+
+#Fourth replicate with no outgroup. Category model H3
+
+#First category
+
+Central_repeat_Fourth_Replicate_NOOutgroup_H3<-read.table("FourthDataSet_LocationsNOOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fourth_Replicate_Central_H3_NOOutgroup<-1
+
+site_categories_model_H3_FourtDataNOOutgroup_Central<-apply(Central_repeat_Fourth_Replicate_NOOutgroup_H3,1,function(x)which(x==max(x)))
+
+category_sites_Fourth_Replicate_NOOutgroup_Central_H3<-which(site_categories_model_H3_FourtDataNOOutgroup_Central==cat_number_Fourth_Replicate_Central_H3_NOOutgroup)
+
+proportion_in_Central_repeat_region_H3_NOOutgroup<-sum(category_sites_Fourth_Replicate_NOOutgroup_Central_H3%in%Central_repeat_region)/length(category_sites_Fourth_Replicate_NOOutgroup_Central_H3)
+
+
+#Second category
+Central_repeat_Fourth_Replicate_NOOutgroup_H3<-read.table("FourthDataSet_LocationsNOOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fourth_Replicate_Central_H3_NOOutgroup<-2
+
+site_categories_model_H3_FourtDataNOOutgroup_Central<-apply(Central_repeat_Fourth_Replicate_NOOutgroup_H3,1,function(x)which(x==max(x)))
+
+category_sites_Fourth_Replicate_NOOutgroup_Central_H3<-which(site_categories_model_H3_FourtDataNOOutgroup_Central==cat_number_Fourth_Replicate_Central_H3_NOOutgroup)
+
+proportion_in_Central_repeat_region_H3_NOOutgroup<-sum(category_sites_Fourth_Replicate_NOOutgroup_Central_H3%in%Central_repeat_region)/length(category_sites_Fourth_Replicate_NOOutgroup_Central_H3)
+
+#Third category
+Central_repeat_Fourth_Replicate_NOOutgroup_H3<-read.table("FourthDataSet_LocationsNOOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fourth_Replicate_Central_H3_NOOutgroup<-3
+
+site_categories_model_H3_FourtDataNOOutgroup_Central<-apply(Central_repeat_Fourth_Replicate_NOOutgroup_H3,1,function(x)which(x==max(x)))
+
+category_sites_Fourth_Replicate_NOOutgroup_Central_H3<-which(site_categories_model_H3_FourtDataNOOutgroup_Central==cat_number_Fourth_Replicate_Central_H3_NOOutgroup)
+
+proportion_in_Central_repeat_region_H3_NOOutgroup<-sum(category_sites_Fourth_Replicate_NOOutgroup_Central_H3%in%Central_repeat_region)/length(category_sites_Fourth_Replicate_NOOutgroup_Central_H3)
+
+#Fifth replicate with outgroup. Categorymodel H3
+
+#First category
+
+Central_repeat_Fifth_Replicate_withOutgroup_H3<-read.table("FifthDataSet_LocationswithOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fifth_Replicate_Central_H3_withOutgroup<-1
+
+site_categories_model_H3_FifthDatawithOutgroup_Central<-apply(Central_repeat_Fifth_Replicate_withOutgroup_H3,1,function(x)which(x==max(x)))
+
+category_sites_Fifth_Replicate_withOutgroup_Central_H3<-which(site_categories_model_H3_FifthDatawithOutgroup_Central==cat_number_Fifth_Replicate_Central_H3_withOutgroup)
+
+proportion_in_Central_repeat_region_H3_withOutgroup<-sum(category_sites_Fifth_Replicate_withOutgroup_Central_H3%in%Central_repeat_region)/length(category_sites_Fifth_Replicate_withOutgroup_Central_H3)
+
+#Second category 
+Central_repeat_Fifth_Replicate_withOutgroup_H3<-read.table("FifthDataSet_LocationswithOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fifth_Replicate_Central_H3_withOutgroup<-2
+
+site_categories_model_H3_FifthDatawithOutgroup_Central<-apply(Central_repeat_Fifth_Replicate_withOutgroup_H3,1,function(x)which(x==max(x)))
+
+category_sites_Fifth_Replicate_withOutgroup_Central_H3<-which(site_categories_model_H3_FifthDatawithOutgroup_Central==cat_number_Fifth_Replicate_Central_H3_withOutgroup)
+
+proportion_in_Central_repeat_region_H3_withOutgroup<-sum(category_sites_Fifth_Replicate_withOutgroup_Central_H3%in%Central_repeat_region)/length(category_sites_Fifth_Replicate_withOutgroup_Central_H3)
+
+#Third category
+Central_repeat_Fifth_Replicate_withOutgroup_H3<-read.table("FifthDataSet_LocationswithOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fifth_Replicate_Central_H3_NOOutgroup<-3
+
+site_categories_model_H3_FifthDatawithOutgroup_Central<-apply(Central_repeat_Fifth_Replicate_withOutgroup_H3,1,function(x)which(x==max(x)))
+
+category_sites_Fifth_Replicate_withOutgroup_Central_H3<-which(site_categories_model_H3_FifthDatawithOutgroup_Central==cat_number_Fifth_Replicate_Central_H3_NOOutgroup)
+
+proportion_in_Central_repeat_region_H3_withOutgroup<-sum(category_sites_Fifth_Replicate_withOutgroup_Central_H3%in%Central_repeat_region)/length(category_sites_Fifth_Replicate_withOutgroup_Central_H3)
+
+
+#Fifth replicate with no out group. Category model H3 
+
+#First category 
+
+Central_repeat_Fifth_Replicate_NOOutgroup_H3<-read.table("FifthDataSet_LocationsNOOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fifth_Replicate_Central_H3_NOOutgroup<-1
+
+site_categories_model_H3_FifthDataNOOutgroup_Central<-apply(Central_repeat_Fifth_Replicate_NOOutgroup_H3,1,function(x)which(x==max(x)))
+
+category_sites_Fifth_Replicate_NOOutgroup_Central_H3<-which(site_categories_model_H3_FifthDataNOOutgroup_Central==cat_number_Fifth_Replicate_Central_H3_NOOutgroup)
+
+proportion_in_Central_repeat_region_H3_NOOutgroup<-sum(category_sites_Fifth_Replicate_NOOutgroup_Central_H3%in%Central_repeat_region)/length(category_sites_Fifth_Replicate_NOOutgroup_Central_H3)
+
+#Second category
+Central_repeat_Fifth_Replicate_NOOutgroup_H3<-read.table("FifthDataSet_LocationsNOOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fifth_Replicate_Central_H3_NOOutgroup<-2
+
+site_categories_model_H3_FifthDataNOOutgroup_Central<-apply(Central_repeat_Fifth_Replicate_withOutgroup_H3,1,function(x)which(x==max(x)))
+
+category_sites_Fifth_Replicate_NOOutgroup_Central_H3<-which(site_categories_model_H3_FifthDataNOOutgroup_Central==cat_number_Fifth_Replicate_Central_H3_NOOutgroup)
+
+proportion_in_Central_repeat_region_H3_NOOutgroup<-sum(category_sites_Fifth_Replicate_NOOutgroup_Central_H3%in%Central_repeat_region)/length(category_sites_Fifth_Replicate_NOOutgroup_Central_H3)
+
+
+
+#Third category 
+Central_repeat_Fifth_Replicate_NOOutgroup_H3<-read.table("FifthDataSet_LocationsNOOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fifth_Replicate_Central_H3_NOOutgroup<-3
+
+site_categories_model_H3_FifthDataNOOutgroup_Central<-apply(Central_repeat_Fifth_Replicate_withOutgroup_H3,1,function(x)which(x==max(x)))
+
+category_sites_Fifth_Replicate_NOOutgroup_Central_H3<-which(site_categories_model_H3_FourtDataNOOutgroup_Central==cat_number_Fifth_Replicate_Central_H3_NOOutgroup)
+
+proportion_in_Central_repeat_region_H3_NOOutgroup<-sum(category_sites_Fifth_Replicate_NOOutgroup_Central_H3%in%Central_repeat_region)/length(category_sites_Fifth_Replicate_NOOutgroup_Central_H3)
+
+
+#Let's calculate the proportion of sites of the different categories that belong to the N-terminal 
+
+#Let's define the N-terminal at first
+N_terminal<-1:354
+
+#First replicate with outgroup. Categorymodel H5 
+
+#First category 
+
+N_terminal_First_Replicate_withOutgroup_H5<-read.table("FirstDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_First_Replicate_N_terminal_H5_withOutgroup<-1
+
+site_categories_model_H5_FirstDatawitOutgroup_N_terminal<-apply(N_terminal_First_Replicate_withOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_First_Repluicate_withOutgroup_N_terminal_H5<-which(site_categories_model_H5_FirstDatawitOutgroup_N_terminal==cat_number_First_Replicate_N_terminal_H5_withOutgroup)
+
+proportion_in_N_terminal_H5_withOutgroup<-sum(category_sites_First_Repluicate_withOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_First_Repluicate_withOutgroup_N_terminal_H5)
+
+#Second category 
+N_terminal_First_Replicate_withOutgroup_H5<-read.table("FirstDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_First_Replicate_N_terminal_H5_withOutgroup<-2
+
+site_categories_model_H5_FirstDatawitOutgroup_N_terminal<-apply(N_terminal_First_Replicate_withOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_First_Repluicate_withOutgroup_N_terminal_H5<-which(site_categories_model_H5_FirstDatawitOutgroup_N_terminal==cat_number_First_Replicate_N_terminal_H5_withOutgroup)
+
+proportion_in_N_terminal_H5_withOutgroup<-sum(category_sites_First_Repluicate_withOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_First_Repluicate_withOutgroup_N_terminal_H5)
+
+#Third category 
+N_terminal_First_Replicate_withOutgroup_H5<-read.table("FirstDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_First_Replicate_N_terminal_H5_withOutgroup<-3
+
+site_categories_model_H5_FirstDatawitOutgroup_N_terminal<-apply(N_terminal_First_Replicate_withOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_First_Repluicate_withOutgroup_N_terminal_H5<-which(site_categories_model_H5_FirstDatawitOutgroup_N_terminal==cat_number_First_Replicate_N_terminal_H5_withOutgroup)
+
+proportion_in_N_terminal_H5_withOutgroup<-sum(category_sites_First_Repluicate_withOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_First_Repluicate_withOutgroup_N_terminal_H5)
+
+#Fourth category 
+N_terminal_First_Replicate_withOutgroup_H5<-read.table("FirstDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_First_Replicate_N_terminal_H5_withOutgroup<-4
+
+site_categories_model_H5_FirstDatawitOutgroup_N_terminal<-apply(N_terminal_First_Replicate_withOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_First_Replicate_withOutgroup_N_terminal_H5<-which(site_categories_model_H5_FirstDatawitOutgroup_N_terminal==cat_number_First_Replicate_N_terminal_H5_withOutgroup)
+
+proportion_in_N_terminal_H5_withOutgroup<-sum(category_sites_First_Replicate_withOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_First_Replicate_withOutgroup_N_terminal_H5)
+
+#Fifth category 
+N_terminal_First_Replicate_withOutgroup_H5<-read.table("FirstDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_First_Replicate_N_terminal_H5_withOutgroup<-5
+
+site_categories_model_H5_FirstDatawitOutgroup_N_terminal<-apply(N_terminal_First_Replicate_withOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_First_Repluicate_withOutgroup_N_terminal_H5<-which(site_categories_model_H5_FirstDatawitOutgroup_N_terminal==cat_number_First_Replicate_N_terminal_H5_withOutgroup)
+
+proportion_in_N_terminal_H5_withOutgroup<-sum(category_sites_First_Repluicate_withOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_First_Repluicate_withOutgroup_N_terminal_H5)
+
+
+#First replicate with no outgroup. H5 category model 
+
+#First category 
+
+N_terminal_First_Replicate_NOOutgroup_H5<-read.table("FirstDataSet_LocationsNOOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_First_Replicate_N_terminal_H5_NOOutgroup<-1
+
+site_categories_model_H5_FirstDataNOOutgroup_N_terminal<-apply(N_terminal_First_Replicate_NOOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_First_Replicate_NOOutgroup_N_terminal_H5<-which(site_categories_model_H5_FirstDataNOOutgroup_N_terminal==cat_number_First_Replicate_N_terminal_H5_NOOutgroup)
+
+proportion_in_N_terminal_H5_NOOoutgroup<-sum(category_sites_First_Replicate_NOOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_First_Replicate_NOOutgroup_N_terminal_H5)
+
+#Second category
+N_terminal_First_Replicate_NOOutgroup_H5<-read.table("FirstDataSet_LocationsNOOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_First_Replicate_N_terminal_H5_NOOutgroup<-2
+
+site_categories_model_H5_FirstDataNOOutgroup_N_terminal<-apply(N_terminal_First_Replicate_NOOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_First_Replicate_NOOutgroup_N_terminal_H5<-which(site_categories_model_H5_FirstDataNOOutgroup_N_terminal==cat_number_First_Replicate_N_terminal_H5_NOOutgroup)
+
+proportion_in_N_terminal_H5_NOOoutgroup<-sum(category_sites_First_Replicate_NOOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_First_Replicate_NOOutgroup_N_terminal_H5)
+
+
+#Third category 
+N_terminal_First_Replicate_NOOutgroup_H5<-read.table("FirstDataSet_LocationsNOOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_First_Replicate_N_terminal_H5_NOOutgroup<-3
+
+site_categories_model_H5_FirstDataNOOutgroup_N_terminal<-apply(N_terminal_First_Replicate_NOOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_First_Replicate_NOOutgroup_N_terminal_H5<-which(site_categories_model_H5_FirstDataNOOutgroup_N_terminal==cat_number_First_Replicate_N_terminal_H5_NOOutgroup)
+
+proportion_in_N_terminal_H5_NOOoutgroup<-sum(category_sites_First_Replicate_NOOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_First_Replicate_NOOutgroup_N_terminal_H5)
+
+#Fourth category
+N_terminal_First_Replicate_NOOutgroup_H5<-read.table("FirstDataSet_LocationsNOOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_First_Replicate_N_terminal_H5_NOOutgroup<-4
+
+site_categories_model_H5_FirstDataNOOutgroup_N_terminal<-apply(N_terminal_First_Replicate_NOOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_First_Replicate_NOOutgroup_N_terminal_H5<-which(site_categories_model_H5_FirstDataNOOutgroup_N_terminal==cat_number_First_Replicate_N_terminal_H5_NOOutgroup)
+
+proportion_in_N_terminal_H5_NOOoutgroup<-sum(category_sites_First_Replicate_NOOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_First_Replicate_NOOutgroup_N_terminal_H5)
+
+#Fifth category
+N_terminal_First_Replicate_NOOutgroup_H5<-read.table("FirstDataSet_LocationsNOOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_First_Replicate_N_terminal_H5_NOOutgroup<-5
+
+site_categories_model_H5_FirstDataNOOutgroup_N_terminal<-apply(N_terminal_First_Replicate_NOOutgroup_H5,1,function(x)which(x==max(x)))
+
+category_sites_First_Replicate_NOOutgroup_N_terminal_H5<-which(site_categories_model_H5_FirstDataNOOutgroup_N_terminal==cat_number_First_Replicate_N_terminal_H5_NOOutgroup)
+
+proportion_in_N_terminal_H5_NOOoutgroup<-sum(category_sites_First_Replicate_NOOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_First_Replicate_NOOutgroup_N_terminal_H5)
+
+#Second replicate with outgroup. Categorymodel H5
+
+#First category
+N_terminal_Second_Replicate_withOutgroup<-read.table("SecondDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1) 
+
+cat_number_Second_Replicate_N_terminal_H5_withOutgroup<-1
+
+site_categories_model_H5_SecondDatawithOutgroup_N_terminal<-apply(N_terminal_Second_Replicate_withOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_withOutgroup_N_terminal_H5<-which(site_categories_model_H5_SecondDatawithOutgroup_N_terminal==cat_number_Second_Replicate_N_terminal_H5_withOutgroup)
+
+proportion_in_N_terminal_H5_withOutgroup<-sum(category_sites_Second_Replicate_withOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_Second_Replicate_withOutgroup_N_terminal_H5)
+
+#Second category 
+N_terminal_Second_Replicate_withOutgroup<-read.table("SecondDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1) 
+
+cat_number_Second_Replicate_N_terminal_H5_withOutgroup<-2
+
+site_categories_model_H5_SecondDatawithOutgroup_N_terminal<-apply(N_terminal_Second_Replicate_withOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_withOutgroup_N_terminal_H5<-which(site_categories_model_H5_SecondDatawithOutgroup_N_terminal==cat_number_Second_Replicate_N_terminal_H5_withOutgroup)
+
+proportion_in_N_terminal_H5_withOutgroup<-sum(category_sites_Second_Replicate_withOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_Second_Replicate_withOutgroup_N_terminal_H5)
+
+#Third category 
+N_terminal_Second_Replicate_withOutgroup<-read.table("SecondDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1) 
+
+cat_number_Second_Replicate_N_terminal_H5_withOutgroup<-3
+
+site_categories_model_H5_SecondDatawithOutgroup_N_terminal<-apply(N_terminal_Second_Replicate_withOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_withOutgroup_N_terminal_H5<-which(site_categories_model_H5_SecondDatawithOutgroup_N_terminal==cat_number_Second_Replicate_N_terminal_H5_withOutgroup)
+
+proportion_in_N_terminal_H5_withOutgroup<-sum(category_sites_Second_Replicate_withOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_Second_Replicate_withOutgroup_N_terminal_H5)
+
+#Fourth category
+N_terminal_Second_Replicate_withOutgroup<-read.table("SecondDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1) 
+
+cat_number_Second_Replicate_N_terminal_H5_withOutgroup<-4
+
+site_categories_model_H5_SecondDatawithOutgroup_N_terminal<-apply(N_terminal_Second_Replicate_withOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_withOutgroup_N_terminal_H5<-which(site_categories_model_H5_SecondDatawithOutgroup_N_terminal==cat_number_Second_Replicate_N_terminal_H5_withOutgroup)
+
+proportion_in_N_terminal_H5_withOutgroup<-sum(category_sites_Second_Replicate_withOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_Second_Replicate_withOutgroup_N_terminal_H5)
+
+#Fifth category
+N_terminal_Second_Replicate_withOutgroup<-read.table("SecondDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1) 
+
+cat_number_Second_Replicate_N_terminal_H5_withOutgroup<-5
+
+site_categories_model_H5_SecondDatawithOutgroup_N_terminal<-apply(N_terminal_Second_Replicate_withOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_withOutgroup_N_terminal_H5<-which(site_categories_model_H5_SecondDatawithOutgroup_N_terminal==cat_number_Second_Replicate_N_terminal_H5_withOutgroup)
+
+proportion_in_N_terminal_H5_withOutgroup<-sum(category_sites_Second_Replicate_withOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_Second_Replicate_withOutgroup_N_terminal_H5)
+
+
+#Second replicate with NO outgroup. Category model H5 
+
+#First category 
+
+N_terminal_Second_Replicate_NOOutgroup<-read.table("SecondDataSet_LocationsNOOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_N_terminal_H5_NOOutgroup<-1
+
+site_categories_model_H5_SecondDataNOOutgroup_N_terminal<-apply(N_terminal_Second_Replicate_NOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_NOOutgroup_N_terminal_H5<-which(site_categories_model_H5_SecondDataNOOutgroup_N_terminal==cat_number_Second_Replicate_N_terminal_H5_NOOutgroup)
+
+proportion_in_N_terminal_H5_NOOutgroup<-sum(category_sites_Second_Replicate_NOOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_Second_Replicate_NOOutgroup_N_terminal_H5)
+
+#Second category 
+N_terminal_Second_Replicate_NOOutgroup<-read.table("SecondDataSet_LocationsNOOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_N_terminal_H5_NOOutgroup<-2
+
+site_categories_model_H5_SecondDataNOOutgroup_N_terminal<-apply(N_terminal_Second_Replicate_NOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_NOOutgroup_N_terminal_H5<-which(site_categories_model_H5_SecondDataNOOutgroup_N_terminal==cat_number_Second_Replicate_N_terminal_H5_NOOutgroup)
+
+proportion_in_N_terminal_H5_NOOutgroup<-sum(category_sites_Second_Replicate_NOOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_Second_Replicate_NOOutgroup_N_terminal_H5)
+
+#Third category 
+N_terminal_Second_Replicate_NOOutgroup<-read.table("SecondDataSet_LocationsNOOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_N_terminal_H5_NOOutgroup<-3
+
+site_categories_model_H5_SecondDataNOOutgroup_N_terminal<-apply(N_terminal_Second_Replicate_NOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_NOOutgroup_N_terminal_H5<-which(site_categories_model_H5_SecondDataNOOutgroup_N_terminal==cat_number_Second_Replicate_N_terminal_H5_NOOutgroup)
+
+proportion_in_N_terminal_H5_NOOutgroup<-sum(category_sites_Second_Replicate_NOOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_Second_Replicate_NOOutgroup_N_terminal_H5)
+
+#Fourth category 
+N_terminal_Second_Replicate_NOOutgroup<-read.table("SecondDataSet_LocationsNOOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_N_terminal_H5_NOOutgroup<-4
+
+site_categories_model_H5_SecondDataNOOutgroup_N_terminal<-apply(N_terminal_Second_Replicate_NOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_NOOutgroup_N_terminal_H5<-which(site_categories_model_H5_SecondDataNOOutgroup_N_terminal==cat_number_Second_Replicate_N_terminal_H5_NOOutgroup)
+
+proportion_in_N_terminal_H5_NOOutgroup<-sum(category_sites_Second_Replicate_NOOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_Second_Replicate_NOOutgroup_N_terminal_H5)
+
+#Fifth category
+N_terminal_Second_Replicate_NOOutgroup<-read.table("SecondDataSet_LocationsNOOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Second_Replicate_N_terminal_H5_NOOutgroup<-5
+
+site_categories_model_H5_SecondDataNOOutgroup_N_terminal<-apply(N_terminal_Second_Replicate_NOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Second_Replicate_NOOutgroup_N_terminal_H5<-which(site_categories_model_H5_SecondDataNOOutgroup_N_terminal==cat_number_Second_Replicate_N_terminal_H5_NOOutgroup)
+
+proportion_in_N_terminal_H5_NOOutgroup<-sum(category_sites_Second_Replicate_NOOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_Second_Replicate_NOOutgroup_N_terminal_H5)
+
+#Third replicate with outgroup. Category model H5
+
+#First category
+N_terminal_Third_Replicate_withOutgroup<-read.table("ThirdDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Third_Replicate_N_terminal_H5_withOutgroup<-1
+
+site_categories_model_H5_ThirdDatawithOutgroup_N_terminal<-apply(N_terminal_Third_Replicate_withOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Third_Replicate_withOutgroup_N_terminal_H5<-which(site_categories_model_H5_ThirdDatawithOutgroup_N_terminal==cat_number_Third_Replicate_N_terminal_H5_withOutgroup)
+
+proportion_in_N_terminal_H5_withoutgroup<-sum(category_sites_Third_Replicate_withOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_Third_Replicate_withOutgroup_N_terminal_H5)
+
+#Second category
+N_terminal_Third_Replicate_withOutgroup<-read.table("ThirdDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Third_Replicate_N_terminal_H5_withOutgroup<-2
+
+site_categories_model_H5_ThirdDatawithOutgroup_N_terminal<-apply(N_terminal_Third_Replicate_withOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Third_Replicate_withOutgroup_N_terminal_H5<-which(site_categories_model_H5_ThirdDatawithOutgroup_N_terminal==cat_number_Third_Replicate_N_terminal_H5_withOutgroup)
+
+proportion_in_N_terminal_H5_withoutgroup<-sum(category_sites_Third_Replicate_withOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_Third_Replicate_withOutgroup_N_terminal_H5)
+
+#Third category
+N_terminal_Third_Replicate_withOutgroup<-read.table("ThirdDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Third_Replicate_N_terminal_H5_withOutgroup<-3
+
+site_categories_model_H5_ThirdDatawithOutgroup_N_terminal<-apply(N_terminal_Third_Replicate_withOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Third_Replicate_withOutgroup_N_terminal_H5<-which(site_categories_model_H5_ThirdDatawithOutgroup_N_terminal==cat_number_Third_Replicate_N_terminal_H5_withOutgroup)
+
+proportion_in_N_terminal_H5_withoutgroup<-sum(category_sites_Third_Replicate_withOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_Third_Replicate_withOutgroup_N_terminal_H5)
+
+#Fourth category
+N_terminal_Third_Replicate_withOutgroup<-read.table("ThirdDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Third_Replicate_N_terminal_H5_withOutgroup<-4
+
+site_categories_model_H5_ThirdDatawithOutgroup_N_terminal<-apply(N_terminal_Third_Replicate_withOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Third_Replicate_withOutgroup_N_terminal_H5<-which(site_categories_model_H5_ThirdDatawithOutgroup_N_terminal==cat_number_Third_Replicate_N_terminal_H5_withOutgroup)
+
+proportion_in_N_terminal_H5_withoutgroup<-sum(category_sites_Third_Replicate_withOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_Third_Replicate_withOutgroup_N_terminal_H5)
+
+#Fifth category
+N_terminal_Third_Replicate_withOutgroup<-read.table("ThirdDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Third_Replicate_N_terminal_H5_withOutgroup<-5
+
+site_categories_model_H5_ThirdDatawithOutgroup_N_terminal<-apply(N_terminal_Third_Replicate_withOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Third_Replicate_withOutgroup_N_terminal_H5<-which(site_categories_model_H5_ThirdDatawithOutgroup_N_terminal==cat_number_Third_Replicate_N_terminal_H5_withOutgroup)
+
+proportion_in_N_terminal_H5_withoutgroup<-sum(category_sites_Third_Replicate_withOutgroup_N_terminal_H5%in%N_terminal)/length(category_sites_Third_Replicate_withOutgroup_N_terminal_H5)
+
+#Third replicate with NO outgroup. Category model H4
+
+#First category 
+
+N_terminal_Third_Replicate_NOOutgroup<-read.table("ThirdDataSet_LocationsNOOutgroupH4GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Third_Replicate_N_terminal_H4_NOOutgroup<-1
+
+site_categories_model_H4_ThirdDataNOOutgroup_N_terminal<-apply(N_terminal_Third_Replicate_NOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Third_Replicate_NOOutgroup_N_terminal_H4<-which(site_categories_model_H4_ThirdDataNOOutgroup_N_terminal==cat_number_Third_Replicate_N_terminal_H4_NOOutgroup)
+
+proportion_in_N_terminal_H4_NOOutgroup<-sum(category_sites_Third_Replicate_NOOutgroup_N_terminal_H4%in%N_terminal)/length(category_sites_Third_Replicate_NOOutgroup_N_terminal_H4)
+
+#Second category 
+N_terminal_Third_Replicate_NOOutgroup<-read.table("ThirdDataSet_LocationsNOOutgroupH4GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Third_Replicate_N_terminal_H4_NOOutgroup<-2
+
+site_categories_model_H4_ThirdDataNOOutgroup_N_terminal<-apply(N_terminal_Third_Replicate_NOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Third_Replicate_NOOutgroup_N_terminal_H4<-which(site_categories_model_H4_ThirdDataNOOutgroup_N_terminal==cat_number_Third_Replicate_N_terminal_H4_NOOutgroup)
+
+proportion_in_N_terminal_H4_NOOutgroup<-sum(category_sites_Third_Replicate_NOOutgroup_N_terminal_H4%in%N_terminal)/length(category_sites_Third_Replicate_NOOutgroup_N_terminal_H4)
+
+#Third category
+N_terminal_Third_Replicate_NOOutgroup<-read.table("ThirdDataSet_LocationsNOOutgroupH4GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Third_Replicate_N_terminal_H4_NOOutgroup<-3
+
+site_categories_model_H4_ThirdDataNOOutgroup_N_terminal<-apply(N_terminal_Third_Replicate_NOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Third_Replicate_NOOutgroup_N_terminal_H4<-which(site_categories_model_H4_ThirdDataNOOutgroup_N_terminal==cat_number_Third_Replicate_N_terminal_H4_NOOutgroup)
+
+proportion_in_N_terminal_H4_NOOutgroup<-sum(category_sites_Third_Replicate_NOOutgroup_N_terminal_H4%in%N_terminal)/length(category_sites_Third_Replicate_NOOutgroup_N_terminal_H4)
+
+#Fourth category 
+N_terminal_Third_Replicate_NOOutgroup<-read.table("ThirdDataSet_LocationsNOOutgroupH4GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Third_Replicate_N_terminal_H4_NOOutgroup<-4
+
+site_categories_model_H4_ThirdDataNOOutgroup_N_terminal<-apply(N_terminal_Third_Replicate_NOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Third_Replicate_NOOutgroup_N_terminal_H4<-which(site_categories_model_H4_ThirdDataNOOutgroup_N_terminal==cat_number_Third_Replicate_N_terminal_H4_NOOutgroup)
+
+proportion_in_N_terminal_H4_NOOutgroup<-sum(category_sites_Third_Replicate_NOOutgroup_N_terminal_H4%in%N_terminal)/length(category_sites_Third_Replicate_NOOutgroup_N_terminal_H4)
+
+
+#Fourth replicate with outgroup. Categorymodel H3
+
+#First category
+N_terminal_Fourth_Replicate_withOutgroup<-read.table("FourthDataSet_LocationswithOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fourth_Replicate_N_terminal_H3_withoutgroup<-1
+
+site_categories_model_H3_FourthDatawithOutgroup_N_terminal<-apply(N_terminal_Fourth_Replicate_withOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fourth_Replicate_withOutgroup_N_terminal_H3<-which(site_categories_model_H3_FourthDatawithOutgroup_N_terminal==cat_number_Fourth_Replicate_N_terminal_H3_withoutgroup)
+
+proportion_in_N_terminal_H3_withOutgroup<-sum(category_sites_Fourth_Replicate_withOutgroup_N_terminal_H3%in%N_terminal)/length(category_sites_Fourth_Replicate_withOutgroup_N_terminal_H3)
+
+#Second category
+N_terminal_Fourth_Replicate_withOutgroup<-read.table("FourthDataSet_LocationswithOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fourth_Replicate_N_terminal_H3_withoutgroup<-2
+
+site_categories_model_H3_FourthDatawithOutgroup_N_terminal<-apply(N_terminal_Fourth_Replicate_withOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fourth_Replicate_withOutgroup_N_terminal_H3<-which(site_categories_model_H3_FourthDatawithOutgroup_N_terminal==cat_number_Fourth_Replicate_N_terminal_H3_withoutgroup)
+
+proportion_in_N_terminal_H3_withOutgroup<-sum(category_sites_Fourth_Replicate_withOutgroup_N_terminal_H3%in%N_terminal)/length(category_sites_Fourth_Replicate_withOutgroup_N_terminal_H3)
+
+#Third category 
+N_terminal_Fourth_Replicate_withOutgroup<-read.table("FourthDataSet_LocationswithOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fourth_Replicate_N_terminal_H3_withoutgroup<-3
+
+site_categories_model_H3_FourthDatawithOutgroup_N_terminal<-apply(N_terminal_Fourth_Replicate_withOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fourth_Replicate_withOutgroup_N_terminal_H3<-which(site_categories_model_H3_FourthDatawithOutgroup_N_terminal==cat_number_Fourth_Replicate_N_terminal_H3_withoutgroup)
+
+proportion_in_N_terminal_H3_withOutgroup<-sum(category_sites_Fourth_Replicate_withOutgroup_N_terminal_H3%in%N_terminal)/length(category_sites_Fourth_Replicate_withOutgroup_N_terminal_H3)
+
+#Fourth replicate with NO outgroup. Category model H3
+
+#First category 
+
+N_terminal_Fourth_Replicate_NOOutgroup<-read.table("FourthDataSet_LocationsNOOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fourth_Replicate_N_terminal_H3_NOOutgroup<-1
+
+site_categories_model_H3_FourthDataNOOutgroup_N_terminal<-apply(N_terminal_Fourth_Replicate_NOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fourth_Replicate_NOOutgroup_N_terminal_H3<-which(site_categories_model_H3_FourthDataNOOutgroup_N_terminal==cat_number_Fourth_Replicate_N_terminal_H3_NOOutgroup)
+
+proportion_in_N_terminal_H3_NOOutgroup<-sum(category_sites_Fourth_Replicate_NOOutgroup_N_terminal_H3%in%N_terminal)/length(category_sites_Fourth_Replicate_NOOutgroup_N_terminal_H3)
+
+
+#Second category
+N_terminal_Fourth_Replicate_NOOutgroup<-read.table("FourthDataSet_LocationsNOOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fourth_Replicate_N_terminal_H3_NOOutgroup<-2
+
+site_categories_model_H3_FourthDataNOOutgroup_N_terminal<-apply(N_terminal_Fourth_Replicate_NOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fourth_Replicate_NOOutgroup_N_terminal_H3<-which(site_categories_model_H3_FourthDataNOOutgroup_N_terminal==cat_number_Fourth_Replicate_N_terminal_H3_NOOutgroup)
+
+proportion_in_N_terminal_H3_NOOutgroup<-sum(category_sites_Fourth_Replicate_NOOutgroup_N_terminal_H3%in%N_terminal)/length(category_sites_Fourth_Replicate_NOOutgroup_N_terminal_H3)
+
+
+#Third category 
+N_terminal_Fourth_Replicate_NOOutgroup<-read.table("FourthDataSet_LocationsNOOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fourth_Replicate_N_terminal_H3_NOOutgroup<-3
+
+site_categories_model_H3_FourthDataNOOutgroup_N_terminal<-apply(N_terminal_Fourth_Replicate_NOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fourth_Replicate_NOOutgroup_N_terminal_H3<-which(site_categories_model_H3_FourthDataNOOutgroup_N_terminal==cat_number_Fourth_Replicate_N_terminal_H3_NOOutgroup)
+
+proportion_in_N_terminal_H3_NOOutgroup<-sum(category_sites_Fourth_Replicate_NOOutgroup_N_terminal_H3%in%N_terminal)/length(category_sites_Fourth_Replicate_NOOutgroup_N_terminal_H3)
+
+
+
+#Fifth replicate with outgroup. Category model H3
+
+#First category 
+
+N_terminal_Fifth_Replicate_withOutgroup<-read.table("FifthDataSet_LocationswithOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fifth_Replicate_N_terminal_H3_withOutgroup<-1
+
+site_categories_model_H3_FifthDatawithOutgroup_N_terminal<-apply(N_terminal_Fifth_Replicate_withOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fifth_Replicate_withOutgroup_N_terminal_H3<-which(site_categories_model_H3_FifthDatawithOutgroup_N_terminal==cat_number_Fifth_Replicate_N_terminal_H3_withOutgroup)
+
+proportion_in_N_terminal_H3_withOutgroup<-sum(category_sites_Fifth_Replicate_withOutgroup_N_terminal_H3%in%N_terminal)/length(category_sites_Fifth_Replicate_withOutgroup_N_terminal_H3)
+
+#Second category
+
+N_terminal_Fifth_Replicate_withOutgroup<-read.table("FifthDataSet_LocationswithOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fifth_Replicate_N_terminal_H3_withOutgroup<-2
+
+site_categories_model_H3_FifthDatawithOutgroup_N_terminal<-apply(N_terminal_Fifth_Replicate_withOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fifth_Replicate_withOutgroup_N_terminal_H3<-which(site_categories_model_H3_FifthDatawithOutgroup_N_terminal==cat_number_Fifth_Replicate_N_terminal_H3_withOutgroup)
+
+proportion_in_N_terminal_H3_withOutgroup<-sum(category_sites_Fifth_Replicate_withOutgroup_N_terminal_H3%in%N_terminal)/length(category_sites_Fifth_Replicate_withOutgroup_N_terminal_H3)
+
+#Third category 
+N_terminal_Fifth_Replicate_withOutgroup<-read.table("FifthDataSet_LocationswithOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fifth_Replicate_N_terminal_H3_withOutgroup<-3
+
+site_categories_model_H3_FifthDatawithOutgroup_N_terminal<-apply(N_terminal_Fifth_Replicate_withOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fifth_Replicate_withOutgroup_N_terminal_H3<-which(site_categories_model_H3_FifthDatawithOutgroup_N_terminal==cat_number_Fifth_Replicate_N_terminal_H3_withOutgroup)
+
+proportion_in_N_terminal_H3_withOutgroup<-sum(category_sites_Fifth_Replicate_withOutgroup_N_terminal_H3%in%N_terminal)/length(category_sites_Fifth_Replicate_withOutgroup_N_terminal_H3)
+
+#Fifth replicate with NO outgroup. Categorymodel H3
+
+#First category 
+
+N_terminal_Fifth_Replicate_NOOutgroup<-read.table("FifthDataSet_LocationsNOOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fifth_Replicate_N_terminal_H3_NOOutgroup<-1
+
+site_categories_model_H3_FifthDataNOOutgroup_N_terminal<-apply(N_terminal_Fifth_Replicate_NOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fifth_Replicate_NOOutgroup_N_terminal_H3<-which(site_categories_model_H3_FifthDataNOOutgroup_N_terminal==cat_number_Fifth_Replicate_N_terminal_H3_NOOutgroup)
+
+proportion_in_N_terminal_H3_NOOutgroup<-sum(category_sites_Fifth_Replicate_NOOutgroup_N_terminal_H3%in%N_terminal)/length(category_sites_Fifth_Replicate_NOOutgroup_N_terminal_H3)
+
+
+#Second category
+N_terminal_Fifth_Replicate_NOOutgroup<-read.table("FifthDataSet_LocationsNOOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fifth_Replicate_N_terminal_H3_NOOutgroup<-2
+
+site_categories_model_H3_FifthDataNOOutgroup_N_terminal<-apply(N_terminal_Fifth_Replicate_NOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fifth_Replicate_NOOutgroup_N_terminal_H3<-which(site_categories_model_H3_FifthDataNOOutgroup_N_terminal==cat_number_Fifth_Replicate_N_terminal_H3_NOOutgroup)
+
+proportion_in_N_terminal_H3_NOOutgroup<-sum(category_sites_Fifth_Replicate_NOOutgroup_N_terminal_H3%in%N_terminal)/length(category_sites_Fifth_Replicate_NOOutgroup_N_terminal_H3)
+
+#Third category 
+N_terminal_Fifth_Replicate_NOOutgroup<-read.table("FifthDataSet_LocationsNOOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names = 1)
+
+cat_number_Fifth_Replicate_N_terminal_H3_NOOutgroup<-3
+
+site_categories_model_H3_FifthDataNOOutgroup_N_terminal<-apply(N_terminal_Fifth_Replicate_NOOutgroup,1,function(x)which(x==max(x)))
+
+category_sites_Fifth_Replicate_NOOutgroup_N_terminal_H3<-which(site_categories_model_H3_FifthDataNOOutgroup_N_terminal==cat_number_Fifth_Replicate_N_terminal_H3_NOOutgroup)
+
+
+proportion_in_N_terminal_H3_NOOutgroup<-sum(category_sites_Fifth_Replicate_NOOutgroup_N_terminal_H3%in%N_terminal)/length(category_sites_Fifth_Replicate_NOOutgroup_N_terminal_H3)
