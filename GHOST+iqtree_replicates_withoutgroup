@@ -1,0 +1,59 @@
+#Now let's run the GHOST model. We will be using H2, H4 and H6
+
+#H2 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\FirstDataSet_81withoutgroup.fasta -m GTR*H2 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_species\\GHOSTFirstwitoutgroup81H2")
+
+#H4 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\FirstDataSet_81withoutgroup.fasta -m GTR*H4 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_species\\GHOSTFirstwitoutgroup80H4")
+
+#H6 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\FirstDataSet_81withoutgroup.fasta -m GTR*H6 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_species\\GHOSTFirstwitoutgroup80H6")
+
+
+#Let us run the second dataset
+
+#H2 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\SecondDataSet_81withoutgroup.fasta -m GTR*H2 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_species\\GHOSTSecondwitoutgroup81H2")
+
+#H4 category model 
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\SecondDataSet_81withoutgroup.fasta -m GTR*H4 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_species\\GHOSTSecondwitoutgroup81H4")
+
+#H6 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\SecondDataSet_81withoutgroup.fasta -m GTR*H6 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_species\\GHOSTSecondwithoutgroup81H6")
+
+
+#Let's do the third dataset 
+
+#H2 category model 
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\ThirdDataSet_81withoutgroup.fasta -m GTR*H2 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_species\\GHOSTThirdwitoutgroup81H2")
+
+#H4 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\ThirdDataSet_81withoutgroup.fasta -m GTR*H4 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_species\\GHOSTThirdwitoutgroup81H4")
+
+#H6 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\ThirdDataSet_81withoutgroup.fasta -m GTR*H4 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_species\\GHOSTThirdwitoutgroup81H6")
+
+
+#Let's do the fourth dataset
+
+#H2 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\FourthDataSet_81withoutgroup.fasta -m GTR*H2 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_species\\GHOSTFourthwitoutgroup81H2")
+
+#H4 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\FourthDataSet_81withoutgroup.fasta -m GTR*H4 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_species\\GHOSTFourthwitoutgroup81H4")
+
+#H6 category model 
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\FourthDataSet_81withoutgroup.fasta -m GTR*H6 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_species\\GHOSTFourthwitoutgroup81H6")
+
+#Let's do the fifth dataset
+
+
+#H2 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\FifthDataSet_81withoutgroup.fasta -m GTR*H2 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_species\\GHOSTFifthwitoutgroup81H2")
+
+#H4 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\FifthDataSet_81withoutgroup.fasta -m GTR*H4 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_species\\GHOSTFifthwitoutgroup81H4")
+
+#H6 category model
+system("C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\bin\\iqtree2 -s C:\\Users\\HomePC\\Downloads\\iqtree-2.2.2.6-Windows\\iqtree-2.2.2.6-Windows\\FifthDataSet_81withoutgroup.fasta -m GTR*H6 -wspm -alrt 1000 -redo -pre C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_species\\GHOSTFifthwitoutgroup81H6")
+
