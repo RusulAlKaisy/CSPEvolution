@@ -4,6 +4,7 @@
 * [Software](#Software)
 * [Setup](#Setup)
 ## About the project
+The project
 ### Work process of the project 
 (https://github.com/RusulAlKaisy/MasterThesis2024/blob/main/Flowchart.svg)
 
