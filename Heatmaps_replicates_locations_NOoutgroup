@@ -1,0 +1,235 @@
+#Let's create some heatmaps for the locations. First we will change the working directory
+
+setwd("C:/Users/HomePC/Desktop/Dataset1/GHOST_200_locations")
+
+#Let us create heatmaps for the H2 category model with outgroup 
+
+#First dataset 
+
+#H2_category model 
+
+H2_categorymodelFirstDataset_withoutgroup<-read.table("FirstDataSet_LocationswithOutgroupH2GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix
+H2_categorymodelFirstDataSet_withoutgroup_matrix<-as.matrix(H2_categorymodelFirstDataset_withoutgroup)
+
+H2_categorymodelFirstDataSet_withoutgroup_plot<-heatmap(H2_categorymodelFirstDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - FirstDataSet_outgroup - Figure 1A",ylab="sites",main="Heatmap_H2_locations_withoutgroup")
+
+#H3 category model 
+
+H3_categorymodelFirstDataSet_withoutgroup<-read.table("FirstDataSet_LocationswithOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix
+H3_categorymodelFirstDataSet_withoutgroup_matrix<-as.matrix(H3_categorymodelFirstDataSet_withoutgroup)
+
+H3_categorymodelFirstDataSet_withoutgroup_plot<-heatmap(H3_categorymodelFirstDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - FirstDataSet_outgroup - Figure 4A",ylab="sites",main="Heatmap_H3_locations_withoutgroup")
+
+#H4 category model
+
+H4_categorymodelFirstDataset_withoutgroup<-read.table("FirstDataSet_LocationswithOutgroupH4GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix
+H4_categorymodelFirstDataSet_withoutgroup_matrix<-as.matrix(H4_categorymodelFirstDataset_withoutgroup)
+
+H4_categorymodelFirstDataSet_withoutgroup_plot<-heatmap(H4_categorymodelFirstDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - FirstDataSet_outgroup - Figure 2A",ylab="sites",main="Heatmap_H4_locations_withoutgroup")
+
+
+#H5 category model 
+H5_categorymodelFirstDataSet_withoutgroup<-read.table("FirstDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix
+H5_categorymodelFirstDataSet_withoutgroup_matrix<-as.matrix(H5_categorymodelFirstDataSet_withoutgroup)
+
+H5_categorymodelFirstDataSet_withoutgroup_plot<-heatmap(H5_categorymodelFirstDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - FirstDataSet_outgroup - Figure 5A",ylab="sites",main="Heatmap_H5_locations_withoutgroup")
+
+
+#H6 category model
+H6_categorymodelFirstDataSet_withoutgroup<-read.table("FirstDataSet_LocationswithOutgroupH6GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix
+H6_categorymodelFirstDataSet_withoutgroup_matrix<-as.matrix(H6_categorymodelFirstDataSet_withoutgroup)
+
+H6_categorymodelFirstDataSet_withoutgroup_plot<-heatmap(H6_categorymodelFirstDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - FirstDataSet_outgroup_Figure 3A",ylab="sites",main="Heatmap_H6_locationswithoutgroup")
+
+
+#Let's create heatmaps for the second dataset with outgroup
+
+#H2 category model
+
+H2_categorymodelSecondDataSet_withoutgroup<-read.table("SecondDataSet_LocationswithOutgroupH2GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix
+H2_categorymodelSecondDataSet_withoutgroup_matrix<-as.matrix(H2_categorymodelSecondDataSet_withoutgroup)
+
+H2_categorymodelSecondDataSet_withoutgroup_plot<-heatmap(H2_categorymodelSecondDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - SecondDataSet_outgroup_Figure 1B",ylab="sites",main="Heatmap_H2_locationswithoutgroup")
+
+#H3 category model 
+
+H3_categorymodelSecondDataSet_withoutgroup<-read.table("SecondDataSet_LocationswithOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix 
+
+H3_categorymodelSecondDataSet_withoutgroup_matrix<-as.matrix(H3_categorymodelSecondDataSet_withoutgroup)
+
+H3_categorymodelSecondDataSet_withoutgroup_plot<-heatmap(H3_categorymodelSecondDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - SecondDataSet_outgroup_Figure 4B",ylab="sites",main="Heatmap_H3_locationswithoutgroup")
+
+
+#H4 category model 
+
+H4_categorymodelSecondDataSet_withoutgroup<-read.table("SecondDataSet_LocationswithOutgroupH4GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix
+
+H4_categorymodelSecondDataSet_withoutgroup_matrix<-as.matrix(H4_categorymodelSecondDataSet_withoutgroup)
+
+H4_categorymodelSecondDataSet_withoutgroup_plot<-heatmap(H4_categorymodelSecondDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - SecondDataSet_outgroup_Figure 2B",ylab="sites",main="Heatmap_H4_locationswithoutgroup")
+
+
+#H5 category model 
+
+H5_categorymodelSecondDataSet_withoutgroup<-read.table("SecondDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix
+
+H5_categorymodelSecondDataSet_withoutgroup_matrix<-as.matrix(H5_categorymodelSecondDataSet_withoutgroup)
+
+H5_categorymodelSecondDataSet_withoutgroup_plot<-heatmap(H5_categorymodelSecondDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - SecondDataSet_outgroup_Figure 5B",ylab="sites",main="Heatmap_H5_locationswithoutgroup")
+
+
+#H6 category model 
+H6_categorymodelSecondDataSet_withoutgroup<-read.table("SecondDataSet_LocationswithOutgroupH6GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix 
+
+H6_categorymodelSecondDataSet_withoutgroup_matrix<-as.matrix(H6_categorymodelSecondDataSet_withoutgroup)
+
+H6_categorymodelSecondDataSet_withoutgroup_plot<-heatmap(H6_categorymodelSecondDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - SecondDataSet_outgroup_Figure 3B",ylab="sites",main="Heatmap_H6_locationswithoutgroup")
+
+
+#Let's create heatmaps for the third dataset with outgroup
+
+#H2 category model
+H2_categorymodelThirdDataSet_withoutgroup<-read.table("ThirdDataSet_LocationswithOutgroupH2GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix
+H2_categorymodelThirdDataSet_withoutgroup_matrix<-as.matrix(H2_categorymodelThirdDataSet_withoutgroup)
+
+H2_categorymodelThirdDataSet_withoutgroup_plot<-heatmap(H2_categorymodelThirdDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - ThirdDataSet_outgroup_Figure 1C",ylab="sites",main="Heatmap_H2_locationswithoutgroup")
+
+
+#H3 category model 
+H3_categorymodelThirdDataSet_withoutgroup<-read.table("ThirdDataSet_LocationswithOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix 
+H3_categorymodelThirdDataSet_withoutgroup_matrix<-as.matrix(H3_categorymodelThirdDataSet_withoutgroup)
+
+H3_categorymodelThirdDataSet_withoutgroup_plot<-heatmap(H3_categorymodelThirdDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - ThirdDataSet_outgroup_Figure 4C",ylab="sites",main="Heatmap_H3_locationswithoutgroup")
+
+#H4 category model 
+
+H4_categorymodelThirdDataSet_withoutgroup<-read.table("ThirdDataSet_LocationswithOutgroupH4GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix 
+H4_categorymodelThirdDataSet_withoutgroup_matrix<-as.matrix(H4_categorymodelThirdDataSet_withoutgroup)
+
+H4_categorymodelThirdDataSet_withoutgroup_plot<-heatmap(H4_categorymodelThirdDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - ThirdDataSet_outgroup_Figure 2C",ylab="sites",main="Heatmap_H4_locationswithoutgroup")
+
+#H5 category model
+H5_categorymodelThirdDataSet_withoutgroup<-read.table("ThirdDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix
+
+H5_categorymodelThirdDataSet_withoutgroup_matrix<-as.matrix(H5_categorymodelThirdDataSet_withoutgroup)
+
+H5_categorymodelThirdDataSet_withoutgroup_plot<-heatmap(H5_categorymodelThirdDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - ThirdDataSet_outgroup_Figure 5C",ylab="sites",main="Heatmap_H5_locationswithoutgroup")
+
+#H6 category model
+H6_categorymodelThirdDataSet_withoutgroup<-read.table("ThirdDataSet_LocationswithOutgroupH6GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix
+H6_categorymodelThirdDataSet_withoutgroup_matrix<-as.matrix(H6_categorymodelThirdDataSet_withoutgroup)
+
+H6_categorymodelThirdDataSet_withoutgroup_plot<-heatmap(H6_categorymodelThirdDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - ThirdDataSet_outgroup_Figure 3C",ylab="sites",main="Heatmap_H6_locationswithoutgroup")
+
+
+#Let's create heatmaps for the fourth dataset with outgroup
+H2_categorymodelFourthDataSet_withoutgroup<-read.table("FourthDataSet_LocationswithOutgroupH2GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix 
+H2_categorymodelFourthDataSet_withoutgroup_matrix<-as.matrix(H2_categorymodelFourthDataSet_withoutgroup)
+H2_categorymodelFourthDataSet_withoutgroup_plot<-heatmap(H2_categorymodelFourthDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - FourthDataSet_outgroup_Figure 1D",ylab="sites",main="Heatmap_H2_locationswithoutgroup")
+
+
+#H3 category model
+H3_categorymodelFourthDataSet_withoutgroup<-read.table("FourthDataSet_LocationswithOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix
+H3_categorymodelFourthDataSet_withoutgroup_matrix<-as.matrix(H3_categorymodelFourthDataSet_withoutgroup)
+
+H3_categorymodelFourthDataSet_withoutgroup_plot<-heatmap(H3_categorymodelFourthDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - FourthDataSet_outgroup_Figure 4D",ylab="sites",main="Heatmap_H3_locationswithoutgroup")
+
+
+#H4 category model
+H4_categorymodelFourthDataSet_withoutgroup<-read.table("FourthDataSet_LocationswithOutgroupH4GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix 
+H4_categorymodelFourthDataSet_withoutgroup_matrix<-as.matrix(H4_categorymodelFourthDataSet_withoutgroup)
+H4_categorymodelFourthDataSet_withoutgroup_plot<-heatmap(H4_categorymodelFourthDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - FourthDataSet_outgroup_Figure 2D",ylab="sites",main="Heatmap_H4_locationswithoutgroup")
+
+#H5 category model
+H5_categorymodelFourthDataSet_withoutgroup<-read.table("FourthDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix 
+H5_categorymodelFourthDataSet_withoutgroup_matrix<-as.matrix(H5_categorymodelFourthDataSet_withoutgroup)
+H5_categorymodelFourthDataSet_withoutgroup_plot<-heatmap(H5_categorymodelFourthDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - FourthDataSet_outgroup_Figure 5D",ylab="sites",main="Heatmap_H5_locationswithoutgroup")
+
+
+#H6 category model
+H6_categorymodelFourthDataSet_withoutgroup<-read.table("FourthDataSet_LocationswithOutgroupH6GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix 
+H6_categorymodelFourthDataSet_withoutgroup_matrix<-as.matrix(H6_categorymodelFourthDataSet_withoutgroup)
+H6_categorymodelFourthDataSet_withoutgroup_plot<-heatmap(H6_categorymodelFourthDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - FourthDataSet_outgroup_Figure 3D",ylab="sites",main="Heatmap_H6_locationswithoutgroup")
+
+
+#Let's create heatmaps for the fifth datasets with outgroup 
+
+#H4 category model
+
+H2_categorymodelFifthDataSet_withoutgroup<-read.table("FifthDataSet_LocationswithOutgroupH2GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix
+H2_categorymodelFifthDataSet_withoutgroup_matrix<-as.matrix(H2_categorymodelFifthDataSet_withoutgroup)
+H2_categorymodelFifthDataSet_withoutgroup_plot<-heatmap(H2_categorymodelFifthDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - FifthDataSet_outgroup_Figure 1E",ylab="sites",main="Heatmap_H2_locationswithoutgroup")
+
+
+#H3 category model
+H3_categorymodelFifthDataSet_withoutgroup<-read.table("FifthDataSet_LocationswithOutgroupH3GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix
+H3_categorymodelFifthDataSet_withoutgroup_matrix<-as.matrix(H3_categorymodelFifthDataSet_withoutgroup)
+H3_categorymodelFifthDataSet_withoutgroup_plot<-heatmap(H3_categorymodelFifthDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - FifthDataSet_outgroup_Figure 4E",ylab="sites",main="Heatmap_H3_locationswithoutgroup")
+
+
+#H4 category model
+H4_categorymodelFifthDataSet_withoutgroup<-read.table("FifthDataSet_LocationswithOutgroupH4GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix
+H4_categorymodelFifthDataSet_withoutgroup_matrix<-as.matrix(H4_categorymodelFifthDataSet_withoutgroup)
+H4_categorymodelFifthDataSet_withoutgroup_plot<-heatmap(H4_categorymodelFifthDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - FifthDataSet_outgroup_Figure 2E",ylab="sites",main="Heatmap_H4_locationswithoutgroup")
+
+
+#H5 category model
+H5_categorymodelFifthDataSet_withoutgroup<-read.table("FifthDataSet_LocationswithOutgroupH5GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix
+H5_categorymodelFifthDataSet_withoutgroup_matrix<-as.matrix(H5_categorymodelFifthDataSet_withoutgroup)
+H5_categorymodelFifthDataSet_withoutgroup_plot<-heatmap(H5_categorymodelFifthDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - FifthDataSet_outgroup_Figure 5E",ylab="sites",main="Heatmap_H5_locationswithoutgroup")
+
+#H6 category model 
+H6_categorymodelFifthDataSet_withoutgroup<-read.table("FifthDataSet_LocationswithOutgroupH6GHOST.fasta.siteprob",header=TRUE,row.names=1)
+
+#Create a matrix
+H6_categorymodelFifthDataSet_withoutgroup_matrix<-as.matrix(H6_categorymodelFifthDataSet_withoutgroup)
+H6_categorymodelFifthDataSet_withoutgroup_plot<-heatmap(H6_categorymodelFifthDataSet_withoutgroup_matrix,Rowv=NA,Colv=NA,scale="none",xlab="Categories - FifthDataSet_outgroup_Figure 3E",ylab="sites",main="Heatmap_H6_locationswithoutgroup")
+
