@@ -9,7 +9,11 @@ The Github repository is part of my master's thesis 2024. The objective of the m
 ### Work process of the project 
 (https://github.com/RusulAlKaisy/MasterThesis2024/blob/main/Flowchart.svg)
 
-### Structure of the repository 
+The provided flowchart illustrates the workflow of the project, delineating each step. The subsequent section describes each step. 
+
+
+
+ 
 
 ## Software 
 
