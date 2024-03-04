@@ -14,6 +14,7 @@ The provided flowchart illustrates the workflow of the project, delineating each
 
 ## Software 
 * Rstudio:4.2.3
+* iqtree-2.2.2.6
 
 
 ## Setup
