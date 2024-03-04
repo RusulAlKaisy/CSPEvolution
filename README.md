@@ -2,7 +2,8 @@
 ## Table of contents 
 * [About the project](#About-the-project)
 * [Software](#Software)
-* [Setup](#Setup)
+* [Work process of the project](#Work process of the project)
+
 ## About the project
 The Github repository is part of my master's thesis 2024. The objective of the master's thesis is to assess the molecular evolutionary history of the circumsporozoite protein through the utilization of mixture models. 
  
