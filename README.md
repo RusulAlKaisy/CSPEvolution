@@ -12,11 +12,9 @@ The Github repository is part of my master's thesis 2024. The objective of the m
 The provided flowchart illustrates the workflow of the project, delineating each step. The subsequent section describes each step. 
 
 
-
- 
-
 ## Software 
-
+Rstudio v.4.2.3
+Iqtree-2.2.2.6
 
 
 ## Setup
