@@ -1,0 +1,34 @@
+Sequences_with_Locations<-read.FASTA("C:\\Users\\HomePC\\Desktop\\Dataset1\\Sequences_with_Locations_WithOutGroup.txt")
+
+#Let's reshuffle the seuqences
+Sequences_with_Locations <- as.matrix(Sequences_with_Locations)  
+neworder <- sample(rownames(Sequences_with_Locations)[-1], nrow(Sequences_with_Locations)-1, replace = F)
+Sequences_with_Locations <- rbind(Sequences_with_Locations[1,], Sequences_with_Locations[neworder,])
+Sequences_with_Locations
+
+
+#The datasets with an outgroup
+
+Rep1_LocationsOutgroup<-Sequences_with_Locations[1:81,]
+
+Rep2_LocationsOutgroup<-Sequences_with_Locations[c(1,82:(81+80)),]
+
+Rep3_LocationsOutgroup<-Sequences_with_Locations[c(1,162:(161+80)),]
+
+Rep4_LocationsOutgroup<-Sequences_with_Locations[c(1,242:(241+80)),]
+
+Rep5_LocationsOutgroup<-Sequences_with_Locations[c(1,322:(321+80)),]
+
+#Sanity check
+which(rownames(Rep1_LocationsOutgroup) %in% rownames(Rep2_LocationsOutgroup))
+which(rownames(Rep2_LocationsOutgroup) %in% rownames(Rep3_LocationsOutgroup))
+which(rownames(Rep3_LocationsOutgroup) %in% rownames(Rep4_LocationsOutgroup))
+which(rownames(Rep4_LocationsOutgroup) %in% rownames(Rep5_LocationsOutgroup))
+
+
+#Save as a FASTA and then run GHOST
+write.FASTA(Rep1_LocationsOutgroup,"C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\Rep1_LocationsOutgroup.fasta")
+write.FASTA(Rep2_LocationsOutgroup,"C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\Rep2_LocationsOutgroup.fasta")
+write.FASTA(Rep3_LocationsOutgroup,"C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\Rep3_LocationsOutgroup.fasta")
+write.FASTA(Rep4_LocationsOutgroup,"C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\Rep4_LocationsOutgroup.fasta")
+write.FASTA(Rep5_LocationsOutgroup,"C:\\Users\\HomePC\\Desktop\\Dataset1\\GHOST_200_locations\\Rep5_LocationsOutgroup.fasta")
