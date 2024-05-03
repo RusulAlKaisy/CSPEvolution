@@ -1,3 +1,4 @@
+<img width="272" alt="Flowchart " src="https://github.com/RusulAlKaisy/MasterThesis2024/assets/161965623/31fc8b3d-7f80-4aaa-b183-a0d0454170e5">
 # MasterThesis2024
 Welcome to the repository for my master's thesis project. The repository contains all the code associated with my thesis project: The molecular evolutionary history of Plasmodium falciparum  circumsporozoite protein assessed with models of heterotachy.
 ## Table of contents 
