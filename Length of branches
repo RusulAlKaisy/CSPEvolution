@@ -1,6 +1,6 @@
 Let us plot the phylogenetic trees and divide branch lengths 
 
-#Phylogenetic tree - First replicate with an outgroup - H5 categorymodel 
+#Phylogenetic tree - First replicate with an outgroup - H5 classmodel 
 
 First_replicate_withOutgroup_Phylo_H5<-read.tree("FirstDataSet_LocationswithOutgroupH5GHOST.fasta.treefile")
 
@@ -47,7 +47,7 @@ plot(tree5,cex=0.05)
 tree6$edge.length<-tree6$edge.length/tree1$edge.length
 plot(tree7,cex=0.05)
 
-#First replicate with no outgroup. Category model H5
+#First replicate with no outgroup. class model H5
 
 First_replicate_NOOutgroup_Phylo_H5<-read.tree("FirstDataSet_LocationsNOOutgroupH5GHOST.fasta.treefile")
 
@@ -78,7 +78,7 @@ plot(tree5_NOOutgroup_First,cex=0.05)
 tree6_NOOutgroup_First$edge.length<-tree6_NOOutgroup_First$edge.length/tree1_NOOutgroup_First$edge.length
 plot(tree6_NOOutgroup_First,cex=0.05)
 
-#Second replicate with outgroup.Category model H5 
+#Second replicate with outgroup.class model H5 
 Second_replicate_withOutgroup_Phylo_H5<-read.tree("SecondDataSet_LocationswithOutgroupH5GHOST.fasta.treefile")
 
 tree1_withOutgroup_Second<-Second_replicate_withOutgroup_Phylo_H5[[1]]
@@ -109,7 +109,7 @@ plot(tree5_withOutgroup_Second,cex=0.05)
 tree6_withOutgroup_Second$edge.length<-tree6_withOutgroup_Second$edge.length/tree1_withOutgroup_Second$edge.length
 plot(tree5_withOutgroup_Second,cex=0.05)
 
-#Second replicate with NO outgroup.Category model H5 
+#Second replicate with NO outgroup.class model H5 
 Second_replicate_NOOutgroup_Phylo_H5<-read.tree("SecondDataSet_LocationsNOOutgroupH5GHOST.fasta.treefile")
 
 
@@ -142,7 +142,7 @@ tree6_NOOutgroup_Second$edge.length<-tree6_NOOutgroup_Second$edge.length/tree1_N
 plot(tree5_NOOutgroup_Second,cex=0.05)
 
 
-#Third replicate with outgroup. Categorymodel H5 
+#Third replicate with outgroup. classmodel H5 
 
 Third_replicate_withOutgroup_Phylo_H5<-read.tree("ThirdDataSet_LocationswithOutgroupH5GHOST.fasta.treefile")
 
@@ -174,7 +174,7 @@ plot(tree5_withOutgroup_Three,cex=0.05)
 tree6_withOutgroup_Three$edge.length<-tree6_withOutgroup_Three$edge.length/tree1_withOutgroup_Three$edge.length
 plot(tree6_withOutgroup_Three,cex=0.05)
 
-#Third replicate NO outgroup. Categorymodel H4 
+#Third replicate NO outgroup. classmodel H4 
 
 Third_replicate_NOOutgroup_Phylo_H4<-read.tree("ThirdDataSet_LocationsNOOutgroupH4GHOST.fasta.treefile")
 
@@ -201,7 +201,7 @@ tree5_NOOutgroup_Three$edge.length<-tree5_NOOutgroup_Three$edge.length/tree1_NOO
 plot(tree5_NOOutgroup_Three,cex=0.05)
 
 
-#Fourth replicate with outgroup. Categorymodel H3
+#Fourth replicate with outgroup. classmodel H3
 
 Fourth_replicate_withOutgroup_Phylo_H3<-read.tree("FourthDataSet_LocationswithOutgroupH3GHOST.fasta.treefile")
 
@@ -222,7 +222,7 @@ plot(tree3_withOutgroup_Four,cex=0.05)
 tree4_withOutgroup_Four$edge.length<-tree4_withOutgroup_Four$edge.length/tree1_withOutgroup_Four$edge.length
 plot(tree4_withOutgroup_Four,cex=0.05)
 
-#Fourth replicate with NO outgroup. Categorymodel H3
+#Fourth replicate with NO outgroup. classmodel H3
 
 Fourth_replicate_NOOutgroup_Phylo_H3<-read.tree("FourthDataSet_LocationsNOOutgroupH3GHOST.fasta.treefile")
 
@@ -251,7 +251,7 @@ plot(tree4_NOOutgroup_Four,cex=0.05, edge.color = tr4col, edge.width = 3)
 
 plot(tree1_NOOutgroup_Four,cex=0.05)
 
-#Fifth replicate with outgroup. Categorymodel H3 
+#Fifth replicate with outgroup. classmodel H3 
 Fifth_replicate_withOutgroup_Phylo_H3<-read.tree("FifthDataSet_LocationswithOutgroupH3GHOST.fasta.treefile")
 
 tree1_withOutgroup_Five<-Fifth_replicate_withOutgroup_Phylo_H3[[1]]
@@ -271,7 +271,7 @@ plot(tree3_withOutgroup_Five,cex=0.05)
 tree4_withOutgroup_Five$edge.length<-tree4_withOutgroup_Five$edge.length/tree1_withOutgroup_Five$edge.length
 plot(tree4_withOutgroup_Five,cex=0.05)
 
-#Fifth replicate NO outgroup. Categorymodel H3 
+#Fifth replicate NO outgroup. classmodel H3 
 
 Fifth_replicate_NOOutgroup_Phylo_H3<-read.tree("FifthDataSet_LocationsNOOutgroupH3GHOST.fasta.treefile")
 
