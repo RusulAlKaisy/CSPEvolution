@@ -5,6 +5,7 @@ Welcome to the repository for my master's thesis project. The repository contain
 * [About the project](#About-the-project)
 * [Software](#Software)
 * [Repository structure](#Repository-structure)
+* [Usage](#Usage)
 
 ## About the project
 The GitHub repository is part of my master's thesis in May 2024. The master thesis project focuses on assessing the molecular evolutionary history of the circumsporozoite protein (CSP) by utilizing phylogenetic mixture models such as GHOST through extensive analysis and development of custom coding. 
@@ -21,6 +22,7 @@ The repository contains all custom-developed code pertinent to the thesis projec
 
 
 
-
+##Usage
+In order to access and make use of the code files stored in this repository, it is recommended to clone or download the code files stored in this repository. Each code file has its own functionality and purpose. The code files cannot be executed unless the corresponding data files are downloaded. 
 
 
