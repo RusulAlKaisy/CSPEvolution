@@ -1,3 +1,4 @@
+#This creates replicates for genetic sequences without the outgroup, and include the species name
 
 #Let's do the datasets that do not contain the outgroup
 Rep1_NoOutgroup<-NewSequencesFastaTrimNoDup[2:81,]
