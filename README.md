@@ -1,4 +1,5 @@
 # MasterThesis2024
+Welcome to the repository for my master's thesis project. The repository contains all the code associated with my thesis project: The molecular evolutionary history of Plasmodium falciparum  circumsporozoite protein assessed with models of heterotachy 
 ## Table of contents 
 * [About the project](#About-the-project)
 * [Software](#Software)
