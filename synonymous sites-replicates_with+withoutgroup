@@ -1,8 +1,8 @@
-#Let's calculate the percentage of non-synonymous sites for the category models with the lowest AIC score 
+#Let's calculate the percentage of non-synonymous sites for the class models with the lowest AIC score 
 
 #Let's calculate the percentage of non-synonymous sites for the replicates with an outgroup
 
-#First replicate - Category model H5 - Category 1 
+#First replicate - class model H5 - class 1 
 
 Replicate1_withOutgroup_H5<-read.table("FirstDataSet_LocationswithOutGroupH5GHOST.fasta.siteprob",header=T, row.names=1)
 dim(Replicate1_withOutgroup_H5)
@@ -12,7 +12,7 @@ head(apply(Replicate1_withOutgroup_H5, 1, function(x) which(x == max(x))))
 
 apply(Replicate1_withOutgroup_H5, 1, function(x) which(x == max(x)))
 
-#How many sites in each category 
+#How many sites in each class 
 
 length(apply(Replicate1_withOutgroup_H5, 1, function(x) which(x == max(x))))
 
@@ -20,7 +20,7 @@ table(apply(Replicate1_withOutgroup_H5,1,function(x) which(x==max(x))))
 
 site_categories_Replicate1_withOutgroup_H5<-apply(Replicate1_withOutgroup_H5, 1, function(x) which(x == max(x))) 
 
-#Which sites belong to which category 
+#Which sites belong to which class 
 catx<-1
 ncatsites<-which(site_categories_Replicate1_withOutgroup_H5==catx)
 
@@ -38,49 +38,49 @@ sum((ncatsites/3)%%1==0)
 
 sum((ncatsites/3)%%1==0)/as.numeric(table(site_categories_Replicate1_withOutgroup_H5)[catx])
 
-#Let's do for the second category 
+#Let's do for the second class 
 
-Category2_Firstreplicate_H5_wOutgroup<-2
-ncatsitesFirstReplicate_H5_wOutgroup2<-which(site_categories_Replicate1_withOutgroup_H5==Category2_Firstreplicate_H5_wOutgroup)
+class2_Firstreplicate_H5_wOutgroup<-2
+ncatsitesFirstReplicate_H5_wOutgroup2<-which(site_categories_Replicate1_withOutgroup_H5==class2_Firstreplicate_H5_wOutgroup)
 
 ncatsitesFirstReplicate_H5_wOutgroup2/3
 
 (ncatsitesFirstReplicate_H5_wOutgroup2/3)%%1==0
 
-sum((ncatsitesFirstReplicate_H5_wOutgroup2/3)%%1==0)/as.numeric(table(site_categories_Replicate1_withOutgroup_H5)[Category2_Firstreplicate_H5_wOutgroup])
+sum((ncatsitesFirstReplicate_H5_wOutgroup2/3)%%1==0)/as.numeric(table(site_categories_Replicate1_withOutgroup_H5)[class2_Firstreplicate_H5_wOutgroup])
 
-#Let's do it for the third category 
+#Let's do it for the third class 
 
-Category3_FirstReplicate_H5_wOutgroup<-3
-ncatsitesFirstReplicate_H5_wOutgroup3<-which(site_categories_Replicate1_withOutgroup_H5==Category3_FirstReplicate_H5_wOutgroup)
+class3_FirstReplicate_H5_wOutgroup<-3
+ncatsitesFirstReplicate_H5_wOutgroup3<-which(site_categories_Replicate1_withOutgroup_H5==class3_FirstReplicate_H5_wOutgroup)
 
 ncatsitesFirstReplicate_H5_wOutgroup3/3
 
 (ncatsitesFirstReplicate_H5_wOutgroup3/3)%%1==0
 
-sum((ncatsitesFirstReplicate_H5_wOutgroup3/3)%%1==0)/as.numeric(table(site_categories_Replicate1_withOutgroup_H5)[Category3_FirstReplicate_H5_wOutgroup])
+sum((ncatsitesFirstReplicate_H5_wOutgroup3/3)%%1==0)/as.numeric(table(site_categories_Replicate1_withOutgroup_H5)[class3_FirstReplicate_H5_wOutgroup])
 
-#Let's do it for the fourth category 
+#Let's do it for the fourth class 
 
-Category4_FirstReplicate_H5_wOutgroup<-4
-ncatsitesFirstReplicate_H5_wOutgroup4<-which(site_categories_Replicate1_withOutgroup_H5==Category4_FirstReplicate_H5_wOutgroup)
+class4_FirstReplicate_H5_wOutgroup<-4
+ncatsitesFirstReplicate_H5_wOutgroup4<-which(site_categories_Replicate1_withOutgroup_H5==class4_FirstReplicate_H5_wOutgroup)
 
 ncatsitesFirstReplicate_H5_wOutgroup4/3
 (ncatsitesFirstReplicate_H5_wOutgroup4/3)%%1==0
 
-sum((ncatsitesFirstReplicate_H5_wOutgroup4/3)%%1==0)/as.numeric(table(site_categories_Replicate1_withOutgroup_H5)[Category4_FirstReplicate_H5_wOutgroup])
+sum((ncatsitesFirstReplicate_H5_wOutgroup4/3)%%1==0)/as.numeric(table(site_categories_Replicate1_withOutgroup_H5)[class4_FirstReplicate_H5_wOutgroup])
 
-#Let's do it for the fifth category 
+#Let's do it for the fifth class 
 
-Category5_FirstReplicate_H5_wOutgroup<-5
-ncatsitesFirstReplicate_H5_wOutgroup5<-which(site_categories_Replicate1_withOutgroup_H5==Category5_FirstReplicate_H5_wOutgroup)
+class5_FirstReplicate_H5_wOutgroup<-5
+ncatsitesFirstReplicate_H5_wOutgroup5<-which(site_categories_Replicate1_withOutgroup_H5==class5_FirstReplicate_H5_wOutgroup)
 
 ncatsitesFirstReplicate_H5_wOutgroup5/3
 (ncatsitesFirstReplicate_H5_wOutgroup5/3)%%1==0
 
-sum((ncatsitesFirstReplicate_H5_wOutgroup5/3)%%1==0)/as.numeric(table(site_categories_Replicate1_withOutgroup_H5)[Category5_FirstReplicate_H5_wOutgroup])
+sum((ncatsitesFirstReplicate_H5_wOutgroup5/3)%%1==0)/as.numeric(table(site_categories_Replicate1_withOutgroup_H5)[class5_FirstReplicate_H5_wOutgroup])
 
-#First replicate with no outgroup - H5 category model 
+#First replicate with no outgroup - H5 class model 
 
 Replicate1_NOOutgroup_H5<-read.table("FirstDataSet_LocationsNOOutGroupH5GHOST.fasta.siteprob",header=T,row.names=1)
 dim(Replicate1_NOOutgroup_H5)
@@ -88,61 +88,61 @@ head(Replicate1_NOOutgroup_H5)
 
 head(apply(Replicate1_NOOutgroup_H5, 1, function(x) which(x == max(x))))
 
-#How many sites in each category 
+#How many sites in each class 
 
 table(apply(Replicate1_NOOutgroup_H5,1,function(x) which(x==max(x))))
 
 site_categories_Replicate1_NOOutgroup_H5<-apply(Replicate1_NOOutgroup_H5, 1, function(x) which(x == max(x))) 
 
-#First category 
+#First class 
 
-Category1_FirstReplicate_H5_NOOutgroup<-1
-ncatsitesFirstReplicate_H5_NOOutgroup1<-which(site_categories_Replicate1_NOOutgroup_H5==Category1_FirstReplicate_H5_NOOutgroup)
+class1_FirstReplicate_H5_NOOutgroup<-1
+ncatsitesFirstReplicate_H5_NOOutgroup1<-which(site_categories_Replicate1_NOOutgroup_H5==class1_FirstReplicate_H5_NOOutgroup)
 
 ncatsitesFirstReplicate_H5_NOOutgroup1/3
 
 (ncatsitesFirstReplicate_H5_NOOutgroup1/3)%%1==0
 
-sum((ncatsitesFirstReplicate_H5_NOOutgroup1/3)%%1==0)/as.numeric(table(site_categories_Replicate1_NOOutgroup_H5)[Category1_FirstReplicate_H5_NOOutgroup])
+sum((ncatsitesFirstReplicate_H5_NOOutgroup1/3)%%1==0)/as.numeric(table(site_categories_Replicate1_NOOutgroup_H5)[class1_FirstReplicate_H5_NOOutgroup])
 
-#Second category 
+#Second class 
 
-Category2_FirstReplicate_H5_NOOutgroup<-2
-ncatsitesFirstReplicate_H5_NOOutgroup2<-which(site_categories_Replicate1_NOOutgroup_H5==Category2_FirstReplicate_H5_NOOutgroup)
+class2_FirstReplicate_H5_NOOutgroup<-2
+ncatsitesFirstReplicate_H5_NOOutgroup2<-which(site_categories_Replicate1_NOOutgroup_H5==class2_FirstReplicate_H5_NOOutgroup)
 
 ncatsitesFirstReplicate_H5_NOOutgroup2/3
 (ncatsitesFirstReplicate_H5_NOOutgroup2/3)%%1==0
 
-sum((ncatsitesFirstReplicate_H5_NOOutgroup2/3)%%1==0)/as.numeric(table(site_categories_Replicate1_NOOutgroup_H5)[Category2_FirstReplicate_H5_NOOutgroup])
+sum((ncatsitesFirstReplicate_H5_NOOutgroup2/3)%%1==0)/as.numeric(table(site_categories_Replicate1_NOOutgroup_H5)[class2_FirstReplicate_H5_NOOutgroup])
 
-#Third category 
-Category3_FirstReplicate_H5_NOOutgroup<-3
-ncatsitesFirstReplicate_H5_NOOutgroup3<-which(site_categories_Replicate1_NOOutgroup_H5==Category3_FirstReplicate_H5_NOOutgroup)
+#Third class 
+class3_FirstReplicate_H5_NOOutgroup<-3
+ncatsitesFirstReplicate_H5_NOOutgroup3<-which(site_categories_Replicate1_NOOutgroup_H5==class3_FirstReplicate_H5_NOOutgroup)
 
 ncatsitesFirstReplicate_H5_NOOutgroup3/3
 (ncatsitesFirstReplicate_H5_NOOutgroup3/3)%%1==0
 
-sum((ncatsitesFirstReplicate_H5_NOOutgroup3/3)%%1==0)/as.numeric(table(site_categories_Replicate1_NOOutgroup_H5)[Category3_FirstReplicate_H5_NOOutgroup])
+sum((ncatsitesFirstReplicate_H5_NOOutgroup3/3)%%1==0)/as.numeric(table(site_categories_Replicate1_NOOutgroup_H5)[class3_FirstReplicate_H5_NOOutgroup])
 
-#Fourth category 
-Category4_FirstReplicate_H5_NOOutgroup<-4
-ncatsitesFirstReplicate_H5_NOOutgroup4<-which(site_categories_Replicate1_NOOutgroup_H5==Category4_FirstReplicate_H5_NOOutgroup)
+#Fourth class 
+class4_FirstReplicate_H5_NOOutgroup<-4
+ncatsitesFirstReplicate_H5_NOOutgroup4<-which(site_categories_Replicate1_NOOutgroup_H5==class4_FirstReplicate_H5_NOOutgroup)
 
 ncatsitesFirstReplicate_H5_NOOutgroup4/3
 (ncatsitesFirstReplicate_H5_NOOutgroup4/3)%%1==0
 
-sum((ncatsitesFirstReplicate_H5_NOOutgroup4/3)%%1==0)/as.numeric(table(site_categories_Replicate1_NOOutgroup_H5)[Category4_FirstReplicate_H5_NOOutgroup])
+sum((ncatsitesFirstReplicate_H5_NOOutgroup4/3)%%1==0)/as.numeric(table(site_categories_Replicate1_NOOutgroup_H5)[class4_FirstReplicate_H5_NOOutgroup])
 
-#Fifth category
-Category5_FirstReplicate_H5_NOOutgroup<-5
-ncatsitesFirstReplicate_H5_NOOutgroup5<-which(site_categories_Replicate1_NOOutgroup_H5==Category5_FirstReplicate_H5_NOOutgroup)
+#Fifth class
+class5_FirstReplicate_H5_NOOutgroup<-5
+ncatsitesFirstReplicate_H5_NOOutgroup5<-which(site_categories_Replicate1_NOOutgroup_H5==class5_FirstReplicate_H5_NOOutgroup)
 
 ncatsitesFirstReplicate_H5_NOOutgroup5/3
 (ncatsitesFirstReplicate_H5_NOOutgroup5/3)%%1==0
 
-sum((ncatsitesFirstReplicate_H5_NOOutgroup5/3)%%1==0)/as.numeric(table(site_categories_Replicate1_NOOutgroup_H5)[Category5_FirstReplicate_H5_NOOutgroup])
+sum((ncatsitesFirstReplicate_H5_NOOutgroup5/3)%%1==0)/as.numeric(table(site_categories_Replicate1_NOOutgroup_H5)[class5_FirstReplicate_H5_NOOutgroup])
 
-#Second dataset with outgroup. Category model 5
+#Second dataset with outgroup. class model 5
 
 Replicate2_withoutgroup_H5<-read.table("SecondDataSet_LocationswithOutGroupH5GHOST.fasta.siteprob", header = T, row.names = 1)
 dim(Replicate2_withoutgroup_H5)
@@ -154,48 +154,48 @@ table(apply(Replicate2_withoutgroup_H5,1,function(x) which(x==max(x))))
 
 site_categories_Replicate2_withoutgroup_H5<-apply(Replicate2_withoutgroup_H5, 1, function(x) which(x == max(x))) 
 
-#First category
-Category1_SecondReplicate_H5_withoutgroup<-1
-ncatsitesSecondReplicate_H5_withoutgroup1<-which(site_categories_Replicate2_withoutgroup_H5==Category1_SecondReplicate_H5_withoutgroup)
+#First class
+class1_SecondReplicate_H5_withoutgroup<-1
+ncatsitesSecondReplicate_H5_withoutgroup1<-which(site_categories_Replicate2_withoutgroup_H5==class1_SecondReplicate_H5_withoutgroup)
 ncatsitesSecondReplicate_H5_withoutgroup1/3
 
 (ncatsitesSecondReplicate_H5_withoutgroup1/3)%%1==0
-sum((ncatsitesSecondReplicate_H5_withoutgroup1/3)%%1==0)/as.numeric(table(site_categories_Replicate2_withoutgroup_H5)[Category1_SecondReplicate_H5_withoutgroup])
+sum((ncatsitesSecondReplicate_H5_withoutgroup1/3)%%1==0)/as.numeric(table(site_categories_Replicate2_withoutgroup_H5)[class1_SecondReplicate_H5_withoutgroup])
 
-#Second category 
-Category2_SecondReplicate_H5_withoutgroup<-2
-ncatsitesSecondReplicate_H5_withoutgroup2<-which(site_categories_Replicate2_withoutgroup_H5==Category2_SecondReplicate_H5_withoutgroup)
+#Second class 
+class2_SecondReplicate_H5_withoutgroup<-2
+ncatsitesSecondReplicate_H5_withoutgroup2<-which(site_categories_Replicate2_withoutgroup_H5==class2_SecondReplicate_H5_withoutgroup)
 
 ncatsitesSecondReplicate_H5_withoutgroup2/3
 (ncatsitesSecondReplicate_H5_withoutgroup2/3)%%1==0
-sum((ncatsitesSecondReplicate_H5_withoutgroup2/3)%%1==0)/as.numeric(table(site_categories_Replicate2_withoutgroup_H5)[Category2_SecondReplicate_H5_withoutgroup])
+sum((ncatsitesSecondReplicate_H5_withoutgroup2/3)%%1==0)/as.numeric(table(site_categories_Replicate2_withoutgroup_H5)[class2_SecondReplicate_H5_withoutgroup])
 
 
-#Third category 
-Category3_SecondReplicate_H5_withoutgroup<-3
-ncatsitesSecondReplicate_H5_withoutgroup3<-which(site_categories_Replicate2_withoutgroup_H5==Category3_SecondReplicate_H5_withoutgroup)
+#Third class 
+class3_SecondReplicate_H5_withoutgroup<-3
+ncatsitesSecondReplicate_H5_withoutgroup3<-which(site_categories_Replicate2_withoutgroup_H5==class3_SecondReplicate_H5_withoutgroup)
 ncatsitesSecondReplicate_H5_withoutgroup3/3
 
 (ncatsitesSecondReplicate_H5_withoutgroup3/3)%%1==0
-sum((ncatsitesSecondReplicate_H5_withoutgroup3/3)%%1==0)/as.numeric(table(site_categories_Replicate2_withoutgroup_H5)[Category3_SecondReplicate_H5_withoutgroup])
+sum((ncatsitesSecondReplicate_H5_withoutgroup3/3)%%1==0)/as.numeric(table(site_categories_Replicate2_withoutgroup_H5)[class3_SecondReplicate_H5_withoutgroup])
 
-#Fourth category 
-Category4_SecondReplicate_H5_withoutgroup<-4
-ncatsitesSecondReplicate_H5_withoutgroup4<-which(site_categories_Replicate2_withoutgroup_H5==Category4_SecondReplicate_H5_withoutgroup)
+#Fourth class 
+class4_SecondReplicate_H5_withoutgroup<-4
+ncatsitesSecondReplicate_H5_withoutgroup4<-which(site_categories_Replicate2_withoutgroup_H5==class4_SecondReplicate_H5_withoutgroup)
 ncatsitesSecondReplicate_H5_withoutgroup4/3
 
 (ncatsitesSecondReplicate_H5_withoutgroup4/3)%%1==0
-sum((ncatsitesSecondReplicate_H5_withoutgroup4/3)%%1==0)/as.numeric(table(site_categories_Replicate2_withoutgroup_H5)[Category4_SecondReplicate_H5_withoutgroup])
+sum((ncatsitesSecondReplicate_H5_withoutgroup4/3)%%1==0)/as.numeric(table(site_categories_Replicate2_withoutgroup_H5)[class4_SecondReplicate_H5_withoutgroup])
 
-#Fifth category 
-Category5_SecondReplicate_H5_withoutgroup<-5
-ncatsitesSecondReplicate_H5_withoutgroup5<-which(site_categories_Replicate2_withoutgroup_H5==Category5_SecondReplicate_H5_withoutgroup)
+#Fifth class 
+class5_SecondReplicate_H5_withoutgroup<-5
+ncatsitesSecondReplicate_H5_withoutgroup5<-which(site_categories_Replicate2_withoutgroup_H5==class5_SecondReplicate_H5_withoutgroup)
 ncatsitesSecondReplicate_H5_withoutgroup5/3
 
 (ncatsitesSecondReplicate_H5_withoutgroup5/3)%%1==0
-sum((ncatsitesSecondReplicate_H5_withoutgroup5/3)%%1==0)/as.numeric(table(site_categories_Replicate2_withoutgroup_H5)[Category5_SecondReplicate_H5_withoutgroup])
+sum((ncatsitesSecondReplicate_H5_withoutgroup5/3)%%1==0)/as.numeric(table(site_categories_Replicate2_withoutgroup_H5)[class5_SecondReplicate_H5_withoutgroup])
 
-#Second replicate with NO outgroup. Category model 5 
+#Second replicate with NO outgroup. class model 5 
 Replicate2_NOOutgroup_H5<-read.table("SecondDataSet_LocationsNOOutGroupH5GHOST.fasta.siteprob",header=T,row.names = 1)
 dim(Replicate2_NOOutgroup_H5)
 head(Replicate2_NOOutgroup_H5)
@@ -206,48 +206,48 @@ table(apply(Replicate2_NOOutgroup_H5,1,function(x) which(x==max(x))))
 
 site_categories_Replicate2_NOOutgroup_H5<-apply(Replicate2_NOOutgroup_H5, 1, function(x) which(x == max(x))) 
 
-#First category
-Category1_SecondReplicate_H5_NOOutgroup<-1
-ncatsitesSecondReplicate_H5_NOOutgroup1<-which(site_categories_Replicate2_NOOutgroup_H5==Category1_SecondReplicate_H5_NOOutgroup)
+#First class
+class1_SecondReplicate_H5_NOOutgroup<-1
+ncatsitesSecondReplicate_H5_NOOutgroup1<-which(site_categories_Replicate2_NOOutgroup_H5==class1_SecondReplicate_H5_NOOutgroup)
 ncatsitesSecondReplicate_H5_NOOutgroup1/3
 
 (ncatsitesSecondReplicate_H5_NOOutgroup1/3)%%1==0
-sum((ncatsitesSecondReplicate_H5_NOOutgroup1/3)%%1==0)/as.numeric(table(site_categories_Replicate2_NOOutgroup_H5)[Category1_SecondReplicate_H5_NOOutgroup])
+sum((ncatsitesSecondReplicate_H5_NOOutgroup1/3)%%1==0)/as.numeric(table(site_categories_Replicate2_NOOutgroup_H5)[class1_SecondReplicate_H5_NOOutgroup])
 
-#Second category
-Category2_SecondReplicate_H5_NOOutgroup<-2
-ncatsitesSecondReplicate_H5_NOOutgroup2<-which(site_categories_Replicate2_NOOutgroup_H5==Category2_SecondReplicate_H5_NOOutgroup)
+#Second class
+class2_SecondReplicate_H5_NOOutgroup<-2
+ncatsitesSecondReplicate_H5_NOOutgroup2<-which(site_categories_Replicate2_NOOutgroup_H5==class2_SecondReplicate_H5_NOOutgroup)
 ncatsitesSecondReplicate_H5_NOOutgroup2/3
 
 (ncatsitesSecondReplicate_H5_NOOutgroup2/3)%%1==0
-sum((ncatsitesSecondReplicate_H5_NOOutgroup2/3)%%1==0)/as.numeric(table(site_categories_Replicate2_NOOutgroup_H5)[Category2_SecondReplicate_H5_NOOutgroup])
+sum((ncatsitesSecondReplicate_H5_NOOutgroup2/3)%%1==0)/as.numeric(table(site_categories_Replicate2_NOOutgroup_H5)[class2_SecondReplicate_H5_NOOutgroup])
 
 
-#Third category 
-Category3_SecondReplicate_H5_NOOutgroup<-3
-ncatsitesSecondReplicate_H5_NOOutgroup3<-which(site_categories_Replicate2_NOOutgroup_H5==Category3_SecondReplicate_H5_NOOutgroup)
+#Third class 
+class3_SecondReplicate_H5_NOOutgroup<-3
+ncatsitesSecondReplicate_H5_NOOutgroup3<-which(site_categories_Replicate2_NOOutgroup_H5==class3_SecondReplicate_H5_NOOutgroup)
 ncatsitesSecondReplicate_H5_NOOutgroup3/3
 
 (ncatsitesSecondReplicate_H5_NOOutgroup3/3)%%1==0
-sum((ncatsitesSecondReplicate_H5_NOOutgroup3/3)%%1==0)/as.numeric(table(site_categories_Replicate2_NOOutgroup_H5)[Category3_SecondReplicate_H5_NOOutgroup])
+sum((ncatsitesSecondReplicate_H5_NOOutgroup3/3)%%1==0)/as.numeric(table(site_categories_Replicate2_NOOutgroup_H5)[class3_SecondReplicate_H5_NOOutgroup])
 
-#Fourth category
-Category4_SecondReplicate_H5_NOOutgroup<-4
-ncatsitesSecondReplicate_H5_NOOutgroup4<-which(site_categories_Replicate2_NOOutgroup_H5==Category4_SecondReplicate_H5_NOOutgroup)
+#Fourth class
+class4_SecondReplicate_H5_NOOutgroup<-4
+ncatsitesSecondReplicate_H5_NOOutgroup4<-which(site_categories_Replicate2_NOOutgroup_H5==class4_SecondReplicate_H5_NOOutgroup)
 ncatsitesSecondReplicate_H5_NOOutgroup4/3
 
 (ncatsitesSecondReplicate_H5_NOOutgroup4/3)%%1==0
-sum((ncatsitesSecondReplicate_H5_NOOutgroup4/3)%%1==0)/as.numeric(table(site_categories_Replicate2_NOOutgroup_H5)[Category4_SecondReplicate_H5_NOOutgroup])
+sum((ncatsitesSecondReplicate_H5_NOOutgroup4/3)%%1==0)/as.numeric(table(site_categories_Replicate2_NOOutgroup_H5)[class4_SecondReplicate_H5_NOOutgroup])
 
-#Fifth category 
-Category5_SecondReplicate_H5_NOOutgroup<-5
-ncatsitesSecondReplicate_H5_NOOutgroup5<-which(site_categories_Replicate2_NOOutgroup_H5==Category5_SecondReplicate_H5_NOOutgroup)
+#Fifth class 
+class5_SecondReplicate_H5_NOOutgroup<-5
+ncatsitesSecondReplicate_H5_NOOutgroup5<-which(site_categories_Replicate2_NOOutgroup_H5==class5_SecondReplicate_H5_NOOutgroup)
 ncatsitesSecondReplicate_H5_NOOutgroup5/3
 
 (ncatsitesSecondReplicate_H5_NOOutgroup5/3)%%1==0
-sum((ncatsitesSecondReplicate_H5_NOOutgroup5/3)%%1==0)/as.numeric(table(site_categories_Replicate2_NOOutgroup_H5)[Category5_SecondReplicate_H5_NOOutgroup])
+sum((ncatsitesSecondReplicate_H5_NOOutgroup5/3)%%1==0)/as.numeric(table(site_categories_Replicate2_NOOutgroup_H5)[class5_SecondReplicate_H5_NOOutgroup])
 
-#Third dataset with outgroup. Category model 5
+#Third dataset with outgroup. class model 5
 Replicate3_withoutgroup_H5<-read.table("ThirdDataSet_LocationswithOutGroupH5GHOST.fasta.siteprob",header=T,row.names = 1)
 dim(Replicate3_withoutgroup_H5)
 
@@ -259,47 +259,47 @@ table(apply(Replicate3_withoutgroup_H5,1,function(x) which(x==max(x))))
 
 site_categories_Replicate3_withoutgroup_H5<-apply(Replicate3_withoutgroup_H5, 1, function(x) which(x == max(x))) 
 
-#First category
-Category1_ThirdReplicate_H5_withoutgroup<-1
-ncatsitesThirdReplicate_H5_withoutgroup1<-which(site_categories_Replicate3_withoutgroup_H5==Category1_ThirdReplicate_H5_withoutgroup)
+#First class
+class1_ThirdReplicate_H5_withoutgroup<-1
+ncatsitesThirdReplicate_H5_withoutgroup1<-which(site_categories_Replicate3_withoutgroup_H5==class1_ThirdReplicate_H5_withoutgroup)
 ncatsitesThirdReplicate_H5_withoutgroup1/3
 
 (ncatsitesThirdReplicate_H5_withoutgroup1/3)%%1==0
-sum((ncatsitesThirdReplicate_H5_withoutgroup1/3)%%1==0)/as.numeric(table(site_categories_Replicate3_withoutgroup_H5)[Category1_ThirdReplicate_H5_withoutgroup])
+sum((ncatsitesThirdReplicate_H5_withoutgroup1/3)%%1==0)/as.numeric(table(site_categories_Replicate3_withoutgroup_H5)[class1_ThirdReplicate_H5_withoutgroup])
 
-#Second category
-Category2_ThirdReplicate_H5_withoutgroup<-2
-ncatsitesThirdReplicate_H5_withoutgroup2<-which(site_categories_Replicate3_withoutgroup_H5==Category2_ThirdReplicate_H5_withoutgroup)
+#Second class
+class2_ThirdReplicate_H5_withoutgroup<-2
+ncatsitesThirdReplicate_H5_withoutgroup2<-which(site_categories_Replicate3_withoutgroup_H5==class2_ThirdReplicate_H5_withoutgroup)
 ncatsitesThirdReplicate_H5_withoutgroup2/3
 
 (ncatsitesThirdReplicate_H5_withoutgroup2/3)%%1==0
-sum((ncatsitesThirdReplicate_H5_withoutgroup2/3)%%1==0)/as.numeric(table(site_categories_Replicate3_withoutgroup_H5)[Category2_ThirdReplicate_H5_withoutgroup])
+sum((ncatsitesThirdReplicate_H5_withoutgroup2/3)%%1==0)/as.numeric(table(site_categories_Replicate3_withoutgroup_H5)[class2_ThirdReplicate_H5_withoutgroup])
 
-#Third category 
-Category3_ThirdReplicate_H5_withoutgroup<-3
-ncatsitesThirdReplicate_H5_withoutgroup3<-which(site_categories_Replicate3_withoutgroup_H5==Category3_ThirdReplicate_H5_withoutgroup)
+#Third class 
+class3_ThirdReplicate_H5_withoutgroup<-3
+ncatsitesThirdReplicate_H5_withoutgroup3<-which(site_categories_Replicate3_withoutgroup_H5==class3_ThirdReplicate_H5_withoutgroup)
 ncatsitesThirdReplicate_H5_withoutgroup3/3
 
 (ncatsitesThirdReplicate_H5_withoutgroup3/3)%%1==0
-sum((ncatsitesThirdReplicate_H5_withoutgroup3/3)%%1==0)/as.numeric(table(site_categories_Replicate3_withoutgroup_H5)[Category3_ThirdReplicate_H5_withoutgroup])
+sum((ncatsitesThirdReplicate_H5_withoutgroup3/3)%%1==0)/as.numeric(table(site_categories_Replicate3_withoutgroup_H5)[class3_ThirdReplicate_H5_withoutgroup])
 
-#Fourth category 
-Category4_ThirdReplicate_H5_withoutgroup<-4
-ncatsitesThirdReplicate_H5_withoutgroup4<-which(site_categories_Replicate3_withoutgroup_H5==Category4_ThirdReplicate_H5_withoutgroup)
+#Fourth class 
+class4_ThirdReplicate_H5_withoutgroup<-4
+ncatsitesThirdReplicate_H5_withoutgroup4<-which(site_categories_Replicate3_withoutgroup_H5==class4_ThirdReplicate_H5_withoutgroup)
 ncatsitesThirdReplicate_H5_withoutgroup4/3
 
 (ncatsitesThirdReplicate_H5_withoutgroup4/3)%%1==0
-sum((ncatsitesThirdReplicate_H5_withoutgroup4/3)%%1==0)/as.numeric(table(site_categories_Replicate3_withoutgroup_H5)[Category4_ThirdReplicate_H5_withoutgroup])
+sum((ncatsitesThirdReplicate_H5_withoutgroup4/3)%%1==0)/as.numeric(table(site_categories_Replicate3_withoutgroup_H5)[class4_ThirdReplicate_H5_withoutgroup])
 
-#Fifth category 
-Category5_ThirdReplicate_H5_withoutgroup<-5
-ncatsitesThirdReplicate_H5_withoutgroup5<-which(site_categories_Replicate3_withoutgroup_H5==Category5_ThirdReplicate_H5_withoutgroup)                                                                   
+#Fifth class 
+class5_ThirdReplicate_H5_withoutgroup<-5
+ncatsitesThirdReplicate_H5_withoutgroup5<-which(site_categories_Replicate3_withoutgroup_H5==class5_ThirdReplicate_H5_withoutgroup)                                                                   
 ncatsitesThirdReplicate_H5_withoutgroup5/3
 
 (ncatsitesThirdReplicate_H5_withoutgroup5/3)%%1==0
-sum((ncatsitesThirdReplicate_H5_withoutgroup5/3)%%1==0)/as.numeric(table(site_categories_Replicate3_withoutgroup_H5)[Category5_ThirdReplicate_H5_withoutgroup])
+sum((ncatsitesThirdReplicate_H5_withoutgroup5/3)%%1==0)/as.numeric(table(site_categories_Replicate3_withoutgroup_H5)[class5_ThirdReplicate_H5_withoutgroup])
 
-#Third replicate with no outgroup. Category model 4 
+#Third replicate with no outgroup. class model 4 
 
 Replicate3_NOOutgroup_H4<-read.table("ThirdDataSet_LocationsNOOutGroupH4GHOST.fasta.siteprob",header=T,row.names = 1)
 dim(Replicate3_NOOutgroup_H4)
@@ -312,41 +312,41 @@ table(apply(Replicate3_NOOutgroup_H4,1,function(x) which(x==max(x))))
 
 site_categories_Replicate3_NOOutgroup_H4<-apply(Replicate3_NOOutgroup_H4, 1, function(x) which(x == max(x)))
 
-#First category 
-Category1_ThirdReplicate_H4_NOOutgroup<-1
-ncatsitesThirdReplicate_H4_NOOutgroup1<-which(site_categories_Replicate3_NOOutgroup_H4==Category1_ThirdReplicate_H4_NOOutgroup)
+#First class 
+class1_ThirdReplicate_H4_NOOutgroup<-1
+ncatsitesThirdReplicate_H4_NOOutgroup1<-which(site_categories_Replicate3_NOOutgroup_H4==class1_ThirdReplicate_H4_NOOutgroup)
 ncatsitesThirdReplicate_H4_NOOutgroup1/3
 
 
 (ncatsitesThirdReplicate_H4_NOOutgroup1/3)%%1==0
-sum((ncatsitesThirdReplicate_H4_NOOutgroup1/3)%%1==0)/as.numeric(table(site_categories_Replicate3_NOOutgroup_H4)[Category1_ThirdReplicate_H4_NOOutgroup])
+sum((ncatsitesThirdReplicate_H4_NOOutgroup1/3)%%1==0)/as.numeric(table(site_categories_Replicate3_NOOutgroup_H4)[class1_ThirdReplicate_H4_NOOutgroup])
 
-#Second category 
-Category2_ThirdReplicate_H4_NOOutgroup<-2
-ncatsitesThirdReplicate_H4_NOOutgroup2<-which(site_categories_Replicate3_NOOutgroup_H4==Category2_ThirdReplicate_H4_NOOutgroup)
+#Second class 
+class2_ThirdReplicate_H4_NOOutgroup<-2
+ncatsitesThirdReplicate_H4_NOOutgroup2<-which(site_categories_Replicate3_NOOutgroup_H4==class2_ThirdReplicate_H4_NOOutgroup)
 ncatsitesThirdReplicate_H4_NOOutgroup2/3
 
 (ncatsitesThirdReplicate_H4_NOOutgroup2/3)%%1==0
-sum((ncatsitesThirdReplicate_H4_NOOutgroup2/3)%%1==0)/as.numeric(table(site_categories_Replicate3_NOOutgroup_H4)[Category2_ThirdReplicate_H4_NOOutgroup])
+sum((ncatsitesThirdReplicate_H4_NOOutgroup2/3)%%1==0)/as.numeric(table(site_categories_Replicate3_NOOutgroup_H4)[class2_ThirdReplicate_H4_NOOutgroup])
 
-#Third category 
-Category3_ThirdReplicate_H4_NOOutgroup<-3
-ncatsitesThirdReplicate_H4_NOOutgroup3<-which(site_categories_Replicate3_NOOutgroup_H4==Category3_ThirdReplicate_H4_NOOutgroup)
+#Third class 
+class3_ThirdReplicate_H4_NOOutgroup<-3
+ncatsitesThirdReplicate_H4_NOOutgroup3<-which(site_categories_Replicate3_NOOutgroup_H4==class3_ThirdReplicate_H4_NOOutgroup)
 ncatsitesThirdReplicate_H4_NOOutgroup3/3
 
 (ncatsitesThirdReplicate_H4_NOOutgroup3/3)%%1==0
-sum((ncatsitesThirdReplicate_H4_NOOutgroup3/3)%%1==0)/as.numeric(table(site_categories_Replicate3_NOOutgroup_H4)[Category3_ThirdReplicate_H4_NOOutgroup])
+sum((ncatsitesThirdReplicate_H4_NOOutgroup3/3)%%1==0)/as.numeric(table(site_categories_Replicate3_NOOutgroup_H4)[class3_ThirdReplicate_H4_NOOutgroup])
 
-#Fourth category 
-Category4_ThirdReplicate_H4_NOOutgroup<-4
-ncatsitesThirdReplicate_H4_NOOutgroup4<-which(site_categories_Replicate3_NOOutgroup_H4==Category4_ThirdReplicate_H4_NOOutgroup)
+#Fourth class 
+class4_ThirdReplicate_H4_NOOutgroup<-4
+ncatsitesThirdReplicate_H4_NOOutgroup4<-which(site_categories_Replicate3_NOOutgroup_H4==class4_ThirdReplicate_H4_NOOutgroup)
 ncatsitesThirdReplicate_H4_NOOutgroup4/3
 
 (ncatsitesThirdReplicate_H4_NOOutgroup4/3)%%1==0
-sum((ncatsitesThirdReplicate_H4_NOOutgroup4/3)%%1==0)/as.numeric(table(site_categories_Replicate3_NOOutgroup_H4)[Category4_ThirdReplicate_H4_NOOutgroup])
+sum((ncatsitesThirdReplicate_H4_NOOutgroup4/3)%%1==0)/as.numeric(table(site_categories_Replicate3_NOOutgroup_H4)[class4_ThirdReplicate_H4_NOOutgroup])
 
 
-#Fourth replicate with outgroup. H3 category model  
+#Fourth replicate with outgroup. H3 class model  
 Replicate4_withOutgroup_H3<-read.table("FourthDataSet_LocationswithOutGroupH3GHOST.fasta.siteprob",header=T,row.names = 1)
 dim(Replicate4_withOutgroup_H3)
 head(Replicate4_withOutgroup_H3)
@@ -357,31 +357,31 @@ table(apply(Replicate4_withOutgroup_H3,1,function(x) which(x==max(x))))
 
 site_categories_Replicate_4withOutgroup_H3<-apply(Replicate4_withOutgroup_H3, 1, function(x) which(x == max(x))) 
 
-#First category 
-Category1_FourthReplicate_H3_withOutgroup<-1
-ncatsitesFourthReplicate_H3_withOutgroup1<-which(site_categories_Replicate_4withOutgroup_H3==Category1_FourthReplicate_H3_withOutgroup)
+#First class 
+class1_FourthReplicate_H3_withOutgroup<-1
+ncatsitesFourthReplicate_H3_withOutgroup1<-which(site_categories_Replicate_4withOutgroup_H3==class1_FourthReplicate_H3_withOutgroup)
 ncatsitesFourthReplicate_H3_withOutgroup1/3
 
 (ncatsitesFourthReplicate_H3_withOutgroup1/3)%%1==0
-sum((ncatsitesFourthReplicate_H3_withOutgroup1/3)%%1==0)/as.numeric(table(site_categories_Replicate_4withOutgroup_H3)[Category1_FourthReplicate_H3_withOutgroup])
+sum((ncatsitesFourthReplicate_H3_withOutgroup1/3)%%1==0)/as.numeric(table(site_categories_Replicate_4withOutgroup_H3)[class1_FourthReplicate_H3_withOutgroup])
 
-#Second category 
-Category2_FourthReplicate_H3_withOutgroup<-2
-ncatsitesFourthReplicate_H3_withOutgroup2<-which(site_categories_Replicate_4withOutgroup_H3==Category2_FourthReplicate_H3_withOutgroup)
+#Second class 
+class2_FourthReplicate_H3_withOutgroup<-2
+ncatsitesFourthReplicate_H3_withOutgroup2<-which(site_categories_Replicate_4withOutgroup_H3==class2_FourthReplicate_H3_withOutgroup)
 ncatsitesFourthReplicate_H3_withOutgroup2/3
 
 (ncatsitesFourthReplicate_H3_withOutgroup2/3)%%1==0
-sum((ncatsitesFourthReplicate_H3_withOutgroup2/3)%%1==0)/as.numeric(table(site_categories_Replicate_4withOutgroup_H3)[Category2_FourthReplicate_H3_withOutgroup])
+sum((ncatsitesFourthReplicate_H3_withOutgroup2/3)%%1==0)/as.numeric(table(site_categories_Replicate_4withOutgroup_H3)[class2_FourthReplicate_H3_withOutgroup])
 
-#Third category
-Category3_FourthReplicate_H3_withOutgroup<-3
-ncatsitesFourthReplicate_H3_withOutgroup3<-which(site_categories_Replicate_4withOutgroup_H3==Category3_FourthReplicate_H3_withOutgroup)
+#Third class
+class3_FourthReplicate_H3_withOutgroup<-3
+ncatsitesFourthReplicate_H3_withOutgroup3<-which(site_categories_Replicate_4withOutgroup_H3==class3_FourthReplicate_H3_withOutgroup)
 ncatsitesFourthReplicate_H3_withOutgroup3/3
 
 (ncatsitesFourthReplicate_H3_withOutgroup3/3)%%1==0
-sum((ncatsitesFourthReplicate_H3_withOutgroup3/3)%%1==0)/as.numeric(table(site_categories_Replicate_4withOutgroup_H3)[Category3_FourthReplicate_H3_withOutgroup])
+sum((ncatsitesFourthReplicate_H3_withOutgroup3/3)%%1==0)/as.numeric(table(site_categories_Replicate_4withOutgroup_H3)[class3_FourthReplicate_H3_withOutgroup])
 
-#Fourth replicate with NO outgroup. H3 category model
+#Fourth replicate with NO outgroup. H3 class model
 Replicate4_NOOutgroup_H3<-read.table("FourthDataSet_LocationsNOOutGroupH3GHOST.fasta.siteprob",header=T,row.names = 1)
 dim(Replicate4_NOOutgroup_H3)
 head(Replicate4_NOOutgroup_H3)
@@ -392,31 +392,31 @@ table(apply(Replicate4_NOOutgroup_H3,1,function(x) which(x==max(x))))
 
 site_categories_Replicate_4NOOutgroup_H3<-apply(Replicate4_NOOutgroup_H3, 1, function(x) which(x == max(x))) 
 
-#First category 
-Category1_FourthReplicate_H3_NOOUtgroup<-1
-ncatsitesFourthReplicate_H3_NOOutgroup1<-which(site_categories_Replicate_4NOOutgroup_H3==Category1_FourthReplicate_H3_NOOUtgroup)
+#First class 
+class1_FourthReplicate_H3_NOOUtgroup<-1
+ncatsitesFourthReplicate_H3_NOOutgroup1<-which(site_categories_Replicate_4NOOutgroup_H3==class1_FourthReplicate_H3_NOOUtgroup)
 ncatsitesFourthReplicate_H3_NOOutgroup1/3
 
 (ncatsitesFourthReplicate_H3_NOOutgroup1/3)%%1==0
-sum((ncatsitesFourthReplicate_H3_NOOutgroup1/3)%%1==0)/as.numeric(table(site_categories_Replicate_4NOOutgroup_H3)[Category1_FourthReplicate_H3_NOOUtgroup])
+sum((ncatsitesFourthReplicate_H3_NOOutgroup1/3)%%1==0)/as.numeric(table(site_categories_Replicate_4NOOutgroup_H3)[class1_FourthReplicate_H3_NOOUtgroup])
 
-#Second category 
-Category2_FourthReplicate_H3_NOOutgroup<-2
-ncatsitesFourthReplicate_H3_NOOutgroup2<-which(site_categories_Replicate_4NOOutgroup_H3==Category2_FourthReplicate_H3_NOOutgroup)
+#Second class 
+class2_FourthReplicate_H3_NOOutgroup<-2
+ncatsitesFourthReplicate_H3_NOOutgroup2<-which(site_categories_Replicate_4NOOutgroup_H3==class2_FourthReplicate_H3_NOOutgroup)
 ncatsitesFourthReplicate_H3_NOOutgroup2/3
 
 (ncatsitesFourthReplicate_H3_NOOutgroup2/3)%%1==0
-sum((ncatsitesFourthReplicate_H3_NOOutgroup2/3)%%1==0)/as.numeric(table(site_categories_Replicate_4NOOutgroup_H3)[Category2_FourthReplicate_H3_NOOutgroup])
+sum((ncatsitesFourthReplicate_H3_NOOutgroup2/3)%%1==0)/as.numeric(table(site_categories_Replicate_4NOOutgroup_H3)[class2_FourthReplicate_H3_NOOutgroup])
 
-#Third category 
-Category3_FourthReplicate_H3_NOOutgroup<-3
-ncatsitesFourthReplicate_H3_NOOutgroup3<-which(site_categories_Replicate_4NOOutgroup_H3==Category3_FourthReplicate_H3_NOOutgroup)
+#Third class 
+class3_FourthReplicate_H3_NOOutgroup<-3
+ncatsitesFourthReplicate_H3_NOOutgroup3<-which(site_categories_Replicate_4NOOutgroup_H3==class3_FourthReplicate_H3_NOOutgroup)
 ncatsitesFourthReplicate_H3_NOOutgroup3/3
 
 (ncatsitesFourthReplicate_H3_NOOutgroup3/3)%%1==0
-sum((ncatsitesFourthReplicate_H3_NOOutgroup3/3)%%1==0)/as.numeric(table(site_categories_Replicate_4NOOutgroup_H3)[Category3_FourthReplicate_H3_NOOutgroup])
+sum((ncatsitesFourthReplicate_H3_NOOutgroup3/3)%%1==0)/as.numeric(table(site_categories_Replicate_4NOOutgroup_H3)[class3_FourthReplicate_H3_NOOutgroup])
 
-#Fifth replicate with NO outgroup. H3 category model 
+#Fifth replicate with NO outgroup. H3 class model 
 Replicate5_NOOutgroup_H3<-read.table("FifthDataSet_LocationsNOOutGroupH3GHOST.fasta.siteprob",header=T,row.names = 1)
 dim(Replicate5_NOOutgroup_H3)
 head(Replicate5_NOOutgroup_H3)
@@ -427,31 +427,31 @@ table(apply(Replicate5_NOOutgroup_H3,1,function(x) which(x==max(x))))
 
 site_categories_Replicate_5NOOutgroup_H3<-apply(Replicate5_NOOutgroup_H3, 1, function(x) which(x == max(x))) 
 
-#First category 
-Category1_FifthReplicate_H3_NOOutgroup<-1
-ncatsitesFifthReplicate_H3_NOOutgroup1<-which(site_categories_Replicate_5NOOutgroup_H3==Category1_FifthReplicate_H3_NOOutgroup)
+#First class 
+class1_FifthReplicate_H3_NOOutgroup<-1
+ncatsitesFifthReplicate_H3_NOOutgroup1<-which(site_categories_Replicate_5NOOutgroup_H3==class1_FifthReplicate_H3_NOOutgroup)
 ncatsitesFifthReplicate_H3_NOOutgroup1/3
 
 (ncatsitesFifthReplicate_H3_NOOutgroup1/3)%%1==0
-sum((ncatsitesFifthReplicate_H3_NOOutgroup1/3)%%1==0)/as.numeric(table(site_categories_Replicate_5NOOutgroup_H3)[Category1_FifthReplicate_H3_NOOutgroup])
+sum((ncatsitesFifthReplicate_H3_NOOutgroup1/3)%%1==0)/as.numeric(table(site_categories_Replicate_5NOOutgroup_H3)[class1_FifthReplicate_H3_NOOutgroup])
 
-#Second category 
-Category2_FifthReplicate_H3_NOOutgroup<-2
-ncatsitesFifthReplicate_H3_NOOutgroup2<-which(site_categories_Replicate_5NOOutgroup_H3==Category2_FifthReplicate_H3_NOOutgroup)
+#Second class 
+class2_FifthReplicate_H3_NOOutgroup<-2
+ncatsitesFifthReplicate_H3_NOOutgroup2<-which(site_categories_Replicate_5NOOutgroup_H3==class2_FifthReplicate_H3_NOOutgroup)
 ncatsitesFifthReplicate_H3_NOOutgroup2/3
 
 (ncatsitesFifthReplicate_H3_NOOutgroup2/3)%%1==0
-sum((ncatsitesFifthReplicate_H3_NOOutgroup2/3)%%1==0)/as.numeric(table(site_categories_Replicate_5NOOutgroup_H3)[Category2_FifthReplicate_H3_NOOutgroup])
+sum((ncatsitesFifthReplicate_H3_NOOutgroup2/3)%%1==0)/as.numeric(table(site_categories_Replicate_5NOOutgroup_H3)[class2_FifthReplicate_H3_NOOutgroup])
 
-#Third category 
-Category3_FifthReplicate_H3_NOOutgroup<-3
-ncatsitesFifthReplicate_H3_NOOutgroup3<-which(site_categories_Replicate_5NOOutgroup_H3==Category3_FifthReplicate_H3_NOOutgroup)
+#Third class 
+class3_FifthReplicate_H3_NOOutgroup<-3
+ncatsitesFifthReplicate_H3_NOOutgroup3<-which(site_categories_Replicate_5NOOutgroup_H3==class3_FifthReplicate_H3_NOOutgroup)
 ncatsitesFifthReplicate_H3_NOOutgroup3/3
 
 (ncatsitesFifthReplicate_H3_NOOutgroup3/3)%%1==0
-sum((ncatsitesFifthReplicate_H3_NOOutgroup3/3)%%1==0)/as.numeric(table(site_categories_Replicate_5NOOutgroup_H3)[Category3_FifthReplicate_H3_NOOutgroup])
+sum((ncatsitesFifthReplicate_H3_NOOutgroup3/3)%%1==0)/as.numeric(table(site_categories_Replicate_5NOOutgroup_H3)[class3_FifthReplicate_H3_NOOutgroup])
 
-#Fifth replicate with outgroup. H3 category model 
+#Fifth replicate with outgroup. H3 class model 
 Replicate5_withoutgroup_H3<-read.table("FifthDataSet_LocationswithOutGroupH3GHOST.fasta.siteprob",header=T,row.names = 1)
 dim(Replicate5_withoutgroup_H3)
 head(Replicate5_withoutgroup_H3)
@@ -462,28 +462,28 @@ table(apply(Replicate5_withoutgroup_H3,1,function(x) which(x==max(x))))
 
 site_categories_Replicate_5withoutgroup_H3<-apply(Replicate5_withoutgroup_H3, 1, function(x) which(x == max(x))) 
 
-#First category
-Category1_FifthReplicate_H3_withOutgroup<-1
-ncatsitesFifthReplicate_H3_withOutgroup1<-which(site_categories_Replicate_5withoutgroup_H3==Category1_FifthReplicate_H3_withOutgroup)
+#First class
+class1_FifthReplicate_H3_withOutgroup<-1
+ncatsitesFifthReplicate_H3_withOutgroup1<-which(site_categories_Replicate_5withoutgroup_H3==class1_FifthReplicate_H3_withOutgroup)
 ncatsitesFifthReplicate_H3_withOutgroup1/3
 
 (ncatsitesFifthReplicate_H3_withOutgroup1/3)%%1==0
-sum((ncatsitesFifthReplicate_H3_withOutgroup1/3)%%1==0)/as.numeric(table(site_categories_Replicate_5withoutgroup_H3)[Category1_FifthReplicate_H3_withOutgroup])
+sum((ncatsitesFifthReplicate_H3_withOutgroup1/3)%%1==0)/as.numeric(table(site_categories_Replicate_5withoutgroup_H3)[class1_FifthReplicate_H3_withOutgroup])
 
 
-#Second category
-Category2_FifthReplicate_H3_withOutgroup<-2
-ncatsitesFifthReplicate_H3_withOutgroup2<-which(site_categories_Replicate_5withoutgroup_H3==Category2_FifthReplicate_H3_withOutgroup)
+#Second class
+class2_FifthReplicate_H3_withOutgroup<-2
+ncatsitesFifthReplicate_H3_withOutgroup2<-which(site_categories_Replicate_5withoutgroup_H3==class2_FifthReplicate_H3_withOutgroup)
 ncatsitesFifthReplicate_H3_withOutgroup2/3
 
 (ncatsitesFifthReplicate_H3_withOutgroup2/3)%%1==0
-sum((ncatsitesFifthReplicate_H3_withOutgroup2/3)%%1==0)/as.numeric(table(site_categories_Replicate_5withoutgroup_H3)[Category2_FifthReplicate_H3_withOutgroup])
+sum((ncatsitesFifthReplicate_H3_withOutgroup2/3)%%1==0)/as.numeric(table(site_categories_Replicate_5withoutgroup_H3)[class2_FifthReplicate_H3_withOutgroup])
 
-#Third category 
-Category3_FifthReplicate_H3_withOutgroup<-3
-ncatsitesFifthReplicate_H3_withOutgroup3<-which(site_categories_Replicate_5withoutgroup_H3==Category3_FifthReplicate_H3_withOutgroup)
+#Third class 
+class3_FifthReplicate_H3_withOutgroup<-3
+ncatsitesFifthReplicate_H3_withOutgroup3<-which(site_categories_Replicate_5withoutgroup_H3==class3_FifthReplicate_H3_withOutgroup)
 ncatsitesFifthReplicate_H3_withOutgroup3/3
 
 (ncatsitesFifthReplicate_H3_withOutgroup3/3)%%1==0
-sum((ncatsitesFifthReplicate_H3_withOutgroup3/3)%%1==0)/as.numeric(table(site_categories_Replicate_5withoutgroup_H3)[Category3_FifthReplicate_H3_withOutgroup])
+sum((ncatsitesFifthReplicate_H3_withOutgroup3/3)%%1==0)/as.numeric(table(site_categories_Replicate_5withoutgroup_H3)[class3_FifthReplicate_H3_withOutgroup])
 
