@@ -13,9 +13,12 @@ The GitHub repository is part of my master's thesis in May 2024. The master thes
 * iqtree-2.2.2.6
  
 ## Repository structure
-The repository contains all custom-developed code pertinent to the thesis project, as well as code utilized in the thesis preparation project (2023). 
+The repository contains all custom-developed code pertinent to the thesis project and the thesis preparation project (2023). The code is segregated into different files based on their functionality or purpose. 
 
-* Data analysis: Contains code files related to data analysis. Related code files in the repository are the following: GHOST + iqtree_replicates_NOOutgroup (The genetic sequences only contains the species name, and do not include an outgroup)
+* Data analysis: Contains code files related to data analysis.
+* Visualization: The repository holds code files for generating visualization, plots, and graphs to illustrate the findings
+
+  
 
 
 
