@@ -6,17 +6,16 @@ Welcome to the repository for my master's thesis project. The repository contain
 * [Repository structure](#Repository-structure)
 
 ## About the project
-The Github repository is part of my master's thesis 2024. The objective of the master's thesis is to assess the molecular evolutionary history of the circumsporozoite protein through the utilization of mixture models. 
- 
-### Work process of the project 
-(https://github.com/RusulAlKaisy/MasterThesis2024/blob/main/Flowchart.svg)
-
-The provided flowchart illustrates the workflow of the project, delineating each step. The subsequent section describes each step. 
-
+The GitHub repository is part of my master's thesis in May 2024. The master thesis project focuses on assessing the molecular evolutionary history of the circumsporozoite protein (CSP) by utilizing phylogenetic mixture models such as GHOST through extensive analysis and development of custom coding. 
 
 ## Software 
 * Rstudio:4.2.3
 * iqtree-2.2.2.6
+ 
+## Repository structure
+The repository contains all custom-developed code. 
+
+
 
 
 
