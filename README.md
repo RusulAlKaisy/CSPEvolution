@@ -1,9 +1,9 @@
 # MasterThesis2024
-Welcome to the repository for my master's thesis project. The repository contains all the code associated with my thesis project: The molecular evolutionary history of Plasmodium falciparum  circumsporozoite protein assessed with models of heterotachy 
+Welcome to the repository for my master's thesis project. The repository contains all the code associated with my thesis project: The molecular evolutionary history of Plasmodium falciparum  circumsporozoite protein assessed with models of heterotachy.
 ## Table of contents 
 * [About the project](#About-the-project)
 * [Software](#Software)
-* [Work process of the project](#Work-process-of-the-project)
+* [Repository structure](#Repository-structure)
 
 ## About the project
 The Github repository is part of my master's thesis 2024. The objective of the master's thesis is to assess the molecular evolutionary history of the circumsporozoite protein through the utilization of mixture models. 
