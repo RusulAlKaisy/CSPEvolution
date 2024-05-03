@@ -1,3 +1,5 @@
+##This creates replicates for the sequences that do include the outgroup and the species name 
+
 NewSequencesFastaTrimNoDup <- as.matrix(NewSequencesFastaTrimNoDup)  
 neworder <- sample(rownames(NewSequencesFastaTrimNoDup)[-1], nrow(NewSequencesFastaTrimNoDup)-1, replace = F)
 NewSequencesFastaTrimNoDup <- rbind(NewSequencesFastaTrimNoDup[1,], NewSequencesFastaTrimNoDup[neworder,])
