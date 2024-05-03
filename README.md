@@ -1,4 +1,4 @@
-<img width="272" alt="Flowchart " src="https://github.com/RusulAlKaisy/MasterThesis2024/assets/161965623/31fc8b3d-7f80-4aaa-b183-a0d0454170e5">
+
 # MasterThesis2024
 Welcome to the repository for my master's thesis project. The repository contains all the code associated with my thesis project: The molecular evolutionary history of Plasmodium falciparum  circumsporozoite protein assessed with models of heterotachy.
 ## Table of contents 
@@ -16,7 +16,7 @@ The GitHub repository is part of my master's thesis in May 2024. The master thes
 ## Repository structure
 The repository contains all custom-developed code pertinent to the thesis project and the thesis preparation project (2023). The code is segregated into different files based on their functionality or purpose. The repository holds code files for generating plots and visualization to represent the data. Furthermore, it contains code related to data analysis. The files are organized and labeled in accordance with the sequential steps as seen below on the flowchart
 
-
+<img width="272" alt="Flowchart " src="https://github.com/RusulAlKaisy/MasterThesis2024/assets/161965623/31fc8b3d-7f80-4aaa-b183-a0d0454170e5">
   
 
 
