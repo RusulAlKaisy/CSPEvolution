@@ -1,0 +1,11 @@
+H6_classmodelSecondDataSet<-read.table("Plasmodium_collected_H6_GHOST.siteprob",header=TRUE,row.names=1)
+
+#Create a new matrix
+New_Matrix_SecondDataSet<-apply(H6_classmodelSecondDataSet,1,function(x){newrow<-x
+newrow[newrow==max(newrow)]<-1
+newrow[newrow!=1]<-0
+return(newrow)})
+
+#Create a matrix
+H6_classmodelSecondDataSet_matrix<-as.matrix(New_Matrix_SecondDataSet)
+H6_classmodelSecondDataSet_heatmap<-heatmap(H6_classmodelSecondDataSet_matrix,Rowv=NA,Colv=NA)  
