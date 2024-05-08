@@ -1,0 +1,200 @@
+#How many sites belong to each class 
+length(apply(SecondDataSet_H6_model,1,function(x)which(x==max(x))))
+table(apply(SecondDataSet_H6_model,1,function(x) which(x==max(x))))
+
+Site_Categories_SecondDataSet_H6<-apply(SecondDataSet_H6_model,1,function(x)which(x==max(x)))
+
+#Which sites belong to the first class 
+SecondDataSet_class_1<-1
+ncatsites_SecondDataSet<-which(Site_Categories_SecondDataSet_H6==SecondDataSet_class_1)
+
+#Test the codon positions 
+ncatsites_SecondDataSet/3
+(ncatsites_SecondDataSet/3)%%1==0
+
+#Total number of third codon positions in the first class 
+sum((ncatsites_SecondDataSet/3)%%1==0)
+
+#Proportion of third codon positions sites in the given class 
+sum((ncatsites_SecondDataSet/3)%%1==0)/as.numeric(table(Site_Categories_SecondDataSet_H6[ncatsites_SecondDataSet]))
+
+#Second class 
+SecondDataSet_class_2<-2
+ncatsites_SecondDataSet<-which(Site_Categories_SecondDataSet_H6==SecondDataSet_class_2)
+ncatsites_SecondDataSet/3
+(ncatsites_SecondDataSet/3)%%1==0
+sum((ncatsites_SecondDataSet/3)%%1==0)
+sum((ncatsites_SecondDataSet/3)%%1==0)/as.numeric(table(Site_Categories_SecondDataSet_H6[ncatsites_SecondDataSet]))
+
+#Third class 
+SecondDataSet_class_3<-3
+ncatsites_SecondDataSet<-which(Site_Categories_SecondDataSet_H6==SecondDataSet_class_3)
+ncatsites_SecondDataSet/3
+(ncatsites_SecondDataSet/3)%%1==0
+sum((ncatsites_SecondDataSet/3)%%1==0)
+sum((ncatsites_SecondDataSet/3)%%1==0)/as.numeric(table(Site_Categories_SecondDataSet_H6[ncatsites_SecondDataSet]))
+
+#Fourth class 
+SecondDataSet_class_4<-4
+ncatsites_SecondDataSet<-which(Site_Categories_SecondDataSet_H6==SecondDataSet_class_4)
+ncatsites_SecondDataSet/3
+(ncatsites_SecondDataSet/3)%%1==0
+sum((ncatsites_SecondDataSet/3)%%1==0)
+sum((ncatsites_SecondDataSet/3)%%1==0)/as.numeric(table(Site_Categories_SecondDataSet_H6[ncatsites_SecondDataSet]))
+
+#Fifth class
+SecondDataSet_class_5<-5
+ncatsites_SecondDataSet<-which(Site_Categories_SecondDataSet_H6==SecondDataSet_class_5)
+ncatsites_SecondDataSet/3
+(ncatsites_SecondDataSet/3)%%1==0
+sum((ncatsites_SecondDataSet/3)%%1==0)
+sum((ncatsites_SecondDataSet/3)%%1==0)/as.numeric(table(Site_Categories_SecondDataSet_H6[ncatsites_SecondDataSet]))
+
+#Sixth class 
+SecondDataSet_class_6<-6
+ncatsites_SecondDataSet<-which(Site_Categories_SecondDataSet_H6==SecondDataSet_class_6)
+ncatsites_SecondDataSet/3
+(ncatsites_SecondDataSet/3)%%1==0
+sum((ncatsites_SecondDataSet/3)%%1==0)
+sum((ncatsites_SecondDataSet/3)%%1==0)/as.numeric(table(Site_Categories_SecondDataSet_H6[ncatsites_SecondDataSet]))
+
+#Let's calculate what sites of the class belong to what region
+C_terminal_Second_Dataset<-1942:2501
+
+SecondDataSet_classmodel_H6_C_terminus<-read.table("Plasmodium_collected_H6_GHOST.siteprob",header=TRUE,row.names=1)
+SecondDataSet_Cat_Number<-1
+
+
+Site_Categories_SecondDataSet_C_terminus<-apply(SecondDataSet_classmodel_H6_C_terminus,1,function(x)which(x==max(x)))
+class_Sites_SecondDataSet_C_terminus<-which(Site_Categories_SecondDataSet_C_terminus==SecondDataSet_Cat_Number)
+
+Proportion_in_C_terminus<-sum(class_Sites_SecondDataSet_C_terminus%in%C_terminal_Second_Dataset)/length(class_Sites_SecondDataSet_C_terminus)
+
+#Second class 
+SecondDataSet_Cat_Number<-2
+Site_Categories_SecondDataSet_C_terminus<-apply(SecondDataSet_classmodel_H6_C_terminus,1,function(x)which(x==max(x)))
+class_Sites_SecondDataSet_C_terminus<-which(Site_Categories_SecondDataSet_C_terminus==SecondDataSet_Cat_Number)
+
+Proportion_in_C_terminus<-sum(class_Sites_SecondDataSet_C_terminus%in%C_terminal_Second_Dataset)/length(class_Sites_SecondDataSet_C_terminus)
+
+#Third class 
+SecondDataSet_Cat_Number<-3
+Site_Categories_SecondDataSet_C_terminus<-apply(SecondDataSet_classmodel_H6_C_terminus,1,function(x)which(x==max(x)))
+class_Sites_SecondDataSet_C_terminus<-which(Site_Categories_SecondDataSet_C_terminus==SecondDataSet_Cat_Number)
+
+Proportion_in_C_terminus<-sum(class_Sites_SecondDataSet_C_terminus%in%C_terminal_Second_Dataset)/length(class_Sites_SecondDataSet_C_terminus)
+
+#Fourth class
+SecondDataSet_Cat_Number<-4
+Site_Categories_SecondDataSet_C_terminus<-apply(SecondDataSet_classmodel_H6_C_terminus,1,function(x)which(x==max(x)))
+class_Sites_SecondDataSet_C_terminus<-which(Site_Categories_SecondDataSet_C_terminus==SecondDataSet_Cat_Number)
+
+Proportion_in_C_terminus<-sum(class_Sites_SecondDataSet_C_terminus%in%C_terminal_Second_Dataset)/length(class_Sites_SecondDataSet_C_terminus)
+
+#Fifth class
+SecondDataSet_Cat_Number<-5
+Site_Categories_SecondDataSet_C_terminus<-apply(SecondDataSet_classmodel_H6_C_terminus,1,function(x)which(x==max(x)))
+class_Sites_SecondDataSet_C_terminus<-which(Site_Categories_SecondDataSet_C_terminus==SecondDataSet_Cat_Number)
+
+Proportion_in_C_terminus<-sum(class_Sites_SecondDataSet_C_terminus%in%C_terminal_Second_Dataset)/length(class_Sites_SecondDataSet_C_terminus)
+
+#Sixth class 
+SecondDataSet_Cat_Number<-6
+Site_Categories_SecondDataSet_C_terminus<-apply(SecondDataSet_classmodel_H6_C_terminus,1,function(x)which(x==max(x)))
+class_Sites_SecondDataSet_C_terminus<-which(Site_Categories_SecondDataSet_C_terminus==SecondDataSet_Cat_Number)
+
+Proportion_in_C_terminus<-sum(class_Sites_SecondDataSet_C_terminus%in%C_terminal_Second_Dataset)/length(class_Sites_SecondDataSet_C_terminus)
+
+#Do it for the N_terminus 
+SecondDataSet_N_terminus<-1:729
+
+#First class
+SecondDataSet_classmodel_H6_N_terminus<-read.table("Plasmodium_collected_H6_GHOST.siteprob",header=TRUE,row.names=1)
+SecondDataSet_Cat_Number<-1
+
+
+Site_Categories_SecondDataSet_N_terminus<-apply(SecondDataSet_classmodel_H6_C_terminus,1,function(x)which(x==max(x)))
+class_Sites_SecondDataSet_N_terminus<-which(Site_Categories_SecondDataSet_N_terminus==SecondDataSet_Cat_Number)
+
+Proportion_in_N_terminus<-sum(class_Sites_SecondDataSet_N_terminus%in%SecondDataSet_N_terminus)/length(class_Sites_SecondDataSet_N_terminus)
+
+#Second class
+SecondDataSet_Cat_Number<-2
+Site_Categories_SecondDataSet_N_terminus<-apply(SecondDataSet_classmodel_H6_C_terminus,1,function(x)which(x==max(x)))
+class_Sites_SecondDataSet_N_terminus<-which(Site_Categories_SecondDataSet_N_terminus==SecondDataSet_Cat_Number)
+Proportion_in_N_terminus<-sum(class_Sites_SecondDataSet_N_terminus%in%SecondDataSet_N_terminus)/length(class_Sites_SecondDataSet_N_terminus)
+
+#Third class 
+SecondDataSet_Cat_Number<-3
+Site_Categories_SecondDataSet_N_terminus<-apply(SecondDataSet_classmodel_H6_C_terminus,1,function(x)which(x==max(x)))
+class_Sites_SecondDataSet_N_terminus<-which(Site_Categories_SecondDataSet_N_terminus==SecondDataSet_Cat_Number)
+Proportion_in_N_terminus<-sum(class_Sites_SecondDataSet_N_terminus%in%SecondDataSet_N_terminus)/length(class_Sites_SecondDataSet_N_terminus)
+
+#Fourth class 
+SecondDataSet_Cat_Number<-4
+Site_Categories_SecondDataSet_N_terminus<-apply(SecondDataSet_classmodel_H6_C_terminus,1,function(x)which(x==max(x)))
+class_Sites_SecondDataSet_N_terminus<-which(Site_Categories_SecondDataSet_N_terminus==SecondDataSet_Cat_Number)
+Proportion_in_N_terminus<-sum(class_Sites_SecondDataSet_N_terminus%in%SecondDataSet_N_terminus)/length(class_Sites_SecondDataSet_N_terminus)
+
+#Fifth class
+SecondDataSet_Cat_Number<-5
+Site_Categories_SecondDataSet_N_terminus<-apply(SecondDataSet_classmodel_H6_C_terminus,1,function(x)which(x==max(x)))
+class_Sites_SecondDataSet_N_terminus<-which(Site_Categories_SecondDataSet_N_terminus==SecondDataSet_Cat_Number)
+Proportion_in_N_terminus<-sum(class_Sites_SecondDataSet_N_terminus%in%SecondDataSet_N_terminus)/length(class_Sites_SecondDataSet_N_terminus)
+
+#Sixth class 
+SecondDataSet_Cat_Number<-6
+Site_Categories_SecondDataSet_N_terminus<-apply(SecondDataSet_classmodel_H6_C_terminus,1,function(x)which(x==max(x)))
+class_Sites_SecondDataSet_N_terminus<-which(Site_Categories_SecondDataSet_N_terminus==SecondDataSet_Cat_Number)
+Proportion_in_N_terminus<-sum(class_Sites_SecondDataSet_N_terminus%in%SecondDataSet_N_terminus)/length(class_Sites_SecondDataSet_N_terminus)
+
+#Central repeat region 
+SecondDataSet_Central_Repeat<-745:1941
+
+#First class
+SecondDataSet_classmodel_H6_Central_repeat<-read.table("Plasmodium_collected_H6_GHOST.siteprob",header=TRUE,row.names=1)
+SecondDataSet_Cat_Number<-1
+Site_Categories_SecondDataSet_Central_repeat<-apply(SecondDataSet_classmodel_H6_Central_repeat,1,function(x)which(x==max(x)))
+class_Sites_SecondDataSet_Central_repeat<-which(Site_Categories_SecondDataSet_Central_repeat==SecondDataSet_Cat_Number)
+
+Proportion_in_Central_repeat<-sum(class_Sites_SecondDataSet_Central_repeat%in%SecondDataSet_Central_Repeat)/length(class_Sites_SecondDataSet_Central_repeat)
+
+#Second class
+SecondDataSet_classmodel_H6_Central_repeat<-read.table("Plasmodium_collected_H6_GHOST.siteprob",header=TRUE,row.names=1)
+SecondDataSet_Cat_Number<-2
+Site_Categories_SecondDataSet_Central_repeat<-apply(SecondDataSet_classmodel_H6_Central_repeat,1,function(x)which(x==max(x)))
+class_Sites_SecondDataSet_Central_repeat<-which(Site_Categories_SecondDataSet_Central_repeat==SecondDataSet_Cat_Number)
+
+Proportion_in_Central_repeat<-sum(class_Sites_SecondDataSet_Central_repeat%in%SecondDataSet_Central_Repeat)/length(class_Sites_SecondDataSet_Central_repeat)
+
+#Third class
+SecondDataSet_classmodel_H6_Central_repeat<-read.table("Plasmodium_collected_H6_GHOST.siteprob",header=TRUE,row.names=1)
+SecondDataSet_Cat_Number<-3
+Site_Categories_SecondDataSet_Central_repeat<-apply(SecondDataSet_classmodel_H6_Central_repeat,1,function(x)which(x==max(x)))
+class_Sites_SecondDataSet_Central_repeat<-which(Site_Categories_SecondDataSet_Central_repeat==SecondDataSet_Cat_Number)
+
+Proportion_in_Central_repeat<-sum(class_Sites_SecondDataSet_Central_repeat%in%SecondDataSet_Central_Repeat)/length(class_Sites_SecondDataSet_Central_repeat)
+
+#Fourth class
+SecondDataSet_classmodel_H6_Central_repeat<-read.table("Plasmodium_collected_H6_GHOST.siteprob",header=TRUE,row.names=1)
+SecondDataSet_Cat_Number<-4
+Site_Categories_SecondDataSet_Central_repeat<-apply(SecondDataSet_classmodel_H6_Central_repeat,1,function(x)which(x==max(x)))
+class_Sites_SecondDataSet_Central_repeat<-which(Site_Categories_SecondDataSet_Central_repeat==SecondDataSet_Cat_Number)
+
+Proportion_in_Central_repeat<-sum(class_Sites_SecondDataSet_Central_repeat%in%SecondDataSet_Central_Repeat)/length(class_Sites_SecondDataSet_Central_repeat)
+
+#Fifth class 
+SecondDataSet_classmodel_H6_Central_repeat<-read.table("Plasmodium_collected_H6_GHOST.siteprob",header=TRUE,row.names=1)
+SecondDataSet_Cat_Number<-5
+Site_Categories_SecondDataSet_Central_repeat<-apply(SecondDataSet_classmodel_H6_Central_repeat,1,function(x)which(x==max(x)))
+class_Sites_SecondDataSet_Central_repeat<-which(Site_Categories_SecondDataSet_Central_repeat==SecondDataSet_Cat_Number)
+
+Proportion_in_Central_repeat<-sum(class_Sites_SecondDataSet_Central_repeat%in%SecondDataSet_Central_Repeat)/length(class_Sites_SecondDataSet_Central_repeat)
+
+#Sitxh class
+SecondDataSet_classmodel_H6_Central_repeat<-read.table("Plasmodium_collected_H6_GHOST.siteprob",header=TRUE,row.names=1)
+SecondDataSet_Cat_Number<-6
+Site_Categories_SecondDataSet_Central_repeat<-apply(SecondDataSet_classmodel_H6_Central_repeat,1,function(x)which(x==max(x)))
+class_Sites_SecondDataSet_Central_repeat<-which(Site_Categories_SecondDataSet_Central_repeat==SecondDataSet_Cat_Number)
+
+Proportion_in_Central_repeat<-sum(class_Sites_SecondDataSet_Central_repeat%in%SecondDataSet_Central_Repeat)/length(class_Sites_SecondDataSet_Central_repeat)
