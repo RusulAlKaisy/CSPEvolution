@@ -1,0 +1,4 @@
+#Calculate the percentage of non-synonymous sites of the H6 category model 
+SecondDataSet_H6_model<-read.table("Plasmodium_collected_H6_GHOST.siteprob")
+head(apply(SecondDataSet_H6_model,1,function(x)which(x==max(x))))
+apply(SecondDataSet_H6_model,1,function(x)which(x==max(x)))
