@@ -1,0 +1,23 @@
+getwd()
+setwd("C:/Users/HomePC/Desktop/Dataset2")
+
+#Read the file, create an object
+Plasmodium_collected<-read.FASTA("Plasmodium_species_collected.txt")
+#Save it as a fasta file
+write.FASTA(Plasmodium_collected,"C:/Users/HomePC/Desktop/Dataset2/Plasmodium_collected_FASTA.fasta")
+
+#Let's do a MACSE alignment of the FASTA file 
+
+system("java -jar ~C:\\Users\\HomePC\\Downloads\\macse\\macse_v2.03.jar -prog alignSequences -max_refine_iter 0 -seq Plasmodium_collected_FASTA.fasta -out_NT Plasmodium_collected_nucleotide_NT.fasta -out_AA Plasmodium_collected_amino_AA.fasta")
+#Removing the gaps 
+system("java -jar ~C:\\Users\\HomePC\\Downloads\\macse\\macse_v2.03.jar -prog exportAlignment -align Plasmodium_collected_nucleotide_NT.fasta -codonForInternalStop NNN -codonForFinalStop --- -codonForInternalFS --- -charForRemainingFS - -out_NT Plasmodium_collected_nucleotide_MACSED_NT.fasta -out_AA Plasmodium_collected_macsed_AA.fasta")
+
+#Use the trimCols function
+setwd("C:/Users/HomePC/Desktop")
+source("trimCols.R")
+setwd("C:/Users/HomePC/Desktop/Dataset2/MACSE")
+
+Plasmodium_collected_MACSE<-read.FASTA("Plasmodium_collected_nucleotide_MACSED_NT.fasta")
+#Create a matrix
+Plasmodium_collected_matrix<-as.matrix(Plasmodium_collected_MACSE)
+Plasmodium_collected_trimCols<-trimCols(Plasmodium_collected_matrix,prop=0.8,codon=T)
