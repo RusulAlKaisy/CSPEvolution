@@ -8,7 +8,7 @@ Welcome to the repository for my master's thesis project. The repository contain
 * [Usage](#Usage)
 
 ## About the project
-The GitHub repository is part of my master's thesis in May 2024. The master thesis project focuses on assessing the molecular evolutionary history of the circumsporozoite protein (CSP) by utilizing phylogenetic mixture models such as GHOST through extensive analysis and development of custom coding. 
+The GitHub repository is part of my master's thesis for May 2024. The master thesis project focuses on assessing the molecular evolutionary history of the circumsporozoite protein (CSP) by utilizing phylogenetic mixture models such as GHOST through extensive analysis and development of custom coding. 
 
 ## Software 
 * Rstudio:4.2.3
